@@ -1,0 +1,12 @@
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\bin\Debug\net8.0\BusinessObject.deps.json
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\bin\Debug\net8.0\BusinessObject.dll
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\bin\Debug\net8.0\BusinessObject.pdb
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.AssemblyInfo.cs
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.sourcelink.json
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.dll
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\refint\BusinessObject.dll
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.pdb
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\ref\BusinessObject.dll
