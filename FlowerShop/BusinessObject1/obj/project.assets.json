@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject1.csproj",
-      "projectName": "BusinessObject1",
-      "projectPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject1.csproj",
+      "projectUniqueName": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj",
+      "projectName": "BusinessObject",
+      "projectPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\obj\\",
       "projectStyle": "PackageReference",

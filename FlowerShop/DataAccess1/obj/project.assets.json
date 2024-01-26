@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\DataAccess1\\DataAccess1.csproj",
-      "projectName": "DataAccess1",
-      "projectPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\DataAccess1\\DataAccess1.csproj",
+      "projectUniqueName": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\DataAccess1\\DataAccess.csproj",
+      "projectName": "DataAccess",
+      "projectPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\DataAccess1\\DataAccess.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\DataAccess1\\obj\\",
       "projectStyle": "PackageReference",
