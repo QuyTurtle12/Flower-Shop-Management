@@ -52,9 +52,9 @@
             lbUsername.AutoSize = true;
             lbUsername.Location = new Point(29, 88);
             lbUsername.Name = "lbUsername";
-            lbUsername.Size = new Size(60, 15);
+            lbUsername.Size = new Size(100, 15);
             lbUsername.TabIndex = 1;
-            lbUsername.Text = "Username";
+            lbUsername.Text = "Username / Email";
             // 
             // lbPassword
             // 
@@ -67,13 +67,13 @@
             // 
             // btnConnect
             // 
-            btnConnect.Location = new Point(134, 190);
+            btnConnect.Location = new Point(137, 190);
             btnConnect.Name = "btnConnect";
             btnConnect.Size = new Size(75, 23);
             btnConnect.TabIndex = 3;
             btnConnect.Text = "Connect";
             btnConnect.UseVisualStyleBackColor = true;
-            btnConnect.Click += this.button1_Click;
+            btnConnect.Click += button1_Click;
             // 
             // btnForgotPwd
             // 
@@ -95,14 +95,14 @@
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(134, 85);
+            txtUsername.Location = new Point(137, 85);
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(131, 23);
             txtUsername.TabIndex = 6;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(134, 132);
+            txtPassword.Location = new Point(137, 132);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(131, 23);
             txtPassword.TabIndex = 7;
