@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Thunder\\OneDrive - EPITA\\Vietnam Semester\\PRN211\\Flower-Shop-Management\\FlowerShopManagement\\GUI\\GUI.csproj",
+      "projectUniqueName": "C:\\Users\\Thunder\\OneDrive - EPITA\\Vietnam Semester\\PRN211\\Flower-Shop-Management\\FlowerShop\\GUI\\GUI.csproj",
       "projectName": "GUI",
-      "projectPath": "C:\\Users\\Thunder\\OneDrive - EPITA\\Vietnam Semester\\PRN211\\Flower-Shop-Management\\FlowerShopManagement\\GUI\\GUI.csproj",
+      "projectPath": "C:\\Users\\Thunder\\OneDrive - EPITA\\Vietnam Semester\\PRN211\\Flower-Shop-Management\\FlowerShop\\GUI\\GUI.csproj",
       "packagesPath": "C:\\Users\\Thunder\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Thunder\\OneDrive - EPITA\\Vietnam Semester\\PRN211\\Flower-Shop-Management\\FlowerShopManagement\\GUI\\obj\\",
+      "outputPath": "C:\\Users\\Thunder\\OneDrive - EPITA\\Vietnam Semester\\PRN211\\Flower-Shop-Management\\FlowerShop\\GUI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
