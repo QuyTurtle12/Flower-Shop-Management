@@ -1,0 +1,6 @@
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Shopping\obj\Debug\net8.0\Shopping.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Shopping\obj\Debug\net8.0\Shopping.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Shopping\obj\Debug\net8.0\Shopping.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Shopping\obj\Debug\net8.0\Shopping.AssemblyInfo.cs
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Shopping\obj\Debug\net8.0\Shopping.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Shopping\obj\Debug\net8.0\Shopping.sourcelink.json

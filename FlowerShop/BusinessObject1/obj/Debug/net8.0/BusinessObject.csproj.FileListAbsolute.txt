@@ -10,3 +10,6 @@ C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject
 C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\refint\BusinessObject.dll
 C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.pdb
 C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\ref\BusinessObject.dll
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\bin\Debug\net8.0\BusinessObject.runtimeconfig.json
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.genruntimeconfig.cache

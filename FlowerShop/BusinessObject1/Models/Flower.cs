@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace BusinessObject.Models;
+
+public partial class Flower
+{
+    public string Id { get; set; } = null!;
+
+    public string? Name { get; set; }
+
+    public string? Season { get; set; }
+
+    public decimal? UnitPrice { get; set; }
+
+    public string? Description { get; set; }
+
+    public int? Stock { get; set; }
+
+    public virtual ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
+}
