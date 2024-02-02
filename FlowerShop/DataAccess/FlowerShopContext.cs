@@ -134,7 +134,7 @@ public partial class FlowerShopContext : DbContext
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__User__3213E83FE2C7CD98");
+            entity.HasKey(e => e.Id).HasName("PK__User__3213E83F85BAABCA");
 
             entity.ToTable("User");
 
@@ -166,6 +166,7 @@ public partial class FlowerShopContext : DbContext
                 .HasMaxLength(20)
                 .IsUnicode(false)
                 .HasColumnName("role");
+            entity.Property(e => e.Status).HasColumnName("status");
             entity.Property(e => e.Username)
                 .HasMaxLength(255)
                 .IsUnicode(false)

@@ -14,6 +14,7 @@ CREATE TABLE [dbo].[User] (
     phone_number VARCHAR(20),
     gender VARCHAR(10),
     role VARCHAR(20),
+	status BIT
 );
 
 -- Order Table
@@ -48,18 +49,19 @@ CREATE TABLE [dbo].[Order_Detail] (
 );
 
 -- User Table
-INSERT INTO [dbo].[User] (id, username, password, fullname, email, phone_number, gender, role)
+INSERT INTO [dbo].[User] (id, username, password, fullname, email, phone_number, gender, role, status)
 VALUES
-('CS001', 'customer1', '123', 'John Doe', 'john.doe@example.com', '1234567890', 'Male', 'Customer'),
-('ST001', 'staff1', 'staffpass', 'Jane Smith', 'jane.smith@example.com', '9876543210', 'Female', 'Staff'),
-('AD001', 'admin1', 'adminpass', 'Admin User', 'admin@example.com', '5555555555', 'Non-Binary', 'Admin'),
-('CS002', 'customer2', 'securepass', 'Alice Johnson', 'alice.johnson@example.com', '1112233444', 'Female', 'Customer'),
-('ST002', 'staff2', 'pass123', 'Bob Miller', 'bob.miller@example.com', '9998887777', 'Male', 'Staff'),
-('CS003', 'customer3', 'passpass', 'Eva Brown', 'eva.brown@example.com', '7776665555', 'Female', 'Customer'),
-('ST003', 'staff3', 'staff123', 'Michael Lee', 'michael.lee@example.com', '3332221111', 'Male', 'Staff'),
-('CS004', 'customer4', 'customerpass', 'Sophie Wilson', 'sophie.wilson@example.com', '4445556666', 'Non-Binary', 'Customer'),
-('CS005', 'customer5', 'passpass', 'Chris Davis', 'chris.davis@example.com', '8889990000', 'Male', 'Customer'),
-('ST004', 'staff4', 'securestaff', 'Olivia Johnson', 'olivia.johnson@example.com', '1231231234', 'Female', 'Staff');
+('CS001', 'customer1', '123', 'John Doe', 'john.doe@example.com', '1234567890', 'Male', 'Customer', 1),
+('ST001', 'staff1', 'staffpass', 'Jane Smith', 'jane.smith@example.com', '9876543210', 'Female', 'Staff', 1),
+('AD001', 'admin1', 'adminpass', 'Admin User', 'admin@example.com', '5555555555', 'Male', 'Admin', 1),
+('CS002', 'customer2', 'securepass', 'Alice Johnson', 'alice.johnson@example.com', '1112233444', 'Female', 'Customer', 1),
+('ST002', 'staff2', 'pass123', 'Bob Miller', 'bob.miller@example.com', '9998887777', 'Male', 'Staff', 1),
+('CS003', 'customer3', 'passpass', 'Eva Brown', 'eva.brown@example.com', '7776665555', 'Female', 'Customer', 1),
+('ST003', 'staff3', 'staff123', 'Michael Lee', 'michael.lee@example.com', '3332221111', 'Male', 'Staff', 1),
+('CS004', 'customer4', 'customerpass', 'Sophie Wilson', 'sophie.wilson@example.com', '4445556666', 'Female', 'Customer', 1),
+('CS005', 'customer5', 'passpass', 'Chris Davis', 'chris.davis@example.com', '8889990000', 'Male', 'Customer', 1),
+('ST004', 'staff4', 'securestaff', 'Olivia Johnson', 'olivia.johnson@example.com', '1231231234', 'Female', 'Staff', 1);
+
 
 -- Flower Table
 INSERT INTO [dbo].[Flower] (id, name, season, unit_price, description, stock)
