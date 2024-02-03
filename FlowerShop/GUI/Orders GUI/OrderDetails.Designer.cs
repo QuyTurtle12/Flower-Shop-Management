@@ -58,7 +58,7 @@
             txtNumberOfItems.Name = "txtNumberOfItems";
             txtNumberOfItems.Size = new Size(38, 23);
             txtNumberOfItems.TabIndex = 1;
-            txtNumberOfItems.TextChanged += this.textBox1_TextChanged;
+            //txtNumberOfItems.TextChanged += this.textBox1_TextChanged;
             // 
             // txtOrderNumber
             // 

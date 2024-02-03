@@ -43,6 +43,7 @@
             textBox4 = new TextBox();
             textBox5 = new TextBox();
             rbtnApplePay = new RadioButton();
+            btnConfirm = new Button();
             SuspendLayout();
             // 
             // lbPaymentMethod
@@ -179,11 +180,21 @@
             rbtnApplePay.Text = "Apple Pay";
             rbtnApplePay.UseVisualStyleBackColor = true;
             // 
+            // btnConfirm
+            // 
+            btnConfirm.Location = new Point(468, 334);
+            btnConfirm.Name = "btnConfirm";
+            btnConfirm.Size = new Size(75, 23);
+            btnConfirm.TabIndex = 15;
+            btnConfirm.Text = "Confirm";
+            btnConfirm.UseVisualStyleBackColor = true;
+            // 
             // Payment
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnConfirm);
             Controls.Add(rbtnApplePay);
             Controls.Add(textBox5);
             Controls.Add(textBox4);
@@ -223,5 +234,6 @@
         private TextBox textBox4;
         private TextBox textBox5;
         private RadioButton rbtnApplePay;
+        private Button btnConfirm;
     }
 }
