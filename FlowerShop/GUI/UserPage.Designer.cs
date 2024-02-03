@@ -43,6 +43,7 @@
             lbEmail = new Label();
             txtEmail = new TextBox();
             btnUpdate = new Button();
+            btnMyOrders = new Button();
             SuspendLayout();
             // 
             // lbUserID
@@ -53,7 +54,6 @@
             lbUserID.Size = new Size(44, 15);
             lbUserID.TabIndex = 0;
             lbUserID.Text = "User ID";
-            lbUserID.Click += this.label1_Click;
             // 
             // lbRole
             // 
@@ -124,7 +124,7 @@
             // 
             // txtLastName
             // 
-            txtLastName.Location = new Point(324, 86);
+            txtLastName.Location = new Point(347, 86);
             txtLastName.Name = "txtLastName";
             txtLastName.Size = new Size(118, 23);
             txtLastName.TabIndex = 9;
@@ -169,13 +169,22 @@
             btnUpdate.TabIndex = 14;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = true;
-            btnUpdate.Click += this.button1_Click;
+            // 
+            // btnMyOrders
+            // 
+            btnMyOrders.Location = new Point(402, 12);
+            btnMyOrders.Name = "btnMyOrders";
+            btnMyOrders.Size = new Size(75, 23);
+            btnMyOrders.TabIndex = 15;
+            btnMyOrders.Text = "My orders";
+            btnMyOrders.UseVisualStyleBackColor = true;
             // 
             // frmUserPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(489, 327);
+            Controls.Add(btnMyOrders);
             Controls.Add(btnUpdate);
             Controls.Add(txtEmail);
             Controls.Add(lbEmail);
@@ -214,5 +223,6 @@
         private Label lbEmail;
         private TextBox txtEmail;
         private Button btnUpdate;
+        private Button btnMyOrders;
     }
 }
