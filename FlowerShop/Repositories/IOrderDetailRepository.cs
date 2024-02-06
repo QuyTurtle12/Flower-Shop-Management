@@ -9,10 +9,10 @@ namespace Repositories
 {
     public interface IOrderDetailRepository
     {
-        OrderDetail GetOrderDetailByOrderId(string OrderId);
+        OrderDetail GetOrderDetailByOrderId(int OrderId);
         void DeleteOrderDetail(OrderDetail orderDetail);
         void AddOrderDetail(OrderDetail orderDetail);
         void UpdateOrderDetail(OrderDetail orderDetail);
-        OrderDetail GetOrderDetailByFlowerId(string FlowerId);
+        OrderDetail GetOrderDetailByFlowerId(int FlowerId);
     }
 }

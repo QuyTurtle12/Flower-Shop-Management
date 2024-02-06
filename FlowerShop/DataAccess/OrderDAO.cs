@@ -28,9 +28,9 @@ namespace DataAccess
             }
         }
 
-        public static Dictionary<string, Order> GetOrderList()
+        public static Dictionary<int, Order> GetOrderList()
         {
-            Dictionary<string, Order> listOrder = new Dictionary<string, Order>();
+            Dictionary<int, Order> listOrder = new Dictionary<int, Order>();
             try
             {
                 using (var context = new FlowerShopContext())
@@ -46,7 +46,7 @@ namespace DataAccess
         }
 
         //Get Order by Order ID
-        public static Order GetOrderById(string id)
+        public static Order GetOrderById(int id)
         {
             Order order = null;
             try
@@ -63,7 +63,7 @@ namespace DataAccess
         }
 
         //Get Order by User ID
-        public static Order GetOrderByUserId(string id)
+        public static Order GetOrderByUserId(int id)
         {
             Order order = null;
             try

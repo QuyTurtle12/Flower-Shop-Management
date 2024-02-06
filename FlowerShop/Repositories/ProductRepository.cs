@@ -15,9 +15,9 @@ namespace Repositories
 
         public void DeleteProduct(Flower product) => ProductDAO.DeleteProduct(product);
 
-        public Dictionary<string, Flower> GetProductList() => ProductDAO.GetProductList();
+        public Dictionary<int, Flower> GetProductList() => ProductDAO.GetProductList();
 
-        public Flower GetProductById(string id) => ProductDAO.GetProductById(id);
+        public Flower GetProductById(int id) => ProductDAO.GetProductById(id);
 
         public void UpdateProduct(Flower product) => ProductDAO.UpdateProduct(product);
 

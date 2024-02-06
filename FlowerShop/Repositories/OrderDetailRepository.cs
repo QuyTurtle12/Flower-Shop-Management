@@ -10,9 +10,9 @@ namespace Repositories
 {
     public class OrderDetailRepository : IOrderDetailRepository
     {
-        public OrderDetail GetOrderDetailByOrderId(string OrderId) => OrderDetailDAO.GetOrderDetailByOrderId(OrderId);
+        public OrderDetail GetOrderDetailByOrderId(int OrderId) => OrderDetailDAO.GetOrderDetailByOrderId(OrderId);
 
-        public OrderDetail GetOrderDetailByFlowerId(string FlowerId) => OrderDetailDAO.GetOrderDetailByFlowerId(FlowerId);
+        public OrderDetail GetOrderDetailByFlowerId(int FlowerId) => OrderDetailDAO.GetOrderDetailByFlowerId(FlowerId);
 
         public void AddOrderDetail(OrderDetail orderDetail) => OrderDetailDAO.AddOrderDetail(orderDetail);
 

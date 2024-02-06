@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using BusinessObject.Models;
 
-namespace DataAccess;
+namespace BusinessObject.Models;
 
 public partial class FlowerShopContext : DbContext
 {
@@ -25,6 +24,7 @@ public partial class FlowerShopContext : DbContext
 
     public virtual DbSet<User> Users { get; set; }
 
+
     private string GetConnectionString()
     {
         IConfiguration configuration = new ConfigurationBuilder()
@@ -42,13 +42,12 @@ public partial class FlowerShopContext : DbContext
     {
         modelBuilder.Entity<Flower>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Flower__3213E83FCFE5D074");
+            entity.HasKey(e => e.Id).HasName("PK__Flower__3213E83F3911EA0A");
 
             entity.ToTable("Flower");
 
             entity.Property(e => e.Id)
-                .HasMaxLength(10)
-                .IsUnicode(false)
+                .ValueGeneratedNever()
                 .HasColumnName("id");
             entity.Property(e => e.Description)
                 .HasColumnType("text")
@@ -69,13 +68,12 @@ public partial class FlowerShopContext : DbContext
 
         modelBuilder.Entity<Order>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Order__3213E83F0440F061");
+            entity.HasKey(e => e.Id).HasName("PK__Order__3213E83F01268DF1");
 
             entity.ToTable("Order");
 
             entity.Property(e => e.Id)
-                .HasMaxLength(10)
-                .IsUnicode(false)
+                .ValueGeneratedNever()
                 .HasColumnName("id");
             entity.Property(e => e.OrderedDate).HasColumnName("ordered_date");
             entity.Property(e => e.PaymentMethod)
@@ -90,10 +88,7 @@ public partial class FlowerShopContext : DbContext
             entity.Property(e => e.TotalPrice)
                 .HasColumnType("decimal(10, 2)")
                 .HasColumnName("total_price");
-            entity.Property(e => e.UserId)
-                .HasMaxLength(10)
-                .IsUnicode(false)
-                .HasColumnName("user_id");
+            entity.Property(e => e.UserId).HasColumnName("user_id");
 
             entity.HasOne(d => d.User).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.UserId)
@@ -102,23 +97,14 @@ public partial class FlowerShopContext : DbContext
 
         modelBuilder.Entity<OrderDetail>(entity =>
         {
-            entity.HasKey(e => e.OrderDetailId).HasName("PK__Order_De__3C5A408059AE6CDA");
+            entity.HasKey(e => e.OrderDetailId).HasName("PK__Order_De__3C5A4080BBEF23D8");
 
             entity.ToTable("Order_Detail");
 
-            entity.Property(e => e.OrderDetailId)
-                .HasMaxLength(10)
-                .IsUnicode(false)
-                .HasColumnName("order_detail_id");
+            entity.Property(e => e.OrderDetailId).HasColumnName("order_detail_id");
             entity.Property(e => e.Amount).HasColumnName("amount");
-            entity.Property(e => e.FlowerId)
-                .HasMaxLength(10)
-                .IsUnicode(false)
-                .HasColumnName("flower_id");
-            entity.Property(e => e.OrderId)
-                .HasMaxLength(10)
-                .IsUnicode(false)
-                .HasColumnName("order_id");
+            entity.Property(e => e.FlowerId).HasColumnName("flower_id");
+            entity.Property(e => e.OrderId).HasColumnName("order_id");
             entity.Property(e => e.Price)
                 .HasColumnType("decimal(10, 2)")
                 .HasColumnName("price");
@@ -134,13 +120,12 @@ public partial class FlowerShopContext : DbContext
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__User__3213E83F85BAABCA");
+            entity.HasKey(e => e.Id).HasName("PK__User__3213E83FFDB3370F");
 
             entity.ToTable("User");
 
             entity.Property(e => e.Id)
-                .HasMaxLength(10)
-                .IsUnicode(false)
+                .ValueGeneratedNever()
                 .HasColumnName("id");
             entity.Property(e => e.Email)
                 .HasMaxLength(255)
@@ -151,7 +136,7 @@ public partial class FlowerShopContext : DbContext
                 .IsUnicode(false)
                 .HasColumnName("fullname");
             entity.Property(e => e.Gender)
-                .HasMaxLength(10)
+                .HasMaxLength(20)
                 .IsUnicode(false)
                 .HasColumnName("gender");
             entity.Property(e => e.Password)

@@ -12,7 +12,7 @@ namespace Repositories
         void AddUser(User user);
         void UpdateUser(User user);
         void DeleteUser(User user);
-        Dictionary<string, User> GetUserList();
-        User GetUserById(string id);
+        Dictionary<int, User> GetUserList();
+        User GetUserById(int id);
     }
 }

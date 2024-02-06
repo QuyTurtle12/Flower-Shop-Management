@@ -26,9 +26,9 @@ namespace DataAccess
                 }
             }
         }
-        public static Dictionary<string, User> GetUserList()
+        public static Dictionary<int, User> GetUserList()
         {
-            Dictionary<string, User > listUser = new Dictionary<string, User>();
+            Dictionary<int, User > listUser = new Dictionary<int, User>();
             try
             {
                 using (var context = new FlowerShopContext())
@@ -43,7 +43,7 @@ namespace DataAccess
             return listUser;
         }
 
-        public static User GetUserById(string id)
+        public static User GetUserById(int id)
         {
             User user = null;
             try
