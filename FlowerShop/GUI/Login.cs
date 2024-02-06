@@ -16,5 +16,15 @@ namespace GUI
         {
 
         }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+
+    public class LoginDbContext : DbContext
+    {
+
     }
 }

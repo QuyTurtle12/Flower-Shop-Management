@@ -4318,19 +4318,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ADMIN\\.nuget\\packages\\": {}
+    "C:\\Users\\Thunder\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj",
+      "projectUniqueName": "C:\\Users\\Thunder\\OneDrive - EPITA\\Vietnam Semester\\PRN211\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj",
       "projectName": "BusinessObject",
-      "projectPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj",
-      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\obj\\",
+      "projectPath": "C:\\Users\\Thunder\\OneDrive - EPITA\\Vietnam Semester\\PRN211\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj",
+      "packagesPath": "C:\\Users\\Thunder\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Thunder\\OneDrive - EPITA\\Vietnam Semester\\PRN211\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Thunder\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4390,5 +4395,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Thunder\\OneDrive - EPITA\\Vietnam Semester\\PRN211\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'success', line 5, position 0."
+    }
+  ]
 }
