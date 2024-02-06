@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Thunder\\OneDrive - EPITA\\Vietnam Semester\\PRN211\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj": {}
+    "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Thunder\\OneDrive - EPITA\\Vietnam Semester\\PRN211\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj": {
+    "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Thunder\\OneDrive - EPITA\\Vietnam Semester\\PRN211\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "C:\\Users\\Thunder\\OneDrive - EPITA\\Vietnam Semester\\PRN211\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj",
-        "packagesPath": "C:\\Users\\Thunder\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Thunder\\OneDrive - EPITA\\Vietnam Semester\\PRN211\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\obj\\",
+        "projectPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Thunder\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,6 +39,22 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

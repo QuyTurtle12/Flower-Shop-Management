@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnectionString": "Server=(local);uid=sa;pwd=123;database=FlowerShop;Trusted_Connection=true;TrustServerCertificate=true;"
+  }
+}

@@ -1,0 +1,16 @@
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\DataAccess\bin\Debug\net8.0\DataAccess.deps.json
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\DataAccess\bin\Debug\net8.0\DataAccess.dll
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\DataAccess\bin\Debug\net8.0\DataAccess.pdb
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\DataAccess\bin\Debug\net8.0\BusinessObject.dll
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\DataAccess\bin\Debug\net8.0\BusinessObject.pdb
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\DataAccess\obj\Debug\net8.0\DataAccess.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\DataAccess\obj\Debug\net8.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfo.cs
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\DataAccess\obj\Debug\net8.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\DataAccess\obj\Debug\net8.0\DataAccess.sourcelink.json
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\DataAccess\obj\Debug\net8.0\DataAccess.csproj.CopyComplete
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\DataAccess\obj\Debug\net8.0\DataAccess.dll
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\DataAccess\obj\Debug\net8.0\refint\DataAccess.dll
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\DataAccess\obj\Debug\net8.0\DataAccess.pdb
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\DataAccess\obj\Debug\net8.0\ref\DataAccess.dll
