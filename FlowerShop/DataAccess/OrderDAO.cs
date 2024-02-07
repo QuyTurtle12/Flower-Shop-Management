@@ -28,7 +28,7 @@ namespace DataAccess
             }
         }
 
-        public static Dictionary<int, Order> GetOrderList()
+        public Dictionary<int, Order> GetOrderList()
         {
             Dictionary<int, Order> listOrder = new Dictionary<int, Order>();
             try
@@ -46,7 +46,7 @@ namespace DataAccess
         }
 
         //Get Order by Order ID
-        public static Order GetOrderById(int id)
+        public Order GetOrderById(int id)
         {
             Order order = null;
             try
@@ -63,7 +63,7 @@ namespace DataAccess
         }
 
         //Get Order by User ID
-        public static Order GetOrderByUserId(int id)
+        public Order GetOrderByUserId(int id)
         {
             Order order = null;
             try
@@ -78,10 +78,10 @@ namespace DataAccess
             }
             return order;
         }
-        public static void AddOrder(Order order) {
+        public void AddOrder(Order order) {
             //Create an order when a user buy products from cart
         }
-        public static void UpdateOrder(Order order) {
+        public void UpdateOrder(Order order) {
             //Update Order Status
         }
     }

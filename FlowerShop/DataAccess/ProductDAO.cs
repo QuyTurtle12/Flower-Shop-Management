@@ -27,7 +27,7 @@ namespace DataAccess
             }
         }
 
-        public static Dictionary<int,Flower> GetProductList()
+        public Dictionary<int,Flower> GetProductList()
         {
             Dictionary<int, Flower> listProduct = new Dictionary<int, Flower>();
             try
@@ -44,7 +44,7 @@ namespace DataAccess
             return listProduct;
         }
 
-        public static Flower GetProductById(int Id) {
+        public Flower GetProductById(int Id) {
             Flower product = null;
             try
             {
@@ -58,13 +58,13 @@ namespace DataAccess
             return product;
         }
 
-        public static void AddProduct(Flower product) {
+        public void AddProduct(Flower product) {
             // Logic to insert product in the database
         }
-        public static void DeleteProduct(Flower product) {
+        public void DeleteProduct(Flower product) {
             // Logic to delete product in the database
         }
-        public static void UpdateProduct(Flower product) {
+        public void UpdateProduct(Flower product) {
             // Logic to update the existing product in the database
         }
     }

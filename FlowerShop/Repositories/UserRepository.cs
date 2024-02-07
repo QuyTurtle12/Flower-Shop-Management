@@ -10,14 +10,14 @@ namespace Repositories
 {
     public class UserRepository : IUserRepository
     {
-        public void AddUser(User user) => UserDAO.AddUser(user);
+        public void AddUser(User user) => UserDAO.Instance.AddUser(user);
 
-        public void DeleteUser(User user) => UserDAO.DeleteUser(user);
+        public void DeleteUser(User user) => UserDAO.Instance.DeleteUser(user);
 
-        public User GetUserById(int id) => UserDAO.GetUserById(id);
+        public User GetUserById(int id) => UserDAO.Instance.GetUserById(id);
 
-        public Dictionary<int, User> GetUserList() => UserDAO.GetUserList();
+        public Dictionary<int, User> GetUserList() => UserDAO.Instance.GetUserList();
 
-        public void UpdateUser(User user) => UserDAO.UpdateUser(user);
+        public void UpdateUser(User user) => UserDAO.Instance.UpdateUser(user);
     }
 }

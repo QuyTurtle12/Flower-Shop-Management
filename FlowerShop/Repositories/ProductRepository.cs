@@ -11,15 +11,15 @@ namespace Repositories
 {
     public class ProductRepository : IProductRepository
     {
-        public void AddProduct(Flower product) => ProductDAO.AddProduct(product);
+        public void AddProduct(Flower product) => ProductDAO.Instance.AddProduct(product);
 
-        public void DeleteProduct(Flower product) => ProductDAO.DeleteProduct(product);
+        public void DeleteProduct(Flower product) => ProductDAO.Instance.DeleteProduct(product);
 
-        public Dictionary<int, Flower> GetProductList() => ProductDAO.GetProductList();
+        public Dictionary<int, Flower> GetProductList() => ProductDAO.Instance.GetProductList();
 
-        public Flower GetProductById(int id) => ProductDAO.GetProductById(id);
+        public Flower GetProductById(int id) => ProductDAO.Instance.GetProductById(id);
 
-        public void UpdateProduct(Flower product) => ProductDAO.UpdateProduct(product);
+        public void UpdateProduct(Flower product) => ProductDAO.Instance.UpdateProduct(product);
 
     }
 }

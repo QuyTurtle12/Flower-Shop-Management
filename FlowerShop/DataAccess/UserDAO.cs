@@ -26,7 +26,7 @@ namespace DataAccess
                 }
             }
         }
-        public static Dictionary<int, User> GetUserList()
+        public Dictionary<int, User> GetUserList()
         {
             Dictionary<int, User > listUser = new Dictionary<int, User>();
             try
@@ -43,7 +43,7 @@ namespace DataAccess
             return listUser;
         }
 
-        public static User GetUserById(int id)
+        public User GetUserById(int id)
         {
             User user = null;
             try
@@ -58,8 +58,8 @@ namespace DataAccess
             return user;
         }
 
-        public static void AddUser(User user) { }
-        public static void DeleteUser(User user) { }
-        public static void UpdateUser(User user) { }
+        public void AddUser(User user) { }
+        public void DeleteUser(User user) { }
+        public void UpdateUser(User user) { }
     }
 }

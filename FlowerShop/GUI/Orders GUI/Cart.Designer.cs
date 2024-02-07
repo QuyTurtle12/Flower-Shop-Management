@@ -29,107 +29,136 @@
         private void InitializeComponent()
         {
             txtCart = new Label();
-            dataGridView1 = new DataGridView();
-            btnPurchase = new Button();
-            btnRemove = new Button();
-            lbPrice = new Label();
+            dgvCart = new DataGridView();
+            txtFlowerId = new DataGridViewTextBoxColumn();
             txtFlowerName = new DataGridViewLinkColumn();
             txtPrice = new DataGridViewTextBoxColumn();
             amount = new DataGridViewComboBoxColumn();
+            btnPurchase = new Button();
+            btnRemove = new Button();
+            lbPrice = new Label();
             txtShopName = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCart).BeginInit();
             SuspendLayout();
             // 
             // txtCart
             // 
             txtCart.AutoSize = true;
             txtCart.Font = new Font("Segoe UI", 13F);
-            txtCart.Location = new Point(51, 91);
+            txtCart.Location = new Point(73, 152);
+            txtCart.Margin = new Padding(4, 0, 4, 0);
             txtCart.Name = "txtCart";
-            txtCart.Size = new Size(44, 25);
+            txtCart.Size = new Size(62, 36);
             txtCart.TabIndex = 0;
             txtCart.Text = "Cart";
             // 
-            // dataGridView1
+            // dgvCart
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { txtFlowerName, txtPrice, amount });
-            dataGridView1.Location = new Point(51, 158);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(343, 150);
-            dataGridView1.TabIndex = 1;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dgvCart.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCart.Columns.AddRange(new DataGridViewColumn[] { txtFlowerId, txtFlowerName, txtPrice, amount });
+            dgvCart.Location = new Point(73, 263);
+            dgvCart.Margin = new Padding(4, 5, 4, 5);
+            dgvCart.Name = "dgvCart";
+            dgvCart.RowHeadersWidth = 62;
+            dgvCart.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvCart.Size = new Size(490, 250);
+            dgvCart.TabIndex = 1;
+            dgvCart.CellContentClick += dataGridView1_CellContentClick;
+            dgvCart.DataBindingComplete += dataGridView1_DataBindingComplete;
+            // 
+            // txtFlowerId
+            // 
+            txtFlowerId.HeaderText = "Flower ID";
+            txtFlowerId.MinimumWidth = 8;
+            txtFlowerId.Name = "txtFlowerId";
+            txtFlowerId.ReadOnly = true;
+            txtFlowerId.Width = 150;
+            // 
+            // txtFlowerName
+            // 
+            txtFlowerName.HeaderText = "Flower Name";
+            txtFlowerName.MinimumWidth = 8;
+            txtFlowerName.Name = "txtFlowerName";
+            txtFlowerName.ReadOnly = true;
+            txtFlowerName.Resizable = DataGridViewTriState.True;
+            txtFlowerName.SortMode = DataGridViewColumnSortMode.Automatic;
+            txtFlowerName.Width = 150;
+            // 
+            // txtPrice
+            // 
+            txtPrice.HeaderText = "Price";
+            txtPrice.MinimumWidth = 8;
+            txtPrice.Name = "txtPrice";
+            txtPrice.ReadOnly = true;
+            txtPrice.Width = 150;
+            // 
+            // amount
+            // 
+            amount.HeaderText = "Amount";
+            amount.MinimumWidth = 8;
+            amount.Name = "amount";
+            amount.Resizable = DataGridViewTriState.True;
+            amount.Width = 150;
             // 
             // btnPurchase
             // 
-            btnPurchase.Location = new Point(614, 376);
+            btnPurchase.Location = new Point(877, 627);
+            btnPurchase.Margin = new Padding(4, 5, 4, 5);
             btnPurchase.Name = "btnPurchase";
-            btnPurchase.Size = new Size(75, 23);
+            btnPurchase.Size = new Size(107, 38);
             btnPurchase.TabIndex = 2;
             btnPurchase.Text = "Purchase";
             btnPurchase.UseVisualStyleBackColor = true;
             // 
             // btnRemove
             // 
-            btnRemove.Location = new Point(412, 158);
+            btnRemove.Location = new Point(589, 263);
+            btnRemove.Margin = new Padding(4, 5, 4, 5);
             btnRemove.Name = "btnRemove";
-            btnRemove.Size = new Size(75, 23);
+            btnRemove.Size = new Size(107, 38);
             btnRemove.TabIndex = 3;
             btnRemove.Text = "Remove";
             btnRemove.UseVisualStyleBackColor = true;
+            btnRemove.Click += btnRemove_Click;
             // 
             // lbPrice
             // 
             lbPrice.AutoSize = true;
             lbPrice.Font = new Font("Segoe UI", 13F);
-            lbPrice.Location = new Point(614, 318);
+            lbPrice.Location = new Point(877, 530);
+            lbPrice.Margin = new Padding(4, 0, 4, 0);
             lbPrice.Name = "lbPrice";
-            lbPrice.Size = new Size(61, 25);
+            lbPrice.Size = new Size(84, 36);
             lbPrice.TabIndex = 4;
             lbPrice.Text = "0.00 $";
-            // 
-            // txtFlowerName
-            // 
-            txtFlowerName.HeaderText = "Flower Name";
-            txtFlowerName.Name = "txtFlowerName";
-            txtFlowerName.Resizable = DataGridViewTriState.True;
-            txtFlowerName.SortMode = DataGridViewColumnSortMode.Automatic;
-            // 
-            // txtPrice
-            // 
-            txtPrice.HeaderText = "Price";
-            txtPrice.Name = "txtPrice";
-            // 
-            // amount
-            // 
-            amount.HeaderText = "Amount";
-            amount.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" });
-            amount.Name = "amount";
             // 
             // txtShopName
             // 
             txtShopName.AutoSize = true;
             txtShopName.Font = new Font("Segoe UI", 13F);
-            txtShopName.Location = new Point(51, 38);
+            txtShopName.Location = new Point(73, 63);
+            txtShopName.Margin = new Padding(4, 0, 4, 0);
             txtShopName.Name = "txtShopName";
-            txtShopName.Size = new Size(106, 25);
+            txtShopName.Size = new Size(149, 36);
             txtShopName.TabIndex = 5;
             txtShopName.Text = "Shop Name";
             // 
             // Cart
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1143, 750);
             Controls.Add(txtShopName);
             Controls.Add(lbPrice);
             Controls.Add(btnRemove);
             Controls.Add(btnPurchase);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvCart);
             Controls.Add(txtCart);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Cart";
             Text = "Cart";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += Cart_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvCart).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -137,13 +166,14 @@
         #endregion
 
         private Label txtCart;
-        private DataGridView dataGridView1;
+        private DataGridView dgvCart;
         private Button btnPurchase;
         private Button btnRemove;
+        private Label lbPrice;
+        private Label txtShopName;
+        private DataGridViewTextBoxColumn txtFlowerId;
         private DataGridViewLinkColumn txtFlowerName;
         private DataGridViewTextBoxColumn txtPrice;
         private DataGridViewComboBoxColumn amount;
-        private Label lbPrice;
-        private Label txtShopName;
     }
 }

@@ -28,7 +28,7 @@ namespace DataAccess
         }
 
         //View Order detail by Order ID
-        public static OrderDetail GetOrderDetailByOrderId(int OrderId)
+        public OrderDetail GetOrderDetailByOrderId(int OrderId)
         {
             OrderDetail orderDetail = null;
             try
@@ -45,7 +45,7 @@ namespace DataAccess
 
         //View Order detail by Flower ID
         //Useful for Flower Dashboard
-        public static OrderDetail GetOrderDetailByFlowerId(int FlowerId)
+        public OrderDetail GetOrderDetailByFlowerId(int FlowerId)
         {
             OrderDetail orderDetail = null;
             try
@@ -60,8 +60,8 @@ namespace DataAccess
             return orderDetail;
         }
 
-        public static void AddOrderDetail(OrderDetail orderDetail) { }
-        public static void DeleteOrderDetail(OrderDetail orderDetail) { }
-        public static void UpdateOrderDetail(OrderDetail orderDetail) { }
+        public void AddOrderDetail(OrderDetail orderDetail) { }
+        public void DeleteOrderDetail(OrderDetail orderDetail) { }
+        public void UpdateOrderDetail(OrderDetail orderDetail) { }
     }
 }

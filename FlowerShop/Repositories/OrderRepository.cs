@@ -10,14 +10,14 @@ namespace Repositories
 {
     internal class OrderRepository : IOrderRepository
     {
-        public void AddOrder(Order order) => OrderDAO.AddOrder(order);
+        public void AddOrder(Order order) => OrderDAO.Instance.AddOrder(order);
 
-        public Order GetOrderByID(int id) => OrderDAO.GetOrderById(id);
+        public Order GetOrderByID(int id) => OrderDAO.Instance.GetOrderById(id);
 
-        public Order GetOrderByUserId(int id) => OrderDAO.GetOrderByUserId(id);
+        public Order GetOrderByUserId(int id) => OrderDAO.Instance.GetOrderByUserId(id);
 
-        public Dictionary<int, Order> GetOrderList(Order order) => OrderDAO.GetOrderList();
+        public Dictionary<int, Order> GetOrderList(Order order) => OrderDAO.Instance.GetOrderList();
 
-        public void UpdateOrder(Order order) => OrderDAO.UpdateOrder(order);
+        public void UpdateOrder(Order order) => OrderDAO.Instance.UpdateOrder(order);
     }
 }
