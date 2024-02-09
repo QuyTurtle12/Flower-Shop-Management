@@ -10,10 +10,4 @@
     <ProjectReference Include="..\BusinessObject1\BusinessObject.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Update="FlowerShopContext.cs">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
-  </ItemGroup>
-
 </Project>

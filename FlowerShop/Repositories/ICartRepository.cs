@@ -12,5 +12,7 @@ namespace Repositories
         void AddCartItem(CartItem product);
         bool RemoveCartItem(CartItem productId);
         List<CartItem> GetCartItems();
+        bool checkCart(List<CartItem> cart);
+        bool checkCartItem(CartItem item);
     }
 }

@@ -1,5 +1,6 @@
 ﻿using BusinessObject.Models;
 using BusinessObject.Shopping;
+using GUI.Orders_GUI;
 using Repositories;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,8 @@ namespace GUI
     public partial class Cart : Form
     {
         private List<CartItem> cartItems;
+        public User currentUser;
+        private decimal totalPrice;
         public Cart()
         {
             InitializeComponent();
@@ -25,6 +28,13 @@ namespace GUI
         {
             InitializeComponent();
             cartItems = items;
+        }
+
+        public Cart(List<CartItem> items, User user)
+        {
+            InitializeComponent();
+            cartItems = items;
+            currentUser = user;
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -40,27 +50,22 @@ namespace GUI
                 int rowIndex = dgvCart.Rows.Add();
                 dgvCart.Rows[rowIndex].Cells["txtFlowerId"].Value = item.ProductId;
                 dgvCart.Rows[rowIndex].Cells["txtFlowerName"].Value = item.ProductName;
-                dgvCart.Rows[rowIndex].Cells["txtPrice"].Value = item.Price;
+                dgvCart.Rows[rowIndex].Cells["txtPrice"].Value = item.Price * Convert.ToDecimal(item.Amount);
 
+                if (item.ProductId != null)
+                {
+                    // Add ComboBox value only for rows with non-null product ID
+                    DataGridViewComboBoxCell amountCell = (DataGridViewComboBoxCell)dgvCart.Rows[rowIndex].Cells["amount"];
+                    amountCell.Items.Clear();
+                    amountCell.Items.AddRange(Enumerable.Range(1, 100).Select(i => i.ToString()).ToArray());
+                    amountCell.Value = item.Amount.ToString();
+                }
             }
-
-            DataGridViewColumn column = dgvCart.Columns["amount"];
-            DataGridViewComboBoxColumn amountColumn = (DataGridViewComboBoxColumn)column;
-            amountColumn.Items.Clear();
-            amountColumn.Items.AddRange(Enumerable.Range(1, 100).Select(i => i.ToString()).ToArray());
+            TotalPriceCal();
         }
 
         private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            // Set the default value for the "amount" column
-            foreach (DataGridViewRow row in dgvCart.Rows)
-            {
-                DataGridViewComboBoxCell comboBoxCell = row.Cells["amount"] as DataGridViewComboBoxCell;
-                if (comboBoxCell != null)
-                {
-                    comboBoxCell.Value = comboBoxCell.Items[0]; // Set default value to the first item in the ComboBox
-                }
-            }
         }
 
         private Flower GetSelectedFlower()
@@ -101,7 +106,8 @@ namespace GUI
                     {
                         ReloadCartItem(); //Reload the cart after remove item
                         MessageBox.Show("Product removed successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    } else
+                    }
+                    else
                     {
                         MessageBox.Show("Product not found in the cart.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -129,14 +135,96 @@ namespace GUI
                 int rowIndex = dgvCart.Rows.Add();
                 dgvCart.Rows[rowIndex].Cells["txtFlowerId"].Value = item.ProductId;
                 dgvCart.Rows[rowIndex].Cells["txtFlowerName"].Value = item.ProductName;
-                dgvCart.Rows[rowIndex].Cells["txtPrice"].Value = item.Price;
+                dgvCart.Rows[rowIndex].Cells["txtPrice"].Value = item.Price * Convert.ToDecimal(item.Amount);
 
+                if (item.ProductId != null)
+                {
+                    // Add ComboBox value only for rows with non-null product ID
+                    DataGridViewComboBoxCell amountCell = (DataGridViewComboBoxCell)dgvCart.Rows[rowIndex].Cells["amount"];
+                    amountCell.Items.Clear();
+                    amountCell.Items.AddRange(Enumerable.Range(1, 100).Select(i => i.ToString()).ToArray());
+                    amountCell.Value = item.Amount.ToString();
+                }
             }
+            TotalPriceCal();
+        }
 
-            DataGridViewColumn column = dgvCart.Columns["amount"];
-            DataGridViewComboBoxColumn amountColumn = (DataGridViewComboBoxColumn)column;
-            amountColumn.Items.Clear();
-            amountColumn.Items.AddRange(Enumerable.Range(1, 100).Select(i => i.ToString()).ToArray());
+        private void dgvCart_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (DataGridViewRow row in dgvCart.Rows)
+                {
+                    // Check if the row is not null and is not a new row
+                    if (!row.IsNewRow && row.Cells["amount"] != null)
+                    {
+                        DataGridViewComboBoxCell amountCell = row.Cells["amount"] as DataGridViewComboBoxCell;
+                        if (amountCell != null && amountCell.Value != null)
+                        {
+                            int amount = Convert.ToInt32(amountCell.Value);
+
+                            // Update the corresponding CartItem in the cartItems list
+                            int productId = Convert.ToInt32(row.Cells["txtFlowerId"].Value);
+                            CartItem product = cartItems.FirstOrDefault(item => item.ProductId == productId);
+                            if (product != null)
+                            {
+                                product.Amount = amount;
+                            }
+                        }
+                    }
+                }
+                ReloadCartItem();
+                MessageBox.Show("Cart items updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error updating cart items: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void TotalPriceCal()
+        {
+            try
+            {
+                decimal totalPrice = 0;
+                foreach (DataGridViewRow row in dgvCart.Rows)
+                {
+                    if (!row.IsNewRow && row.Cells["txtPrice"] != null)
+                    {
+                        DataGridViewTextBoxCell priceCell = row.Cells["txtPrice"] as DataGridViewTextBoxCell;
+                        if (priceCell != null && priceCell.Value != null)
+                        {
+                            decimal price = Convert.ToDecimal(priceCell.Value);
+                            totalPrice += price;
+                        }
+                    }
+                }
+                this.totalPrice = totalPrice;
+                lbPrice.Text = totalPrice.ToString() + "$";
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        private void btnPurchase_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CartRepository cartRepository = new CartRepository();
+                Payment paymentForm = new Payment(cartRepository.GetCartItems(), currentUser, totalPrice);
+                paymentForm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error opening payment form: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

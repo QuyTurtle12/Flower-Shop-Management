@@ -45,6 +45,28 @@ namespace DataAccess
             return listOrder;
         }
 
+        //Get order list base on user id
+        public Dictionary<int, Order> GetOrderListByUserID(int id)
+        {
+            Dictionary<int, Order> listOrder = new Dictionary<int, Order>();
+            try
+            {
+                using (var context = new FlowerShopContext())
+                {
+                    // Query orders associated with the specified user ID
+                    var orders = context.Orders.Where(order => order.UserId == id).ToList();
+
+
+                    listOrder = orders.ToDictionary(order => order.Id);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return listOrder;
+        }
+
         //Get Order by Order ID
         public Order GetOrderById(int id)
         {
@@ -78,11 +100,56 @@ namespace DataAccess
             }
             return order;
         }
-        public void AddOrder(Order order) {
-            //Create an order when a user buy products from cart
+
+        private int orderIdGeneration()
+        {
+            using (var context = new FlowerShopContext())
+            {
+                Random rnd = new Random();
+                int orderId;
+                do
+                {
+                    orderId = rnd.Next(1, 1000); // Generate a random integer between 1 and 999
+                } while (context.Orders.Any(o => o.Id == orderId)); // Check if the orderId already exists
+                return orderId;
+            }
         }
-        public void UpdateOrder(Order order) {
+
+        public void AddOrder(int userId, DateOnly orderedDate, decimal totalPrice, string paymentMethod, string phoneNum, string address)
+        {
+            //Create an order when a user buy products from cart
+            int orderId = orderIdGeneration();
+            try
+            {
+                using (var context = new FlowerShopContext())
+                {
+                    Order order = new Order
+                    {
+                        Id = orderId,
+                        UserId = userId,
+                        OrderedDate = orderedDate,
+                        TotalPrice = totalPrice,
+                        PaymentMethod = paymentMethod,
+                        Phone = phoneNum,
+                        Address = address,
+                        Status = "Unprocessed"
+                    };
+                    context.Orders.Add(order);
+                    context.SaveChanges();
+                }
+                OrderDetailDAO.Instance.GetOrderIdFromOrderDAO(orderId);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error adding order: " + ex.Message);
+            }
+        }
+
+        public void UpdateOrder(Order order)
+        {
             //Update Order Status
         }
     }
 }
+
+

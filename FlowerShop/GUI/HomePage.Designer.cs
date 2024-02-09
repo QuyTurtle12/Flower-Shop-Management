@@ -34,13 +34,14 @@
             button2 = new Button();
             comboBox1 = new ComboBox();
             dataGridView1 = new DataGridView();
+            flower_name = new DataGridViewTextBoxColumn();
+            unit_price = new DataGridViewTextBoxColumn();
+            Image = new DataGridViewImageColumn();
             lbFilters = new Label();
             btnCart = new Button();
             btnAdd = new Button();
             lbAnnouncement = new Label();
-            flower_name = new DataGridViewTextBoxColumn();
-            unit_price = new DataGridViewTextBoxColumn();
-            Image = new DataGridViewImageColumn();
+            btnViewOrder = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -107,6 +108,30 @@
             dataGridView1.TabIndex = 8;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
+            // flower_name
+            // 
+            flower_name.HeaderText = "Flower Name";
+            flower_name.MinimumWidth = 8;
+            flower_name.Name = "flower_name";
+            flower_name.ReadOnly = true;
+            flower_name.Width = 150;
+            // 
+            // unit_price
+            // 
+            unit_price.HeaderText = "Unit Price";
+            unit_price.MinimumWidth = 8;
+            unit_price.Name = "unit_price";
+            unit_price.ReadOnly = true;
+            unit_price.Width = 150;
+            // 
+            // Image
+            // 
+            Image.HeaderText = "Image";
+            Image.MinimumWidth = 8;
+            Image.Name = "Image";
+            Image.ReadOnly = true;
+            Image.Width = 150;
+            // 
             // lbFilters
             // 
             lbFilters.AutoSize = true;
@@ -148,35 +173,22 @@
             lbAnnouncement.TabIndex = 11;
             lbAnnouncement.Tag = "Announcer";
             // 
-            // flower_name
+            // btnViewOrder
             // 
-            flower_name.HeaderText = "Flower Name";
-            flower_name.MinimumWidth = 8;
-            flower_name.Name = "flower_name";
-            flower_name.ReadOnly = true;
-            flower_name.Width = 150;
-            // 
-            // unit_price
-            // 
-            unit_price.HeaderText = "Unit Price";
-            unit_price.MinimumWidth = 8;
-            unit_price.Name = "unit_price";
-            unit_price.ReadOnly = true;
-            unit_price.Width = 150;
-            // 
-            // Image
-            // 
-            Image.HeaderText = "Image";
-            Image.MinimumWidth = 8;
-            Image.Name = "Image";
-            Image.ReadOnly = true;
-            Image.Width = 150;
+            btnViewOrder.Location = new Point(870, 156);
+            btnViewOrder.Name = "btnViewOrder";
+            btnViewOrder.Size = new Size(128, 38);
+            btnViewOrder.TabIndex = 12;
+            btnViewOrder.Text = "ViewOrder";
+            btnViewOrder.UseVisualStyleBackColor = true;
+            btnViewOrder.Click += btnViewOrder_Click;
             // 
             // HomePage
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1017, 632);
+            Controls.Add(btnViewOrder);
             Controls.Add(lbAnnouncement);
             Controls.Add(btnAdd);
             Controls.Add(btnCart);
@@ -211,5 +223,6 @@
         private DataGridViewTextBoxColumn flower_name;
         private DataGridViewTextBoxColumn unit_price;
         private DataGridViewImageColumn Image;
+        private Button btnViewOrder;
     }
 }

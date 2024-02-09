@@ -35,7 +35,7 @@ public partial class FlowerShopContext : DbContext
     {
         modelBuilder.Entity<Flower>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Flower__3213E83F3911EA0A");
+            entity.HasKey(e => e.Id).HasName("PK__Flower__3213E83FE2397D2F");
 
             entity.ToTable("Flower");
 
@@ -61,18 +61,26 @@ public partial class FlowerShopContext : DbContext
 
         modelBuilder.Entity<Order>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Order__3213E83F01268DF1");
+            entity.HasKey(e => e.Id).HasName("PK__Order__3213E83F0E765734");
 
             entity.ToTable("Order");
 
             entity.Property(e => e.Id)
                 .ValueGeneratedNever()
                 .HasColumnName("id");
+            entity.Property(e => e.Address)
+                .HasMaxLength(100)
+                .IsUnicode(false)
+                .HasColumnName("address");
             entity.Property(e => e.OrderedDate).HasColumnName("ordered_date");
             entity.Property(e => e.PaymentMethod)
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("payment_method");
+            entity.Property(e => e.Phone)
+                .HasMaxLength(18)
+                .IsUnicode(false)
+                .HasColumnName("phone");
             entity.Property(e => e.ShippedDate).HasColumnName("shipped_date");
             entity.Property(e => e.Status)
                 .HasMaxLength(20)
@@ -90,7 +98,7 @@ public partial class FlowerShopContext : DbContext
 
         modelBuilder.Entity<OrderDetail>(entity =>
         {
-            entity.HasKey(e => e.OrderDetailId).HasName("PK__Order_De__3C5A4080BBEF23D8");
+            entity.HasKey(e => e.OrderDetailId).HasName("PK__Order_De__3C5A4080FDA0CE41");
 
             entity.ToTable("Order_Detail");
 
@@ -113,7 +121,7 @@ public partial class FlowerShopContext : DbContext
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__User__3213E83FFDB3370F");
+            entity.HasKey(e => e.Id).HasName("PK__User__3213E83F0E11F47C");
 
             entity.ToTable("User");
 

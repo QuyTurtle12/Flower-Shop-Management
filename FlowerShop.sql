@@ -25,6 +25,8 @@ CREATE TABLE [dbo].[Order] (
     shipped_date DATE,
     total_price DECIMAL(10, 2),
     payment_method VARCHAR(50),
+	phone VARCHAR(18),
+	address VARCHAR(100),
     status VARCHAR(20)
 );
 
@@ -57,10 +59,10 @@ VALUES
 
 
 -- Sample data for Order Table
-INSERT INTO [dbo].[Order] (id, user_id, ordered_date, shipped_date, total_price, payment_method, status)
+INSERT INTO [dbo].[Order] (id, user_id, ordered_date, shipped_date, total_price, payment_method, phone, address, status)
 VALUES
-    (101, 1, '2024-02-06', '2024-02-08', 150.00, 'COD', 'Shipped'),
-    (102, 2, '2024-02-07', NULL, 200.50, 'COD', 'Processing');
+    (101, 1, '2024-02-06', '2024-02-08', 150.00, 'COD', '1234567890', 'Nguyen Thai Hoc, District 1, Viet Nam', 'Shipped'),
+    (102, 2, '2024-02-07', NULL, 200.50, 'COD', '9876543210', 'Nguyen Thai Hoc, District 1, Viet Nam', 'Processing');
 
 -- Sample data for Flower Table
 INSERT INTO [dbo].[Flower] (id, name, season, unit_price, description, stock)

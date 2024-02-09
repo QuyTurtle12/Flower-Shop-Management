@@ -14,5 +14,6 @@ namespace Repositories
         void DeleteUser(User user);
         Dictionary<int, User> GetUserList();
         User GetUserById(int id);
+        User Login(string username, string password);
     }
 }

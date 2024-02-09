@@ -15,6 +15,16 @@ namespace Repositories
             CartManagement.Instance.AddCartItem(product);
         }
 
+        public bool checkCart(List<CartItem> cart)
+        {
+            return CartManagement.Instance.checkCart(cart);
+        }
+
+        public bool checkCartItem(CartItem item)
+        {
+            return CartManagement.Instance.checkCartItem(item);
+        }
+
         public List<CartItem> GetCartItems()
         {
             return CartManagement.Instance.GetCartItems();
@@ -24,5 +34,7 @@ namespace Repositories
         {
             return CartManagement.Instance.RemoveCartItem(product);
         }
+
+
     }
 }

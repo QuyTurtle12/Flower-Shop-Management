@@ -38,6 +38,7 @@
             btnRemove = new Button();
             lbPrice = new Label();
             txtShopName = new Label();
+            btnUpdate = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvCart).BeginInit();
             SuspendLayout();
             // 
@@ -56,7 +57,7 @@
             // 
             dgvCart.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvCart.Columns.AddRange(new DataGridViewColumn[] { txtFlowerId, txtFlowerName, txtPrice, amount });
-            dgvCart.Location = new Point(73, 263);
+            dgvCart.Location = new Point(72, 264);
             dgvCart.Margin = new Padding(4, 5, 4, 5);
             dgvCart.Name = "dgvCart";
             dgvCart.RowHeadersWidth = 62;
@@ -64,6 +65,7 @@
             dgvCart.Size = new Size(490, 250);
             dgvCart.TabIndex = 1;
             dgvCart.CellContentClick += dataGridView1_CellContentClick;
+            dgvCart.CellValueChanged += dgvCart_CellValueChanged;
             dgvCart.DataBindingComplete += dataGridView1_DataBindingComplete;
             // 
             // txtFlowerId
@@ -72,6 +74,7 @@
             txtFlowerId.MinimumWidth = 8;
             txtFlowerId.Name = "txtFlowerId";
             txtFlowerId.ReadOnly = true;
+            txtFlowerId.Visible = false;
             txtFlowerId.Width = 150;
             // 
             // txtFlowerName
@@ -109,6 +112,7 @@
             btnPurchase.TabIndex = 2;
             btnPurchase.Text = "Purchase";
             btnPurchase.UseVisualStyleBackColor = true;
+            btnPurchase.Click += btnPurchase_Click;
             // 
             // btnRemove
             // 
@@ -143,11 +147,22 @@
             txtShopName.TabIndex = 5;
             txtShopName.Text = "Shop Name";
             // 
+            // btnUpdate
+            // 
+            btnUpdate.Location = new Point(589, 332);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(107, 38);
+            btnUpdate.TabIndex = 6;
+            btnUpdate.Text = "Update";
+            btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
+            // 
             // Cart
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1143, 750);
+            Controls.Add(btnUpdate);
             Controls.Add(txtShopName);
             Controls.Add(lbPrice);
             Controls.Add(btnRemove);
@@ -171,6 +186,7 @@
         private Button btnRemove;
         private Label lbPrice;
         private Label txtShopName;
+        private Button btnUpdate;
         private DataGridViewTextBoxColumn txtFlowerId;
         private DataGridViewLinkColumn txtFlowerName;
         private DataGridViewTextBoxColumn txtPrice;

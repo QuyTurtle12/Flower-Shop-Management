@@ -11,9 +11,10 @@ namespace Repositories
     public interface IOrderRepository
     {
         Dictionary<int, Order> GetOrderList(Order order);
+        Dictionary<int, Order> GetOrderListByUserID(int id);
         Order GetOrderByID(int id);
         Order GetOrderByUserId(int id);
-        void AddOrder(Order order);
         void UpdateOrder(Order order);
+        void AddOrder(int userId, DateOnly orderedDate, decimal totalPrice, string paymentMethod, string phoneNum, string address);
     }
 }

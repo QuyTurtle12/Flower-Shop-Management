@@ -60,5 +60,24 @@ namespace DataAccess.Shopping
         {
             return cart;
         }
+
+        public bool checkCart(List<CartItem> cart)
+        {
+            bool cartExist = false;
+            if (cart.Count > 0) {
+                cartExist = true;
+            }
+            return cartExist;
+        }
+
+        public bool checkCartItem(CartItem item)
+        {
+            bool itemExist = false;
+            if (item.ProductId != null)
+            {
+                itemExist = true;
+            }
+            return itemExist;
+        }
     }
 }

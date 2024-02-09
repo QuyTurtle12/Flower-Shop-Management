@@ -61,5 +61,18 @@ namespace DataAccess
         public void AddUser(User user) { }
         public void DeleteUser(User user) { }
         public void UpdateUser(User user) { }
+
+        public User Login(string username, string password)
+        {
+            // Assuming dbContext is your DbContext instance to interact with the database
+            using (var dbContext = new FlowerShopContext())
+            {
+                // Query the database to find the user with the provided username and password
+                User user = dbContext.Users.FirstOrDefault(u => u.Username == username && u.Password == password);
+
+                // Return the user if found, otherwise return null
+                return user;
+            }
+        }
     }
 }

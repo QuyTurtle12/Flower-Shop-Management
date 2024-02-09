@@ -1,6 +1,7 @@
 ﻿using BusinessObject.Models;
 using BusinessObject.Shopping;
 using DataAccess.Shopping;
+using GUI.Orders_GUI;
 using Repositories;
 using System;
 using System.Collections.Generic;
@@ -21,19 +22,38 @@ namespace GUI
         {
             InitializeComponent();
         }
-
+        public User currentUser;
+        private List<CartItem> cartItems;
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-
-        private void button3_Click(object sender, EventArgs e)
+        public HomePage(User user)
         {
+            InitializeComponent();
+            currentUser = user;
+        }
+
+        public HomePage(List<CartItem> items, User user)
+        {
+            InitializeComponent();
+            cartItems = items;
+            currentUser = user;
+        }
+        private void button3_Click(object sender, EventArgs e)
+        { 
             try
             {
                 CartRepository cartRepository = new CartRepository();
-                Cart cartForm = new Cart(cartRepository.GetCartItems());
-                cartForm.Show();
+                Cart cartForm = new Cart(cartRepository.GetCartItems(), currentUser);
+                if (cartRepository.checkCart(cartRepository.GetCartItems()))
+                {
+                    cartForm.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Cart Empty!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch (Exception ex)
             {
@@ -49,7 +69,7 @@ namespace GUI
                 ProductRepository productRepository = new ProductRepository();
                 Dictionary<int, Flower> productList = productRepository.GetProductList();
                 dataGridView1.DataBindings.Clear();
-                    
+
                 List<Flower> flowers = productList.Values.ToList();
 
                 dataGridView1.Columns.Clear();
@@ -57,7 +77,7 @@ namespace GUI
                 dataGridView1.AutoGenerateColumns = true;
                 dataGridView1.DataSource = flowers;
                 dataGridView1.Columns["UnitPrice"].HeaderText = "Unit Price";
-                dataGridView1.Columns.Remove("Stock");
+                dataGridView1.Columns["Id"].Visible = false;
                 dataGridView1.Columns.Remove("OrderDetails");
 
                 foreach (DataGridViewColumn column in dataGridView1.Columns)
@@ -96,7 +116,7 @@ namespace GUI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            
+
             try
             {
                 CartRepository cartRepository = new CartRepository();
@@ -107,10 +127,12 @@ namespace GUI
                     {
                         ProductId = selectedFlower.Id,
                         ProductName = selectedFlower.Name,
-                        Price = (decimal)selectedFlower.UnitPrice
+                        Price = (decimal)selectedFlower.UnitPrice,
+                        Amount = 1
                     });
                     MessageBox.Show("Product added to cart successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                } else
+                }
+                else
                 {
                     MessageBox.Show("Please select a flower to add to the cart.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -120,6 +142,11 @@ namespace GUI
                 MessageBox.Show("Error adding product to cart: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-    
+
+        private void btnViewOrder_Click(object sender, EventArgs e)
+        {
+            MyOrders orderForm = new MyOrders(currentUser);
+            orderForm.Show();
+        }
     }
 }

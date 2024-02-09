@@ -14,4 +14,3 @@ C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\DataAccess\obj
 C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\DataAccess\obj\Debug\net8.0\refint\DataAccess.dll
 C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\DataAccess\obj\Debug\net8.0\DataAccess.pdb
 C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\DataAccess\obj\Debug\net8.0\ref\DataAccess.dll
-C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\DataAccess\bin\Debug\net8.0\FlowerShopContext.cs

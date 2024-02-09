@@ -30,18 +30,18 @@
         {
             lbPaymentMethod = new Label();
             rbtnCash = new RadioButton();
-            radioButton2 = new RadioButton();
-            radioButton3 = new RadioButton();
+            rbtnZaloPay = new RadioButton();
+            rbtnBankCard = new RadioButton();
             lbStreet = new Label();
             lbDistrict = new Label();
             lbCountry = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
+            txtStreet = new TextBox();
+            txtDistrict = new TextBox();
+            txtCountry = new TextBox();
             lbFullName = new Label();
             lbPhoneNumber = new Label();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
+            txtFullName = new TextBox();
+            txtPhoneNumber = new TextBox();
             rbtnApplePay = new RadioButton();
             btnConfirm = new Button();
             SuspendLayout();
@@ -49,51 +49,58 @@
             // lbPaymentMethod
             // 
             lbPaymentMethod.AutoSize = true;
-            lbPaymentMethod.Location = new Point(42, 139);
+            lbPaymentMethod.Location = new Point(60, 232);
+            lbPaymentMethod.Margin = new Padding(4, 0, 4, 0);
             lbPaymentMethod.Name = "lbPaymentMethod";
-            lbPaymentMethod.Size = new Size(99, 15);
+            lbPaymentMethod.Size = new Size(148, 25);
             lbPaymentMethod.TabIndex = 0;
             lbPaymentMethod.Text = "Payment method";
             // 
             // rbtnCash
             // 
             rbtnCash.AutoSize = true;
-            rbtnCash.Location = new Point(42, 172);
+            rbtnCash.Location = new Point(60, 287);
+            rbtnCash.Margin = new Padding(4, 5, 4, 5);
             rbtnCash.Name = "rbtnCash";
-            rbtnCash.Size = new Size(120, 19);
+            rbtnCash.Size = new Size(177, 29);
             rbtnCash.TabIndex = 1;
             rbtnCash.TabStop = true;
             rbtnCash.Text = "Cash (on delivery)";
             rbtnCash.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbtnZaloPay
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(253, 172);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(70, 19);
-            radioButton2.TabIndex = 2;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Zalo Pay";
-            radioButton2.UseVisualStyleBackColor = true;
+            rbtnZaloPay.AutoSize = true;
+            rbtnZaloPay.Enabled = false;
+            rbtnZaloPay.Location = new Point(361, 287);
+            rbtnZaloPay.Margin = new Padding(4, 5, 4, 5);
+            rbtnZaloPay.Name = "rbtnZaloPay";
+            rbtnZaloPay.Size = new Size(103, 29);
+            rbtnZaloPay.TabIndex = 2;
+            rbtnZaloPay.TabStop = true;
+            rbtnZaloPay.Text = "Zalo Pay";
+            rbtnZaloPay.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rbtnBankCard
             // 
-            radioButton3.AutoSize = true;
-            radioButton3.Location = new Point(168, 172);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(79, 19);
-            radioButton3.TabIndex = 3;
-            radioButton3.TabStop = true;
-            radioButton3.Text = "Bank Card";
-            radioButton3.UseVisualStyleBackColor = true;
+            rbtnBankCard.AutoSize = true;
+            rbtnBankCard.Enabled = false;
+            rbtnBankCard.Location = new Point(240, 287);
+            rbtnBankCard.Margin = new Padding(4, 5, 4, 5);
+            rbtnBankCard.Name = "rbtnBankCard";
+            rbtnBankCard.Size = new Size(117, 29);
+            rbtnBankCard.TabIndex = 3;
+            rbtnBankCard.TabStop = true;
+            rbtnBankCard.Text = "Bank Card";
+            rbtnBankCard.UseVisualStyleBackColor = true;
             // 
             // lbStreet
             // 
             lbStreet.AutoSize = true;
-            lbStreet.Location = new Point(42, 290);
+            lbStreet.Location = new Point(60, 483);
+            lbStreet.Margin = new Padding(4, 0, 4, 0);
             lbStreet.Name = "lbStreet";
-            lbStreet.Size = new Size(37, 15);
+            lbStreet.Size = new Size(57, 25);
             lbStreet.TabIndex = 4;
             lbStreet.Text = "Street";
             lbStreet.Click += label2_Click;
@@ -101,80 +108,91 @@
             // lbDistrict
             // 
             lbDistrict.AutoSize = true;
-            lbDistrict.Location = new Point(42, 353);
+            lbDistrict.Location = new Point(60, 588);
+            lbDistrict.Margin = new Padding(4, 0, 4, 0);
             lbDistrict.Name = "lbDistrict";
-            lbDistrict.Size = new Size(44, 15);
+            lbDistrict.Size = new Size(67, 25);
             lbDistrict.TabIndex = 5;
             lbDistrict.Text = "District";
             // 
             // lbCountry
             // 
             lbCountry.AutoSize = true;
-            lbCountry.Location = new Point(208, 353);
+            lbCountry.Location = new Point(297, 588);
+            lbCountry.Margin = new Padding(4, 0, 4, 0);
             lbCountry.Name = "lbCountry";
-            lbCountry.Size = new Size(50, 15);
+            lbCountry.Size = new Size(75, 25);
             lbCountry.TabIndex = 6;
             lbCountry.Text = "Country";
             // 
-            // textBox1
+            // txtStreet
             // 
-            textBox1.Location = new Point(42, 308);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(301, 23);
-            textBox1.TabIndex = 7;
+            txtStreet.Location = new Point(60, 513);
+            txtStreet.Margin = new Padding(4, 5, 4, 5);
+            txtStreet.Name = "txtStreet";
+            txtStreet.Size = new Size(428, 31);
+            txtStreet.TabIndex = 7;
             // 
-            // textBox2
+            // txtDistrict
             // 
-            textBox2.Location = new Point(42, 371);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(149, 23);
-            textBox2.TabIndex = 8;
+            txtDistrict.Location = new Point(60, 618);
+            txtDistrict.Margin = new Padding(4, 5, 4, 5);
+            txtDistrict.Name = "txtDistrict";
+            txtDistrict.Size = new Size(211, 31);
+            txtDistrict.TabIndex = 8;
             // 
-            // textBox3
+            // txtCountry
             // 
-            textBox3.Location = new Point(208, 371);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(135, 23);
-            textBox3.TabIndex = 9;
+            txtCountry.Location = new Point(297, 618);
+            txtCountry.Margin = new Padding(4, 5, 4, 5);
+            txtCountry.Name = "txtCountry";
+            txtCountry.Size = new Size(191, 31);
+            txtCountry.TabIndex = 9;
             // 
             // lbFullName
             // 
             lbFullName.AutoSize = true;
-            lbFullName.Location = new Point(42, 39);
+            lbFullName.Location = new Point(60, 65);
+            lbFullName.Margin = new Padding(4, 0, 4, 0);
             lbFullName.Name = "lbFullName";
-            lbFullName.Size = new Size(59, 15);
+            lbFullName.Size = new Size(88, 25);
             lbFullName.TabIndex = 10;
             lbFullName.Text = "Full name";
             // 
             // lbPhoneNumber
             // 
             lbPhoneNumber.AutoSize = true;
-            lbPhoneNumber.Location = new Point(42, 78);
+            lbPhoneNumber.Location = new Point(60, 130);
+            lbPhoneNumber.Margin = new Padding(4, 0, 4, 0);
             lbPhoneNumber.Name = "lbPhoneNumber";
-            lbPhoneNumber.Size = new Size(86, 15);
+            lbPhoneNumber.Size = new Size(129, 25);
             lbPhoneNumber.TabIndex = 11;
             lbPhoneNumber.Text = "Phone number";
             // 
-            // textBox4
+            // txtFullName
             // 
-            textBox4.Location = new Point(134, 36);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(144, 23);
-            textBox4.TabIndex = 12;
+            txtFullName.Location = new Point(191, 60);
+            txtFullName.Margin = new Padding(4, 5, 4, 5);
+            txtFullName.Name = "txtFullName";
+            txtFullName.Size = new Size(204, 31);
+            txtFullName.TabIndex = 12;
             // 
-            // textBox5
+            // txtPhoneNumber
             // 
-            textBox5.Location = new Point(134, 75);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(144, 23);
-            textBox5.TabIndex = 13;
+            txtPhoneNumber.Location = new Point(191, 125);
+            txtPhoneNumber.Margin = new Padding(4, 5, 4, 5);
+            txtPhoneNumber.Name = "txtPhoneNumber";
+            txtPhoneNumber.Size = new Size(204, 31);
+            txtPhoneNumber.TabIndex = 13;
             // 
             // rbtnApplePay
             // 
             rbtnApplePay.AutoSize = true;
-            rbtnApplePay.Location = new Point(329, 172);
+            rbtnApplePay.Enabled = false;
+            rbtnApplePay.Location = new Point(470, 287);
+            rbtnApplePay.Margin = new Padding(4, 5, 4, 5);
             rbtnApplePay.Name = "rbtnApplePay";
-            rbtnApplePay.Size = new Size(78, 19);
+            rbtnApplePay.Size = new Size(116, 29);
             rbtnApplePay.TabIndex = 14;
             rbtnApplePay.TabStop = true;
             rbtnApplePay.Text = "Apple Pay";
@@ -182,34 +200,37 @@
             // 
             // btnConfirm
             // 
-            btnConfirm.Location = new Point(468, 334);
+            btnConfirm.Location = new Point(669, 557);
+            btnConfirm.Margin = new Padding(4, 5, 4, 5);
             btnConfirm.Name = "btnConfirm";
-            btnConfirm.Size = new Size(75, 23);
+            btnConfirm.Size = new Size(107, 38);
             btnConfirm.TabIndex = 15;
             btnConfirm.Text = "Confirm";
             btnConfirm.UseVisualStyleBackColor = true;
+            btnConfirm.Click += btnConfirm_Click;
             // 
             // Payment
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1143, 750);
             Controls.Add(btnConfirm);
             Controls.Add(rbtnApplePay);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
+            Controls.Add(txtPhoneNumber);
+            Controls.Add(txtFullName);
             Controls.Add(lbPhoneNumber);
             Controls.Add(lbFullName);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtCountry);
+            Controls.Add(txtDistrict);
+            Controls.Add(txtStreet);
             Controls.Add(lbCountry);
             Controls.Add(lbDistrict);
             Controls.Add(lbStreet);
-            Controls.Add(radioButton3);
-            Controls.Add(radioButton2);
+            Controls.Add(rbtnBankCard);
+            Controls.Add(rbtnZaloPay);
             Controls.Add(rbtnCash);
             Controls.Add(lbPaymentMethod);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Payment";
             Text = "Payment";
             Load += Payment_Load;
@@ -221,18 +242,18 @@
 
         private Label lbPaymentMethod;
         private RadioButton rbtnCash;
-        private RadioButton radioButton2;
-        private RadioButton radioButton3;
+        private RadioButton rbtnZaloPay;
+        private RadioButton rbtnBankCard;
         private Label lbStreet;
         private Label lbDistrict;
         private Label lbCountry;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox txtStreet;
+        private TextBox txtDistrict;
+        private TextBox txtCountry;
         private Label lbFullName;
         private Label lbPhoneNumber;
-        private TextBox textBox4;
-        private TextBox textBox5;
+        private TextBox txtFullName;
+        private TextBox txtPhoneNumber;
         private RadioButton rbtnApplePay;
         private Button btnConfirm;
     }

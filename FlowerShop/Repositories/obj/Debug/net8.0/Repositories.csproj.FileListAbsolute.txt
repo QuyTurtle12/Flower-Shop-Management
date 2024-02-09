@@ -16,4 +16,3 @@ C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Repositories\o
 C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Repositories\obj\Debug\net8.0\refint\Repositories.dll
 C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.pdb
 C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Repositories\obj\Debug\net8.0\ref\Repositories.dll
-C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Repositories\bin\Debug\net8.0\FlowerShopContext.cs

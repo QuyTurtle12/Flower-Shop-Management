@@ -27,6 +27,25 @@ namespace DataAccess
             }
         }
 
+        public Dictionary<int, OrderDetail> GetOrderDetailListByOrderID(int id)
+        {
+            Dictionary<int, OrderDetail> listOrder = new Dictionary<int, OrderDetail>();
+            try
+            {
+                using (var context = new FlowerShopContext())
+                {
+                    // Query orders associated with the specified user ID
+                    var orders = context.OrderDetails.Where(order => order.OrderId == id).ToList();
+
+                    listOrder = orders.ToDictionary(order => order.OrderDetailId);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return listOrder;
+        }
         //View Order detail by Order ID
         public OrderDetail GetOrderDetailByOrderId(int OrderId)
         {
@@ -60,7 +79,33 @@ namespace DataAccess
             return orderDetail;
         }
 
-        public void AddOrderDetail(OrderDetail orderDetail) { }
+        private int orderId;
+        public void GetOrderIdFromOrderDAO(int orderId)
+        {
+            this.orderId = orderId;
+        }
+
+        public void AddOrderDetail(int flowerId, int amount, decimal price) {
+            try
+            {
+                using (var context = new FlowerShopContext())
+                {
+                    OrderDetail detail = new OrderDetail
+                    {
+                        OrderId = orderId,
+                        FlowerId = flowerId,
+                        Amount = amount,
+                        Price = price
+                    };
+                    context.OrderDetails.Add(detail);
+                    context.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error at adding order detail: " + ex.Message);
+            }
+        }
         public void DeleteOrderDetail(OrderDetail orderDetail) { }
         public void UpdateOrderDetail(OrderDetail orderDetail) { }
     }

@@ -14,10 +14,12 @@ namespace Repositories
 
         public OrderDetail GetOrderDetailByFlowerId(int FlowerId) => OrderDetailDAO.Instance.GetOrderDetailByFlowerId(FlowerId);
 
-        public void AddOrderDetail(OrderDetail orderDetail) => OrderDetailDAO.Instance.AddOrderDetail(orderDetail);
-
         public void DeleteOrderDetail(OrderDetail orderDetail) => OrderDetailDAO.Instance.DeleteOrderDetail(orderDetail);
 
         public void UpdateOrderDetail(OrderDetail orderDetail) => OrderDetailDAO.Instance.UpdateOrderDetail(orderDetail);
+
+        public Dictionary<int, OrderDetail> GetOrderDetailListByOrderID(int orderId) => OrderDetailDAO.Instance.GetOrderDetailListByOrderID(orderId);
+
+        public void AddOrderDetail(int flowerId, int amount, decimal price) => OrderDetailDAO.Instance.AddOrderDetail(flowerId, amount, price);
     }
 }
