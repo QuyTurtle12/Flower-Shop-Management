@@ -14,9 +14,14 @@ namespace Repositories
 
         public void DeleteUser(User user) => UserDAO.DeleteUser(user);
 
-        public User GetUserById(string id) => UserDAO.GetUserById(id);
+        public User GetUserById(int id) => UserDAO.GetUserById(id);
 
-        public Dictionary<string, User> GetUserList() => UserDAO.GetUserList();
+        public Dictionary<int, User> GetUserList(UserDAO userDAO) => userDAO.GetUserList();
+
+        public Dictionary<int, User> GetUserList()
+        {
+            throw new NotImplementedException();
+        }
 
         public void UpdateUser(User user) => UserDAO.UpdateUser(user);
     }

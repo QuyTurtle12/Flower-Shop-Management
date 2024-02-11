@@ -5,11 +5,11 @@ namespace BusinessObject.Models;
 
 public partial class OrderDetail
 {
-    public string OrderDetailId { get; set; } = null!;
+    public int OrderDetailId { get; set; }
 
-    public string? OrderId { get; set; }
+    public int? OrderId { get; set; }
 
-    public string? FlowerId { get; set; }
+    public int? FlowerId { get; set; }
 
     public int? Amount { get; set; }
 

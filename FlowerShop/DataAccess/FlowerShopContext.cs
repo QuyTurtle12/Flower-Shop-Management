@@ -30,12 +30,21 @@ public partial class FlowerShopContext : DbContext
         IConfiguration configuration = new ConfigurationBuilder()
         .SetBasePath(Directory.GetCurrentDirectory())
         .AddJsonFile("appsettings.json", true, true).Build();
-        return configuration["ConnectionStrings:DefaultConnectionString"];
+        var connectionString = configuration["ConnectionStrings:DefaultConnectionString"];
+        Console.WriteLine(connectionString); // Debugging purpose
+        return connectionString;
     }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer(GetConnectionString());
+        if (!optionsBuilder.IsConfigured)
+        {
+            // Hardcoded connection string
+            var connectionString = "Server=(local);uid=sa;pwd=123456;database=FlowerShop;Trusted_Connection=true;TrustServerCertificate=true;";
+            optionsBuilder.UseSqlServer(connectionString);
+        }
+
+        //optionsBuilder.UseSqlServer(GetConnectionString());
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -107,30 +116,25 @@ public partial class FlowerShopContext : DbContext
             entity.ToTable("Order_Detail");
 
             entity.Property(e => e.OrderDetailId)
-                .HasMaxLength(10)
-                .IsUnicode(false)
+                .ValueGeneratedOnAdd() 
                 .HasColumnName("order_detail_id");
             entity.Property(e => e.Amount).HasColumnName("amount");
             entity.Property(e => e.FlowerId)
-                .HasMaxLength(10)
-                .IsUnicode(false)
                 .HasColumnName("flower_id");
             entity.Property(e => e.OrderId)
-                .HasMaxLength(10)
-                .IsUnicode(false)
                 .HasColumnName("order_id");
             entity.Property(e => e.Price)
                 .HasColumnType("decimal(10, 2)")
                 .HasColumnName("price");
-
             entity.HasOne(d => d.Flower).WithMany(p => p.OrderDetails)
                 .HasForeignKey(d => d.FlowerId)
                 .HasConstraintName("FK__Order_Det__flowe__3F466844");
 
             entity.HasOne(d => d.Order).WithMany(p => p.OrderDetails)
-                .HasForeignKey(d => d.OrderId)
+                .HasForeignKey(d => d.OrderId) // Ensure this foreign key correctly references the Order's primary key
                 .HasConstraintName("FK__Order_Det__order__3E52440B");
         });
+
 
         modelBuilder.Entity<User>(entity =>
         {

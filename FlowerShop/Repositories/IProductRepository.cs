@@ -13,7 +13,7 @@ namespace Repositories
         void AddProduct(Flower product);
         void UpdateProduct(Flower product);
         void DeleteProduct(Flower product);
-        Dictionary<string, Flower> GetProductList();
-        Flower GetProductById(string productId);
+        Dictionary<int, Flower> GetProductList();
+        Flower GetProductById(int productId);
     }
 }

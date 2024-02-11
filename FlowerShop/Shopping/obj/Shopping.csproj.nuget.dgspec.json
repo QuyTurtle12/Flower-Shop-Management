@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\Shopping\\Shopping.csproj": {}
+    "E:\\1. Project\\School SP24\\PRNx\\Project\\ProjectAssignment\\FlowerShop\\Shopping\\Shopping.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\Shopping\\Shopping.csproj": {
+    "E:\\1. Project\\School SP24\\PRNx\\Project\\ProjectAssignment\\FlowerShop\\Shopping\\Shopping.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\Shopping\\Shopping.csproj",
+        "projectUniqueName": "E:\\1. Project\\School SP24\\PRNx\\Project\\ProjectAssignment\\FlowerShop\\Shopping\\Shopping.csproj",
         "projectName": "Shopping",
-        "projectPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\Shopping\\Shopping.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\Shopping\\obj\\",
+        "projectPath": "E:\\1. Project\\School SP24\\PRNx\\Project\\ProjectAssignment\\FlowerShop\\Shopping\\Shopping.csproj",
+        "packagesPath": "C:\\Users\\hoaph\\.nuget\\packages\\",
+        "outputPath": "E:\\1. Project\\School SP24\\PRNx\\Project\\ProjectAssignment\\FlowerShop\\Shopping\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hoaph\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

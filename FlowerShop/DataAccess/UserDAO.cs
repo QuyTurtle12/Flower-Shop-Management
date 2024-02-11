@@ -26,9 +26,9 @@ namespace DataAccess
                 }
             }
         }
-        public static Dictionary<string, User> GetUserList()
+        public Dictionary<int, User> GetUserList()
         {
-            Dictionary<string, User > listUser = new Dictionary<string, User>();
+            Dictionary<int, User > listUser = new Dictionary<int, User>();
             try
             {
                 using (var context = new FlowerShopContext())
@@ -43,7 +43,7 @@ namespace DataAccess
             return listUser;
         }
 
-        public static User GetUserById(string id)
+        public static User GetUserById(int id)
         {
             User user = null;
             try
@@ -58,7 +58,46 @@ namespace DataAccess
             return user;
         }
 
-        public static void AddUser(User user) { }
+        public User AuthenticateUser(string username, string password)
+        {
+            User user = null;
+            try
+            {
+                using var context = new FlowerShopContext();
+                user = context.Users.SingleOrDefault(u => u.Username == username && u.Password == password && u.Status == true);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return user;
+        }
+        public bool CheckUsernameExists(string username)
+        {
+            bool isExist = false;
+            using (var context = new FlowerShopContext())
+            {
+                try
+                {
+                    isExist = context.Users.Any(u => u.Username == username);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+                return isExist;
+            }
+        }
+
+        public static void AddUser(User user)
+        {
+            using (var context = new FlowerShopContext())
+            {
+                context.Users.Add(user);
+                context.SaveChanges();
+            }
+        }
+
         public static void DeleteUser(User user) { }
         public static void UpdateUser(User user) { }
     }

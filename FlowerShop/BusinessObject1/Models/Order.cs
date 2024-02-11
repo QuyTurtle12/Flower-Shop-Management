@@ -5,9 +5,9 @@ namespace BusinessObject.Models;
 
 public partial class Order
 {
-    public string Id { get; set; } = null!;
+    public int Id { get; set; }
 
-    public string? UserId { get; set; }
+    public int? UserId { get; set; }
 
     public DateOnly? OrderedDate { get; set; }
 
