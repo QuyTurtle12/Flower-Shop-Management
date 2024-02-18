@@ -21,5 +21,7 @@ namespace Repositories
         public Dictionary<int, OrderDetail> GetOrderDetailListByOrderID(int orderId) => OrderDetailDAO.Instance.GetOrderDetailListByOrderID(orderId);
 
         public void AddOrderDetail(int flowerId, int amount, decimal price) => OrderDetailDAO.Instance.AddOrderDetail(flowerId, amount, price);
+
+        public Dictionary<int, OrderDetail> GetOrderDetailListByFlowerID(int flowerId) => OrderDetailDAO.Instance.GetOrderDetailListByFlowerID(flowerId);
     }
 }

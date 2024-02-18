@@ -21,5 +21,6 @@ namespace Repositories
 
         public void UpdateProduct(Flower product) => ProductDAO.Instance.UpdateProduct(product);
 
+        public void UpdateStock(int id, int amount) => ProductDAO.Instance.UpdateStock(id, amount);
     }
 }

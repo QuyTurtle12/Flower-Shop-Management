@@ -101,6 +101,90 @@ namespace DataAccess
             return order;
         }
 
+        public Dictionary<int, Order> GetOrdersOneMonthBefore(Dictionary<int, Order> orders)
+        {
+            Dictionary<int, Order> listOrder = new Dictionary<int, Order>();
+            try
+            {
+                using(var context = new FlowerShopContext())
+                {
+                    DateOnly oneMonthAgo = DateOnly.FromDateTime(DateTime.Now.AddMonths(-1));
+
+                    listOrder = orders
+                    .Where(kvp => kvp.Value.OrderedDate >= oneMonthAgo)
+                    .ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return listOrder;
+        }
+
+        public Dictionary<int, Order> GetOrdersThreeMonthsBefore(Dictionary<int, Order> orders)
+        {
+            Dictionary<int, Order> listOrder = new Dictionary<int, Order>();
+            try
+            {
+                using (var context = new FlowerShopContext())
+                {
+                    DateOnly threeMonthAgo = DateOnly.FromDateTime(DateTime.Now.AddMonths(-3));
+
+                    listOrder = orders
+                    .Where(kvp => kvp.Value.OrderedDate >= threeMonthAgo)
+                    .ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return listOrder;
+        }
+
+        public Dictionary<int, Order> GetOrdersSixMonthsBefore(Dictionary<int, Order> orders)
+        {
+            Dictionary<int, Order> listOrder = new Dictionary<int, Order>();
+            try
+            {
+                using (var context = new FlowerShopContext())
+                {
+                    DateOnly sixMonthAgo = DateOnly.FromDateTime(DateTime.Now.AddMonths(-6));
+
+                    listOrder = orders
+                    .Where(kvp => kvp.Value.OrderedDate >= sixMonthAgo)
+                    .ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return listOrder;
+        }
+
+        public Dictionary<int, Order> GetOrdersOneYearBefore(Dictionary<int, Order> orders)
+        {
+            Dictionary<int, Order> listOrder = new Dictionary<int, Order>();
+            try
+            {
+                using (var context = new FlowerShopContext())
+                {
+                    DateOnly oneYearAgo = DateOnly.FromDateTime(DateTime.Now.AddMonths(-12));
+
+                    listOrder = orders
+                    .Where(kvp => kvp.Value.OrderedDate >= oneYearAgo)
+                    .ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return listOrder;
+        }
+
         private int orderIdGeneration()
         {
             using (var context = new FlowerShopContext())

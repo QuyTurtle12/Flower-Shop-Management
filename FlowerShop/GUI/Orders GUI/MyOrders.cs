@@ -1,4 +1,5 @@
 ﻿using BusinessObject.Models;
+using DataAccess;
 using Repositories;
 using System;
 using System.Collections.Generic;
@@ -50,6 +51,8 @@ namespace GUI.Orders_GUI
             dgvOrder.DataBindings.Clear();
 
             List<Order> orders = orderList.Values.ToList();
+            orders = orders.OrderByDescending(o => o.OrderedDate).ToList(); //Sort Order by Ordered Date
+
             foreach (Order order in orders)
             {
                 int rowIndex = dgvOrder.Rows.Add();

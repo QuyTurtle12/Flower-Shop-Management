@@ -58,6 +58,31 @@ namespace DataAccess
             return product;
         }
 
+        public void UpdateStock(int id ,int amount)
+        {
+            try
+            {
+                using (var context = new FlowerShopContext())
+                {
+                    var flower = context.Flowers.Find(id);
+
+                    if (flower != null)
+                    {
+                        flower.Stock -= amount;
+                        context.SaveChanges();
+                    }
+                    else
+                    {
+                        throw new Exception($"Flower with ID {id} not found.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error updating stock: {ex.Message}");
+            }
+        }
+
         public void AddProduct(Flower product) {
             // Logic to insert product in the database
         }

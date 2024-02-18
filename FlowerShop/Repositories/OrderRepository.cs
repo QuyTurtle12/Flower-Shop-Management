@@ -16,10 +16,20 @@ namespace Repositories
 
         public Order GetOrderByUserId(int id) => OrderDAO.Instance.GetOrderByUserId(id);
 
-        public Dictionary<int, Order> GetOrderList(Order order) => OrderDAO.Instance.GetOrderList();
+        public Dictionary<int, Order> GetOrderList() => OrderDAO.Instance.GetOrderList();
 
         public Dictionary<int, Order> GetOrderListByUserID(int id) => OrderDAO.Instance.GetOrderListByUserID(id);
 
+        public Dictionary<int, Order> GetOrdersOneMonthBefore(Dictionary<int, Order> orders) => OrderDAO.Instance.GetOrdersOneMonthBefore(orders);
+
+        public Dictionary<int, Order> GetOrdersThreeMonthsBefore(Dictionary<int, Order> orders) => OrderDAO.Instance.GetOrdersThreeMonthsBefore(orders);
+
+        public Dictionary<int, Order> GetOrdersSixMonthsBefore(Dictionary<int, Order> orders) => OrderDAO.Instance.GetOrdersSixMonthsBefore(orders);
+
+        public Dictionary<int, Order> GetOrdersOneYearBefore(Dictionary<int, Order> orders) => OrderDAO.Instance.GetOrdersOneYearBefore(orders);
+
         public void UpdateOrder(Order order) => OrderDAO.Instance.UpdateOrder(order);
+
+
     }
 }

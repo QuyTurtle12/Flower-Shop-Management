@@ -15,5 +15,6 @@ namespace Repositories
         void DeleteProduct(Flower product);
         Dictionary<int, Flower> GetProductList();
         Flower GetProductById(int productId);
+        void UpdateStock(int id, int amount);
     }
 }

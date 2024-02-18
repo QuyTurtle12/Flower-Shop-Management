@@ -10,6 +10,7 @@ namespace Repositories
     public interface IOrderDetailRepository
     {
         Dictionary<int, OrderDetail> GetOrderDetailListByOrderID(int orderId);
+        Dictionary<int, OrderDetail> GetOrderDetailListByFlowerID(int flowerId);
         OrderDetail GetOrderDetailByOrderId(int OrderId);
         void DeleteOrderDetail(OrderDetail orderDetail);
         void UpdateOrderDetail(OrderDetail orderDetail);

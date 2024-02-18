@@ -34,7 +34,6 @@ namespace DataAccess
             {
                 using (var context = new FlowerShopContext())
                 {
-                    // Query orders associated with the specified user ID
                     var orders = context.OrderDetails.Where(order => order.OrderId == id).ToList();
 
                     listOrder = orders.ToDictionary(order => order.OrderDetailId);
@@ -64,6 +63,24 @@ namespace DataAccess
 
         //View Order detail by Flower ID
         //Useful for Flower Dashboard
+        public Dictionary<int, OrderDetail> GetOrderDetailListByFlowerID(int id)
+        {
+            Dictionary<int, OrderDetail> listOrder = new Dictionary<int, OrderDetail>();
+            try
+            {
+                using (var context = new FlowerShopContext())
+                {
+                    var flowers = context.OrderDetails.Where(flower => flower.FlowerId == id).ToList();
+                    listOrder = flowers.ToDictionary(flower => flower.OrderDetailId);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return listOrder;
+        }
+
         public OrderDetail GetOrderDetailByFlowerId(int FlowerId)
         {
             OrderDetail orderDetail = null;

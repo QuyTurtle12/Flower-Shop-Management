@@ -76,3 +76,4 @@ C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\bin\Debug\
 C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\bin\Debug\net8.0-windows\DataAccess.pdb
 C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\obj\Debug\net8.0-windows\GUI.csproj.AssemblyReference.cache
 C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\obj\Debug\net8.0-windows\GUI.csproj.CopyComplete
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\obj\Debug\net8.0-windows\GUI.Dashboard.resources
