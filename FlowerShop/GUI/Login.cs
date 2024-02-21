@@ -1,3 +1,4 @@
+using BusinessObject.Models;
 using DataAccess;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
@@ -26,12 +27,10 @@ namespace GUI
                 var user = userBusiness.Login(username, password);
                 if (user != null)
                 {
-                    //IF RIGHT, NAVIGATE TO ANOTHER FORM
-
-                    //this.Hide(); - Hide the login form
-                    //nextPage nextpage = new nextPage(user); - Create an instance of UserPage, passing the logged-in user if needed
-                    //nextPage.FormClosed += (s, args) => this.Close(); - Ensure the entire application closes when UserPage is closed
-                    //nextPage.Show();
+                    this.Hide(); 
+                    HomePage nextPage = new HomePage(user);
+                    nextPage.FormClosed += (s, args) => this.Close();
+                    nextPage.Show();
                 }
             }
             catch (Exception ex)

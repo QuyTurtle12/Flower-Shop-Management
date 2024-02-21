@@ -1,5 +1,6 @@
 ﻿using BusinessObject.Models;
 using DataAccess;
+using Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -81,7 +82,8 @@ namespace GUI
 
             try
             {
-                UserDAO.AddUser(newUser);
+                UserRepository userRepository = new UserRepository();
+                userRepository.AddUser(newUser);
 
                 MessageBox.Show("Registration successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -129,6 +131,11 @@ namespace GUI
             {
                 lblPasswordMismatch.Visible = false;
             }
+
+        }
+
+        private void Register_Load(object sender, EventArgs e)
+        {
 
         }
     }

@@ -3043,24 +3043,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hoaph\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\ADMIN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\1. Project\\School SP24\\PRNx\\Project\\ProjectAssignment\\FlowerShop\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "E:\\1. Project\\School SP24\\PRNx\\Project\\ProjectAssignment\\FlowerShop\\DataAccess\\DataAccess.csproj",
-      "packagesPath": "C:\\Users\\hoaph\\.nuget\\packages\\",
-      "outputPath": "E:\\1. Project\\School SP24\\PRNx\\Project\\ProjectAssignment\\FlowerShop\\DataAccess\\obj\\",
+      "projectPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\DataAccess\\DataAccess.csproj",
+      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\hoaph\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3074,8 +3069,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\1. Project\\School SP24\\PRNx\\Project\\ProjectAssignment\\FlowerShop\\BusinessObject1\\BusinessObject.csproj": {
-              "projectPath": "E:\\1. Project\\School SP24\\PRNx\\Project\\ProjectAssignment\\FlowerShop\\BusinessObject1\\BusinessObject.csproj"
+            "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj": {
+              "projectPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj"
             }
           }
         }

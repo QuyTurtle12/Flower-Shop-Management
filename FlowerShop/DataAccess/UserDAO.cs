@@ -89,7 +89,7 @@ namespace DataAccess
             }
         }
 
-        public static void AddUser(User user)
+        public void AddUser(User user)
         {
             using (var context = new FlowerShopContext())
             {
@@ -98,7 +98,7 @@ namespace DataAccess
             }
         }
 
-        public static void DeleteUser(User user) { }
-        public static void UpdateUser(User user) { }
+        public void DeleteUser(User user) { }
+        public void UpdateUser(User user) { }
     }
 }
