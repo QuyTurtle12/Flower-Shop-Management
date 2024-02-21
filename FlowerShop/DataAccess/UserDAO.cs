@@ -58,21 +58,47 @@ namespace DataAccess
             return user;
         }
 
-        public void AddUser(User user) { }
-        public void DeleteUser(User user) { }
-        public void UpdateUser(User user) { }
-
-        public User Login(string username, string password)
+        public User AuthenticateUser(string username, string password)
         {
-            // Assuming dbContext is your DbContext instance to interact with the database
-            using (var dbContext = new FlowerShopContext())
+            User user = null;
+            try
             {
-                // Query the database to find the user with the provided username and password
-                User user = dbContext.Users.FirstOrDefault(u => u.Username == username && u.Password == password);
-
-                // Return the user if found, otherwise return null
-                return user;
+                using var context = new FlowerShopContext();
+                user = context.Users.SingleOrDefault(u => u.Username == username && u.Password == password && u.Status == true);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return user;
+        }
+        public bool CheckUsernameExists(string username)
+        {
+            bool isExist = false;
+            using (var context = new FlowerShopContext())
+            {
+                try
+                {
+                    isExist = context.Users.Any(u => u.Username == username);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+                return isExist;
             }
         }
+
+        public static void AddUser(User user)
+        {
+            using (var context = new FlowerShopContext())
+            {
+                context.Users.Add(user);
+                context.SaveChanges();
+            }
+        }
+
+        public static void DeleteUser(User user) { }
+        public static void UpdateUser(User user) { }
     }
 }

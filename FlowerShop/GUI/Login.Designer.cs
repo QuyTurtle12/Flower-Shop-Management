@@ -31,9 +31,9 @@
             lbLogin = new Label();
             lbUsername = new Label();
             lbPassword = new Label();
-            btnConnect = new Button();
-            btnForgotPwd = new Button();
-            btnCreateAccount = new Button();
+            btnLogin = new Button();
+            btnRecoverAccount = new Button();
+            btnRegister = new Button();
             txtUsername = new TextBox();
             txtPassword = new TextBox();
             SuspendLayout();
@@ -41,11 +41,12 @@
             // lbLogin
             // 
             lbLogin.AutoSize = true;
-            lbLogin.Location = new Point(120, 21);
+            lbLogin.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            lbLogin.Location = new Point(109, 27);
             lbLogin.Name = "lbLogin";
-            lbLogin.Size = new Size(37, 15);
+            lbLogin.Size = new Size(124, 25);
             lbLogin.TabIndex = 0;
-            lbLogin.Text = "Login";
+            lbLogin.Text = "LOGIN PAGE";
             // 
             // lbUsername
             // 
@@ -65,58 +66,60 @@
             lbPassword.TabIndex = 2;
             lbPassword.Text = "Password";
             // 
-            // btnConnect
+            // btnLogin
             // 
-            btnConnect.Location = new Point(137, 190);
-            btnConnect.Name = "btnConnect";
-            btnConnect.Size = new Size(75, 23);
-            btnConnect.TabIndex = 3;
-            btnConnect.Text = "Connect";
-            btnConnect.UseVisualStyleBackColor = true;
-            btnConnect.Click += button1_Click;
+            btnLogin.Location = new Point(190, 223);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(92, 41);
+            btnLogin.TabIndex = 3;
+            btnLogin.Text = "Login";
+            btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.Click += btnLogin_Click;
             // 
-            // btnForgotPwd
+            // btnRecoverAccount
             // 
-            btnForgotPwd.Location = new Point(146, 254);
-            btnForgotPwd.Name = "btnForgotPwd";
-            btnForgotPwd.Size = new Size(122, 23);
-            btnForgotPwd.TabIndex = 4;
-            btnForgotPwd.Text = "Forget password ?";
-            btnForgotPwd.UseVisualStyleBackColor = true;
+            btnRecoverAccount.Location = new Point(212, 161);
+            btnRecoverAccount.Name = "btnRecoverAccount";
+            btnRecoverAccount.Size = new Size(122, 22);
+            btnRecoverAccount.TabIndex = 4;
+            btnRecoverAccount.Text = "Forget password ?";
+            btnRecoverAccount.UseVisualStyleBackColor = true;
+            btnRecoverAccount.Click += btnRecoverAccount_Click;
             // 
-            // btnCreateAccount
+            // btnRegister
             // 
-            btnCreateAccount.Location = new Point(42, 254);
-            btnCreateAccount.Name = "btnCreateAccount";
-            btnCreateAccount.Size = new Size(98, 23);
-            btnCreateAccount.TabIndex = 5;
-            btnCreateAccount.Text = "Create account";
-            btnCreateAccount.UseVisualStyleBackColor = true;
+            btnRegister.Location = new Point(29, 223);
+            btnRegister.Name = "btnRegister";
+            btnRegister.Size = new Size(107, 41);
+            btnRegister.TabIndex = 5;
+            btnRegister.Text = "Create account";
+            btnRegister.UseVisualStyleBackColor = true;
+            btnRegister.Click += btnRegister_Click;
             // 
             // txtUsername
             // 
             txtUsername.Location = new Point(137, 85);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(131, 23);
+            txtUsername.Size = new Size(197, 23);
             txtUsername.TabIndex = 6;
             // 
             // txtPassword
             // 
             txtPassword.Location = new Point(137, 132);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(131, 23);
+            txtPassword.Size = new Size(197, 23);
             txtPassword.TabIndex = 7;
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(324, 301);
+            ClientSize = new Size(360, 340);
             Controls.Add(txtPassword);
             Controls.Add(txtUsername);
-            Controls.Add(btnCreateAccount);
-            Controls.Add(btnForgotPwd);
-            Controls.Add(btnConnect);
+            Controls.Add(btnRegister);
+            Controls.Add(btnRecoverAccount);
+            Controls.Add(btnLogin);
             Controls.Add(lbPassword);
             Controls.Add(lbUsername);
             Controls.Add(lbLogin);
@@ -132,9 +135,9 @@
         private Label lbLogin;
         private Label lbUsername;
         private Label lbPassword;
-        private Button btnConnect;
-        private Button btnForgotPwd;
-        private Button btnCreateAccount;
+        private Button btnLogin;
+        private Button btnRecoverAccount;
+        private Button btnRegister;
         private TextBox txtUsername;
         private TextBox txtPassword;
     }

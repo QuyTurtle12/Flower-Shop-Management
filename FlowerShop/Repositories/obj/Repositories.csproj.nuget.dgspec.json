@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\Repositories\\Repositories.csproj": {}
+    "E:\\1. Project\\School SP24\\PRNx\\Project\\ProjectAssignment\\FlowerShop\\Repositories\\Repositories.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj": {
+    "E:\\1. Project\\School SP24\\PRNx\\Project\\ProjectAssignment\\FlowerShop\\BusinessObject1\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj",
+        "projectUniqueName": "E:\\1. Project\\School SP24\\PRNx\\Project\\ProjectAssignment\\FlowerShop\\BusinessObject1\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\obj\\",
+        "projectPath": "E:\\1. Project\\School SP24\\PRNx\\Project\\ProjectAssignment\\FlowerShop\\BusinessObject1\\BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\hoaph\\.nuget\\packages\\",
+        "outputPath": "E:\\1. Project\\School SP24\\PRNx\\Project\\ProjectAssignment\\FlowerShop\\BusinessObject1\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hoaph\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -75,17 +79,21 @@
         }
       }
     },
-    "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\DataAccess\\DataAccess.csproj": {
+    "E:\\1. Project\\School SP24\\PRNx\\Project\\ProjectAssignment\\FlowerShop\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "E:\\1. Project\\School SP24\\PRNx\\Project\\ProjectAssignment\\FlowerShop\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\DataAccess\\obj\\",
+        "projectPath": "E:\\1. Project\\School SP24\\PRNx\\Project\\ProjectAssignment\\FlowerShop\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\hoaph\\.nuget\\packages\\",
+        "outputPath": "E:\\1. Project\\School SP24\\PRNx\\Project\\ProjectAssignment\\FlowerShop\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hoaph\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -99,8 +107,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj": {
-                "projectPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj"
+              "E:\\1. Project\\School SP24\\PRNx\\Project\\ProjectAssignment\\FlowerShop\\BusinessObject1\\BusinessObject.csproj": {
+                "projectPath": "E:\\1. Project\\School SP24\\PRNx\\Project\\ProjectAssignment\\FlowerShop\\BusinessObject1\\BusinessObject.csproj"
               }
             }
           }
@@ -134,17 +142,21 @@
         }
       }
     },
-    "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\Repositories\\Repositories.csproj": {
+    "E:\\1. Project\\School SP24\\PRNx\\Project\\ProjectAssignment\\FlowerShop\\Repositories\\Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\Repositories\\Repositories.csproj",
+        "projectUniqueName": "E:\\1. Project\\School SP24\\PRNx\\Project\\ProjectAssignment\\FlowerShop\\Repositories\\Repositories.csproj",
         "projectName": "Repositories",
-        "projectPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\Repositories\\Repositories.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\Repositories\\obj\\",
+        "projectPath": "E:\\1. Project\\School SP24\\PRNx\\Project\\ProjectAssignment\\FlowerShop\\Repositories\\Repositories.csproj",
+        "packagesPath": "C:\\Users\\hoaph\\.nuget\\packages\\",
+        "outputPath": "E:\\1. Project\\School SP24\\PRNx\\Project\\ProjectAssignment\\FlowerShop\\Repositories\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hoaph\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -158,8 +170,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\DataAccess\\DataAccess.csproj"
+              "E:\\1. Project\\School SP24\\PRNx\\Project\\ProjectAssignment\\FlowerShop\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "E:\\1. Project\\School SP24\\PRNx\\Project\\ProjectAssignment\\FlowerShop\\DataAccess\\DataAccess.csproj"
               }
             }
           }

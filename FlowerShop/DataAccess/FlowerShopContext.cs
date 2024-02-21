@@ -109,15 +109,15 @@ public partial class FlowerShopContext : DbContext
             entity.Property(e => e.Price)
                 .HasColumnType("decimal(10, 2)")
                 .HasColumnName("price");
-
             entity.HasOne(d => d.Flower).WithMany(p => p.OrderDetails)
                 .HasForeignKey(d => d.FlowerId)
                 .HasConstraintName("FK__Order_Det__flowe__3F466844");
 
             entity.HasOne(d => d.Order).WithMany(p => p.OrderDetails)
-                .HasForeignKey(d => d.OrderId)
+                .HasForeignKey(d => d.OrderId) // Ensure this foreign key correctly references the Order's primary key
                 .HasConstraintName("FK__Order_Det__order__3E52440B");
         });
+
 
         modelBuilder.Entity<User>(entity =>
         {

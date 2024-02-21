@@ -18,7 +18,8 @@ namespace Repositories
 
         public Dictionary<int, User> GetUserList() => UserDAO.Instance.GetUserList();
 
-        public User Login(string username, string password) => UserDAO.Instance.Login(username, password);
+       // public Dictionary<int, User> GetUserList(UserDAO userDAO) => userDAO.GetUserList();
+
 
         public void UpdateUser(User user) => UserDAO.Instance.UpdateUser(user);
     }

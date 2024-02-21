@@ -1,5 +1,5 @@
-using BusinessObject.Models;
-using Repositories;
+using DataAccess;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace GUI
 {
@@ -15,29 +15,46 @@ namespace GUI
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
+            var userBusiness = new UserBusiness();
+
             try
             {
-                UserRepository userRepository = new UserRepository();
-                user = userRepository.Login(txtUsername.Text, txtPassword.Text);
+                var user = userBusiness.Login(username, password);
                 if (user != null)
                 {
-                    
-                    MessageBox.Show("Login Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    HomePage homePage = new HomePage(user);
-                    homePage.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Incorrect User Name or Password", "Infomation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //IF RIGHT, NAVIGATE TO ANOTHER FORM
+
+                    //this.Hide(); - Hide the login form
+                    //nextPage nextpage = new nextPage(user); - Create an instance of UserPage, passing the logged-in user if needed
+                    //nextPage.FormClosed += (s, args) => this.Close(); - Ensure the entire application closes when UserPage is closed
+                    //nextPage.Show();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Login Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message);
             }
+        }
 
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            Register registerForm = new Register();
+            registerForm.Show();
+            // this.Hide();
+            // registerForm.FormClosed += (s, args) => this.Close();
+        }
+
+        private void btnRecoverAccount_Click(object sender, EventArgs e)
+        {
+            // Navigate to the RecoverAccount form
+            RecoverAccount recoverAccountForm = new RecoverAccount();
+            recoverAccountForm.Show();
+            // Optionally hide the login form, uncomment the line below if you wish to hide it
+            // this.Hide();
         }
     }
 }
