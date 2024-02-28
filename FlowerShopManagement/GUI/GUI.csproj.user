@@ -4,6 +4,9 @@
     <Compile Update="Create.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Flower_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Reset.cs">
       <SubType>Form</SubType>
     </Compile>
