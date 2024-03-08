@@ -11,7 +11,12 @@ namespace GUI
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
+<<<<<<< HEAD:FlowerShopManagement/GUI/Program.cs
             Application.Run(new StaffInterface());
+=======
+     
+            Application.Run(new Login());
+>>>>>>> Cart:FlowerShop/GUI/Program.cs
         }
     }
 }

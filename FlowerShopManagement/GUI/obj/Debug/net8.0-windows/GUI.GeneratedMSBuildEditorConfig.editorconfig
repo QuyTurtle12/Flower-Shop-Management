@@ -14,6 +14,10 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GUI
+<<<<<<< HEAD:FlowerShopManagement/GUI/obj/Debug/net8.0-windows/GUI.GeneratedMSBuildEditorConfig.editorconfig
 build_property.ProjectDir = C:\Users\tomgi\Flower-Shop-Management\FlowerShopManagement\GUI\
+=======
+build_property.ProjectDir = C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\
+>>>>>>> Cart:FlowerShop/GUI/obj/Debug/net8.0-windows/GUI.GeneratedMSBuildEditorConfig.editorconfig
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

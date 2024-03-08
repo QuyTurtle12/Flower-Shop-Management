@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD:FlowerShopManagement/GUI/obj/Debug/net8.0-windows/GUI.AssemblyInfo.cs
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8fd7f7b21f361ee2503bacbcb65c97d579f6033a")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+98deb61db7e88993c9194b151f793c490af3fbf1")]
+>>>>>>> Cart:FlowerShop/GUI/obj/Debug/net8.0-windows/GUI.AssemblyInfo.cs
 [assembly: System.Reflection.AssemblyProductAttribute("GUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

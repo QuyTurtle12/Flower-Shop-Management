@@ -12,6 +12,10 @@
       }
     ],
     "configProperties": {
+<<<<<<< HEAD:FlowerShopManagement/GUI/bin/Debug/net8.0-windows/GUI.runtimeconfig.json
+=======
+      "System.Reflection.NullabilityInfoContext.IsSupported": true,
+>>>>>>> Cart:FlowerShop/GUI/bin/Debug/net8.0-windows/GUI.runtimeconfig.json
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": true
     }
   }
