@@ -19,6 +19,7 @@ namespace GUI
         private List<CartItem> cartItems;
         public User currentUser;
         private decimal totalPrice;
+        private List<int> stockList;
         public Cart()
         {
             InitializeComponent();
@@ -30,11 +31,12 @@ namespace GUI
             cartItems = items;
         }
 
-        public Cart(List<CartItem> items, User user)
+        public Cart(List<CartItem> items, User user, List<int> stockList)
         {
             InitializeComponent();
             cartItems = items;
             currentUser = user;
+            this.stockList = stockList;
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -45,21 +47,23 @@ namespace GUI
         {
             List<CartItem> items = cartItems.ToList();
             dgvCart.DataBindings.Clear();
+            int productLoadedCount = 0;
             foreach (CartItem item in items)
             {
                 int rowIndex = dgvCart.Rows.Add();
                 dgvCart.Rows[rowIndex].Cells["txtFlowerId"].Value = item.ProductId;
                 dgvCart.Rows[rowIndex].Cells["txtFlowerName"].Value = item.ProductName;
                 dgvCart.Rows[rowIndex].Cells["txtPrice"].Value = item.Price * Convert.ToDecimal(item.Amount);
-
+                int unitInStock = Convert.ToInt32(stockList[productLoadedCount]);
                 if (item.ProductId != null)
                 {
                     // Add ComboBox value only for rows with non-null product ID
                     DataGridViewComboBoxCell amountCell = (DataGridViewComboBoxCell)dgvCart.Rows[rowIndex].Cells["amount"];
                     amountCell.Items.Clear();
-                    amountCell.Items.AddRange(Enumerable.Range(1, 100).Select(i => i.ToString()).ToArray());
+                    amountCell.Items.AddRange(Enumerable.Range(1, unitInStock).Select(i => i.ToString()).ToArray());
                     amountCell.Value = item.Amount.ToString();
                 }
+                productLoadedCount++;
             }
             TotalPriceCal();
         }
@@ -130,21 +134,24 @@ namespace GUI
         {
             List<CartItem> items = cartItems.ToList();
             dgvCart.Rows.Clear();
+            int productLoadedCount = 0;
             foreach (CartItem item in items)
             {
                 int rowIndex = dgvCart.Rows.Add();
                 dgvCart.Rows[rowIndex].Cells["txtFlowerId"].Value = item.ProductId;
                 dgvCart.Rows[rowIndex].Cells["txtFlowerName"].Value = item.ProductName;
                 dgvCart.Rows[rowIndex].Cells["txtPrice"].Value = item.Price * Convert.ToDecimal(item.Amount);
+                int unitInStock = Convert.ToInt32(stockList[productLoadedCount]);
 
                 if (item.ProductId != null)
                 {
                     // Add ComboBox value only for rows with non-null product ID
                     DataGridViewComboBoxCell amountCell = (DataGridViewComboBoxCell)dgvCart.Rows[rowIndex].Cells["amount"];
                     amountCell.Items.Clear();
-                    amountCell.Items.AddRange(Enumerable.Range(1, 100).Select(i => i.ToString()).ToArray());
+                    amountCell.Items.AddRange(Enumerable.Range(1, unitInStock).Select(i => i.ToString()).ToArray());
                     amountCell.Value = item.Amount.ToString();
                 }
+                productLoadedCount++;
             }
             TotalPriceCal();
         }
@@ -217,8 +224,10 @@ namespace GUI
         {
             try
             {
+                this.Hide();
                 CartRepository cartRepository = new CartRepository();
                 Payment paymentForm = new Payment(cartRepository.GetCartItems(), currentUser, totalPrice);
+                paymentForm.FormClosed += (s, args) => this.Close();
                 paymentForm.Show();
             }
             catch (Exception ex)

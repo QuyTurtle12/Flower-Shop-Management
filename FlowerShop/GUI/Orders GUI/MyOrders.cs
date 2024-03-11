@@ -35,7 +35,7 @@ namespace GUI.Orders_GUI
 
                 // Open the Order Detail Form with the order ID
                 OrderDetails orderDetailForm = new OrderDetails(orderId);
-                orderDetailForm.Show();
+                orderDetailForm.ShowDialog();
             }
         }
 
@@ -64,12 +64,7 @@ namespace GUI.Orders_GUI
                 dgvOrder.Rows[rowIndex].Cells["txtStatus"].Value = order.Status;
                 dgvOrder.Rows[rowIndex].Cells["txtOrderDate"].Value = order.OrderedDate;
                 dgvOrder.Rows[rowIndex].Cells["txtShippedDate"].Value = order.ShippedDate;
-
-                foreach (DataGridViewColumn column in dgvOrder.Columns)
-                {
-                    column.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                }
-            }
+            } 
         }
     }
 }

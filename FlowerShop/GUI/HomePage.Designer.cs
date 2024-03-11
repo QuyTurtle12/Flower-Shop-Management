@@ -32,7 +32,7 @@
             textBox1 = new TextBox();
             button1 = new Button();
             button2 = new Button();
-            comboBox1 = new ComboBox();
+            cbbSort = new ComboBox();
             dataGridView1 = new DataGridView();
             flower_name = new DataGridViewTextBoxColumn();
             unit_price = new DataGridViewTextBoxColumn();
@@ -43,6 +43,11 @@
             lbAnnouncement = new Label();
             btnViewOrder = new Button();
             btnDashboard = new Button();
+            lbSeason = new Label();
+            cbbSeason = new ComboBox();
+            lbSort = new Label();
+            btnSearch = new Button();
+            btnClear = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -81,17 +86,18 @@
             button2.Text = "button2";
             button2.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cbbSort
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Alphabet", "Ascending price", "Descending price" });
-            comboBox1.Location = new Point(92, 75);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 4;
+            cbbSort.FormattingEnabled = true;
+            cbbSort.Items.AddRange(new object[] { "Alphabet", "Ascending price", "Descending price" });
+            cbbSort.Location = new Point(176, 75);
+            cbbSort.Name = "cbbSort";
+            cbbSort.Size = new Size(121, 23);
+            cbbSort.TabIndex = 4;
             // 
             // dataGridView1
             // 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { flower_name, unit_price, Image });
             dataGridView1.Location = new Point(64, 151);
@@ -109,7 +115,7 @@
             flower_name.MinimumWidth = 8;
             flower_name.Name = "flower_name";
             flower_name.ReadOnly = true;
-            flower_name.Width = 150;
+            flower_name.Width = 102;
             // 
             // unit_price
             // 
@@ -117,7 +123,7 @@
             unit_price.MinimumWidth = 8;
             unit_price.Name = "unit_price";
             unit_price.ReadOnly = true;
-            unit_price.Width = 150;
+            unit_price.Width = 83;
             // 
             // Image
             // 
@@ -125,13 +131,13 @@
             Image.MinimumWidth = 8;
             Image.Name = "Image";
             Image.ReadOnly = true;
-            Image.Width = 150;
+            Image.Width = 46;
             // 
             // lbFilters
             // 
             lbFilters.AutoSize = true;
             lbFilters.BackColor = Color.Transparent;
-            lbFilters.Location = new Point(24, 78);
+            lbFilters.Location = new Point(64, 75);
             lbFilters.Name = "lbFilters";
             lbFilters.Size = new Size(38, 15);
             lbFilters.TabIndex = 6;
@@ -190,11 +196,63 @@
             btnDashboard.UseVisualStyleBackColor = true;
             btnDashboard.Click += btnDashboard_Click;
             // 
+            // lbSeason
+            // 
+            lbSeason.AutoSize = true;
+            lbSeason.Location = new Point(126, 113);
+            lbSeason.Name = "lbSeason";
+            lbSeason.Size = new Size(44, 15);
+            lbSeason.TabIndex = 14;
+            lbSeason.Text = "Season";
+            // 
+            // cbbSeason
+            // 
+            cbbSeason.FormattingEnabled = true;
+            cbbSeason.Items.AddRange(new object[] { "Spring", "Summer", "Autumn", "Winter" });
+            cbbSeason.Location = new Point(175, 113);
+            cbbSeason.Name = "cbbSeason";
+            cbbSeason.Size = new Size(122, 23);
+            cbbSeason.TabIndex = 15;
+            // 
+            // lbSort
+            // 
+            lbSort.AutoSize = true;
+            lbSort.Location = new Point(126, 75);
+            lbSort.Name = "lbSort";
+            lbSort.Size = new Size(28, 15);
+            lbSort.TabIndex = 16;
+            lbSort.Text = "Sort";
+            // 
+            // btnSearch
+            // 
+            btnSearch.Location = new Point(323, 71);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(93, 28);
+            btnSearch.TabIndex = 17;
+            btnSearch.Text = "Search";
+            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
+            // 
+            // btnClear
+            // 
+            btnClear.Location = new Point(323, 113);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(93, 28);
+            btnClear.TabIndex = 18;
+            btnClear.Text = "Clear";
+            btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
+            // 
             // HomePage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(712, 379);
+            Controls.Add(btnClear);
+            Controls.Add(btnSearch);
+            Controls.Add(lbSort);
+            Controls.Add(cbbSeason);
+            Controls.Add(lbSeason);
             Controls.Add(btnDashboard);
             Controls.Add(btnViewOrder);
             Controls.Add(lbAnnouncement);
@@ -202,7 +260,7 @@
             Controls.Add(btnCart);
             Controls.Add(lbFilters);
             Controls.Add(dataGridView1);
-            Controls.Add(comboBox1);
+            Controls.Add(cbbSort);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(textBox1);
@@ -221,7 +279,7 @@
         private TextBox textBox1;
         private Button button1;
         private Button button2;
-        private ComboBox comboBox1;
+        private ComboBox cbbSort;
         private DataGridView dataGridView1;
         private Label lbFilters;
         private Button btnCart;
@@ -232,5 +290,10 @@
         private DataGridViewImageColumn Image;
         private Button btnViewOrder;
         private Button btnDashboard;
+        private Label lbSeason;
+        private ComboBox cbbSeason;
+        private Label lbSort;
+        private Button btnSearch;
+        private Button btnClear;
     }
 }
