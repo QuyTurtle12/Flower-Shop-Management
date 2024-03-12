@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\.github",
+    "\\FlowerShop",
+    "\\FlowerShop\\DataAccess"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\FlowerShop\\DataAccess\\FlowerShopContext.cs",
   "PreviewInSolutionExplorer": false
 }

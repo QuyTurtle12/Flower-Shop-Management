@@ -43,6 +43,7 @@
             lbAnnouncement = new Label();
             btnViewOrder = new Button();
             btnDashboard = new Button();
+            AddFlower = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -190,11 +191,22 @@
             btnDashboard.UseVisualStyleBackColor = true;
             btnDashboard.Click += btnDashboard_Click;
             // 
+            // AddFlower
+            // 
+            AddFlower.Location = new Point(609, 263);
+            AddFlower.Name = "AddFlower";
+            AddFlower.Size = new Size(75, 23);
+            AddFlower.TabIndex = 14;
+            AddFlower.Text = "Add Flower";
+            AddFlower.UseVisualStyleBackColor = true;
+            AddFlower.Click += btnAddFlower_Click;
+            // 
             // HomePage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(712, 379);
+            Controls.Add(AddFlower);
             Controls.Add(btnDashboard);
             Controls.Add(btnViewOrder);
             Controls.Add(lbAnnouncement);
@@ -232,5 +244,6 @@
         private DataGridViewImageColumn Image;
         private Button btnViewOrder;
         private Button btnDashboard;
+        private Button AddFlower;
     }
 }

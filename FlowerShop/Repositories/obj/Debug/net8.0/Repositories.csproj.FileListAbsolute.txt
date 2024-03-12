@@ -1,0 +1,54 @@
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfo.cs
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.sourcelink.json
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Repositories\bin\Debug\net8.0\Repositories.deps.json
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Repositories\bin\Debug\net8.0\Repositories.dll
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Repositories\bin\Debug\net8.0\Repositories.pdb
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Repositories\bin\Debug\net8.0\BusinessObject.dll
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Repositories\bin\Debug\net8.0\DataAccess.dll
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Repositories\bin\Debug\net8.0\DataAccess.pdb
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Repositories\bin\Debug\net8.0\BusinessObject.pdb
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.csproj.CopyComplete
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.dll
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Repositories\obj\Debug\net8.0\refint\Repositories.dll
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.pdb
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Repositories\obj\Debug\net8.0\ref\Repositories.dll
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.csproj.AssemblyReference.cache
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfoInputs.cache
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfo.cs
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.csproj.CoreCompileInputs.cache
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.sourcelink.json
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.dll
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\obj\Debug\net8.0\refint\Repositories.dll
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.pdb
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\bin\Debug\net8.0\Repositories.deps.json
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\bin\Debug\net8.0\Repositories.dll
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\bin\Debug\net8.0\Repositories.pdb
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\bin\Debug\net8.0\BusinessObject.dll
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\bin\Debug\net8.0\DataAccess.dll
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\bin\Debug\net8.0\DataAccess.pdb
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\bin\Debug\net8.0\BusinessObject.pdb
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.csproj.CopyComplete
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\obj\Debug\net8.0\ref\Repositories.dll
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\Repositories\bin\Debug\net8.0\Repositories.deps.json
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\Repositories\bin\Debug\net8.0\Repositories.dll
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\Repositories\bin\Debug\net8.0\Repositories.pdb
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\Repositories\bin\Debug\net8.0\BusinessObject.dll
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\Repositories\bin\Debug\net8.0\DataAccess.dll
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\Repositories\bin\Debug\net8.0\DataAccess.pdb
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\Repositories\bin\Debug\net8.0\BusinessObject.pdb
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.csproj.AssemblyReference.cache
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfoInputs.cache
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfo.cs
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.csproj.CoreCompileInputs.cache
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.sourcelink.json
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.csproj.CopyComplete
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.dll
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\Repositories\obj\Debug\net8.0\refint\Repositories.dll
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.pdb
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\Repositories\obj\Debug\net8.0\ref\Repositories.dll

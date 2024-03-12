@@ -97,6 +97,7 @@ namespace GUI
                 if (currentUser.Role.Equals("Admin"))
                 {
                     btnDashboard.Enabled = true;
+                    AddFlower.Enabled = true;
                 }
                 ProductDTO productDTO = new ProductDTO();
                 productDTOList = productDTO.MapFlowerToDTO(flowers);
@@ -182,5 +183,19 @@ namespace GUI
             Dashboard dashboardForm = new Dashboard(productDTOList);
             dashboardForm.Show();
         }
+
+        private void btnAddFlower_Click(object sender, EventArgs e)
+        {
+            if (currentUser.Role.Equals("Admin"))
+            {
+                AddFlowerForm addFlowerForm = new AddFlowerForm();
+                addFlowerForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Only admin can use this function.", "Infomation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
     }
 }

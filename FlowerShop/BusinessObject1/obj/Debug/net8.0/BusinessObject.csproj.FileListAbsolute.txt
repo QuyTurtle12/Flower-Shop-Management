@@ -1,0 +1,59 @@
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\bin\Debug\net8.0\BusinessObject.deps.json
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\bin\Debug\net8.0\BusinessObject.dll
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\bin\Debug\net8.0\BusinessObject.pdb
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.AssemblyInfo.cs
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.sourcelink.json
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.dll
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\refint\BusinessObject.dll
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.pdb
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\ref\BusinessObject.dll
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\bin\Debug\net8.0\BusinessObject.runtimeconfig.json
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.genruntimeconfig.cache
+C:\Users\ADMIN\Downloads\Flower-Shop-Management-main\FlowerShop\BusinessObject1\bin\Debug\net8.0\BusinessObject.deps.json
+C:\Users\ADMIN\Downloads\Flower-Shop-Management-main\FlowerShop\BusinessObject1\bin\Debug\net8.0\BusinessObject.runtimeconfig.json
+C:\Users\ADMIN\Downloads\Flower-Shop-Management-main\FlowerShop\BusinessObject1\bin\Debug\net8.0\BusinessObject.dll
+C:\Users\ADMIN\Downloads\Flower-Shop-Management-main\FlowerShop\BusinessObject1\bin\Debug\net8.0\BusinessObject.pdb
+C:\Users\ADMIN\Downloads\Flower-Shop-Management-main\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Downloads\Flower-Shop-Management-main\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\Downloads\Flower-Shop-Management-main\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Downloads\Flower-Shop-Management-main\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.AssemblyInfo.cs
+C:\Users\ADMIN\Downloads\Flower-Shop-Management-main\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Downloads\Flower-Shop-Management-main\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.dll
+C:\Users\ADMIN\Downloads\Flower-Shop-Management-main\FlowerShop\BusinessObject1\obj\Debug\net8.0\refint\BusinessObject.dll
+C:\Users\ADMIN\Downloads\Flower-Shop-Management-main\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.pdb
+C:\Users\ADMIN\Downloads\Flower-Shop-Management-main\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.genruntimeconfig.cache
+C:\Users\ADMIN\Downloads\Flower-Shop-Management-main\FlowerShop\BusinessObject1\obj\Debug\net8.0\ref\BusinessObject.dll
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\BusinessObject1\bin\Debug\net8.0\BusinessObject.deps.json
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\BusinessObject1\bin\Debug\net8.0\BusinessObject.runtimeconfig.json
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\BusinessObject1\bin\Debug\net8.0\BusinessObject.dll
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\BusinessObject1\bin\Debug\net8.0\BusinessObject.pdb
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.csproj.AssemblyReference.cache
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.GeneratedMSBuildEditorConfig.editorconfig
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.AssemblyInfoInputs.cache
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.AssemblyInfo.cs
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.csproj.CoreCompileInputs.cache
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.sourcelink.json
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.dll
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\BusinessObject1\obj\Debug\net8.0\refint\BusinessObject.dll
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.pdb
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.genruntimeconfig.cache
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\BusinessObject1\obj\Debug\net8.0\ref\BusinessObject.dll
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\BusinessObject1\bin\Debug\net8.0\BusinessObject.deps.json
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\BusinessObject1\bin\Debug\net8.0\BusinessObject.runtimeconfig.json
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\BusinessObject1\bin\Debug\net8.0\BusinessObject.dll
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\BusinessObject1\bin\Debug\net8.0\BusinessObject.pdb
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.csproj.AssemblyReference.cache
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.AssemblyInfoInputs.cache
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.AssemblyInfo.cs
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.csproj.CoreCompileInputs.cache
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.sourcelink.json
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.dll
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\refint\BusinessObject.dll
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.pdb
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\BusinessObject.genruntimeconfig.cache
+C:\Users\tomgi\Flower-Shop-Management\FlowerShop\BusinessObject1\obj\Debug\net8.0\ref\BusinessObject.dll

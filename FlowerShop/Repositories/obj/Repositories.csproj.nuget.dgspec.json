@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\Repositories\\Repositories.csproj": {}
+    "C:\\Users\\tomgi\\Flower-Shop-Management\\FlowerShop\\Repositories\\Repositories.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj": {
+    "C:\\Users\\tomgi\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj",
+        "projectUniqueName": "C:\\Users\\tomgi\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\obj\\",
+        "projectPath": "C:\\Users\\tomgi\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\tomgi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tomgi\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tomgi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -71,21 +75,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\tomgi\\Flower-Shop-Management\\FlowerShop\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\tomgi\\Flower-Shop-Management\\FlowerShop\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\tomgi\\Flower-Shop-Management\\FlowerShop\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\tomgi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tomgi\\Flower-Shop-Management\\FlowerShop\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tomgi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -99,8 +107,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj": {
-                "projectPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj"
+              "C:\\Users\\tomgi\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj": {
+                "projectPath": "C:\\Users\\tomgi\\Flower-Shop-Management\\FlowerShop\\BusinessObject1\\BusinessObject.csproj"
               }
             }
           }
@@ -130,21 +138,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\Repositories\\Repositories.csproj": {
+    "C:\\Users\\tomgi\\Flower-Shop-Management\\FlowerShop\\Repositories\\Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\Repositories\\Repositories.csproj",
+        "projectUniqueName": "C:\\Users\\tomgi\\Flower-Shop-Management\\FlowerShop\\Repositories\\Repositories.csproj",
         "projectName": "Repositories",
-        "projectPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\Repositories\\Repositories.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\Repositories\\obj\\",
+        "projectPath": "C:\\Users\\tomgi\\Flower-Shop-Management\\FlowerShop\\Repositories\\Repositories.csproj",
+        "packagesPath": "C:\\Users\\tomgi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tomgi\\Flower-Shop-Management\\FlowerShop\\Repositories\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tomgi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -158,8 +170,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\ADMIN\\Documents\\GitHub\\Flower-Shop-Management\\FlowerShop\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\tomgi\\Flower-Shop-Management\\FlowerShop\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\tomgi\\Flower-Shop-Management\\FlowerShop\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -189,7 +201,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

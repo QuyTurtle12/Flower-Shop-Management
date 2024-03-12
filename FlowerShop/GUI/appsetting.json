@@ -1,5 +1,5 @@
 {
   "ConnectionStrings": {
-    "DefaultConnectionString": "Server=MSI\\SQLEXPRESS02;uid=sa;pwd=123;database=FlowerShop;Trusted_Connection=true;TrustServerCertificate=true;"
+    "DefaultConnectionString": "Server=TOM-LAPTOP\\MSSQLSERVER01;uid=sa;pwd=1234;database=FlowerShop;Trusted_Connection=true;TrustServerCertificate=true;"
   }
 }
