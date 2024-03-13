@@ -32,6 +32,9 @@
     <Compile Update="Register.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="StaffManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="UserPage.cs">
       <SubType>Form</SubType>
     </Compile>
