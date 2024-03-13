@@ -45,6 +45,7 @@ namespace DataAccess
             }
             return listOrder;
         }
+
         //View Order detail by Order ID
         public OrderDetail GetOrderDetailByOrderId(int OrderId)
         {

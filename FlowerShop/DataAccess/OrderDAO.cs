@@ -189,13 +189,8 @@ namespace DataAccess
         {
             using (var context = new FlowerShopContext())
             {
-                Random rnd = new Random();
-                int orderId;
-                do
-                {
-                    orderId = rnd.Next(1, 1000); // Generate a random integer between 1 and 999
-                } while (context.Orders.Any(o => o.Id == orderId)); // Check if the orderId already exists
-                return orderId;
+                int lastOrderId = context.Orders.Max(c => c.Id); // Retrieve the last used OrderId
+                 return lastOrderId + 1; // Increment it by 1 to generate a new OrderId
             }
         }
 

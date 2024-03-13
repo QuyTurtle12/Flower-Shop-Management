@@ -7,8 +7,6 @@ namespace BusinessObject.Models;
 
 public partial class User
 {
-    [Key]
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
 
     public string? Username { get; set; }

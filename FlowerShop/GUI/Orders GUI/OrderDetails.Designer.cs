@@ -45,62 +45,57 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(63, 162);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(44, 97);
             label1.Name = "label1";
-            label1.Size = new Size(147, 25);
+            label1.Size = new Size(97, 15);
             label1.TabIndex = 0;
             label1.Text = "Number of items";
             // 
             // txtNumberOfItems
             // 
-            txtNumberOfItems.Location = new Point(214, 157);
-            txtNumberOfItems.Margin = new Padding(4, 5, 4, 5);
+            txtNumberOfItems.Location = new Point(150, 94);
             txtNumberOfItems.Name = "txtNumberOfItems";
             txtNumberOfItems.ReadOnly = true;
-            txtNumberOfItems.Size = new Size(53, 31);
+            txtNumberOfItems.Size = new Size(38, 23);
             txtNumberOfItems.TabIndex = 1;
             // 
             // txtOrderNumber
             // 
-            txtOrderNumber.Location = new Point(214, 87);
-            txtOrderNumber.Margin = new Padding(4, 5, 4, 5);
+            txtOrderNumber.Location = new Point(150, 52);
             txtOrderNumber.Name = "txtOrderNumber";
             txtOrderNumber.ReadOnly = true;
-            txtOrderNumber.Size = new Size(141, 31);
+            txtOrderNumber.Size = new Size(100, 23);
             txtOrderNumber.TabIndex = 2;
             txtOrderNumber.TextChanged += textBox2_TextChanged;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(63, 92);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(44, 55);
             label2.Name = "label2";
-            label2.Size = new Size(125, 25);
+            label2.Size = new Size(82, 15);
             label2.TabIndex = 3;
             label2.Text = "Order number";
             // 
             // btnClose
             // 
-            btnClose.Location = new Point(63, 553);
-            btnClose.Margin = new Padding(4, 5, 4, 5);
+            btnClose.Location = new Point(44, 332);
             btnClose.Name = "btnClose";
-            btnClose.Size = new Size(107, 38);
+            btnClose.Size = new Size(75, 23);
             btnClose.TabIndex = 4;
             btnClose.Text = "Close";
             btnClose.UseVisualStyleBackColor = true;
             // 
             // dgvOrderDetail
             // 
+            dgvOrderDetail.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgvOrderDetail.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvOrderDetail.Columns.AddRange(new DataGridViewColumn[] { txtID, txtFlowerName, txtSeason, txtAmount, txtTotalPrice });
-            dgvOrderDetail.Location = new Point(63, 240);
-            dgvOrderDetail.Margin = new Padding(4, 5, 4, 5);
+            dgvOrderDetail.Location = new Point(44, 144);
             dgvOrderDetail.Name = "dgvOrderDetail";
             dgvOrderDetail.ReadOnly = true;
             dgvOrderDetail.RowHeadersWidth = 62;
-            dgvOrderDetail.Size = new Size(667, 250);
+            dgvOrderDetail.Size = new Size(467, 150);
             dgvOrderDetail.TabIndex = 5;
             // 
             // txtID
@@ -109,7 +104,7 @@
             txtID.MinimumWidth = 8;
             txtID.Name = "txtID";
             txtID.ReadOnly = true;
-            txtID.Width = 150;
+            txtID.Width = 43;
             // 
             // txtFlowerName
             // 
@@ -117,7 +112,7 @@
             txtFlowerName.MinimumWidth = 8;
             txtFlowerName.Name = "txtFlowerName";
             txtFlowerName.ReadOnly = true;
-            txtFlowerName.Width = 150;
+            txtFlowerName.Width = 102;
             // 
             // txtSeason
             // 
@@ -125,7 +120,7 @@
             txtSeason.MinimumWidth = 8;
             txtSeason.Name = "txtSeason";
             txtSeason.ReadOnly = true;
-            txtSeason.Width = 150;
+            txtSeason.Width = 69;
             // 
             // txtAmount
             // 
@@ -133,7 +128,7 @@
             txtAmount.MinimumWidth = 8;
             txtAmount.Name = "txtAmount";
             txtAmount.ReadOnly = true;
-            txtAmount.Width = 150;
+            txtAmount.Width = 76;
             // 
             // txtTotalPrice
             // 
@@ -141,20 +136,19 @@
             txtTotalPrice.MinimumWidth = 8;
             txtTotalPrice.Name = "txtTotalPrice";
             txtTotalPrice.ReadOnly = true;
-            txtTotalPrice.Width = 150;
+            txtTotalPrice.Width = 86;
             // 
             // OrderDetails
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1023, 630);
+            ClientSize = new Size(716, 378);
             Controls.Add(dgvOrderDetail);
             Controls.Add(btnClose);
             Controls.Add(label2);
             Controls.Add(txtOrderNumber);
             Controls.Add(txtNumberOfItems);
             Controls.Add(label1);
-            Margin = new Padding(4, 5, 4, 5);
             Name = "OrderDetails";
             Text = "OrderDetails";
             Load += OrderDetails_Load;

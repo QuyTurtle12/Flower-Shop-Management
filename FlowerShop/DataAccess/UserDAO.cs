@@ -89,11 +89,41 @@ namespace DataAccess
             }
         }
 
+        public int GenerateNewUserId()
+        {
+            int newUserId;
+            try
+            {
+                using (var context = new FlowerShopContext())
+                {
+                    int lastCustomerId = context.Users.Max(c => c.Id); // Retrieve the last used User Id
+                    newUserId = lastCustomerId + 1; // Increment it by 1 to generate a new User Id
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return newUserId;
+        }
+
         public void AddUser(User user)
         {
             using (var context = new FlowerShopContext())
             {
-                context.Users.Add(user);
+                User newUser = new User()
+                {
+                    Id = GenerateNewUserId(),
+                    Username = user.Username,
+                    Password = user.Password,
+                    Fullname = user.Fullname,
+                    Email = user.Email,
+                    PhoneNumber = user.PhoneNumber,
+                    Gender = user.Gender,
+                    Role = user.Role,
+                    Status = user.Status,
+                };
+                context.Users.Add(newUser);
                 context.SaveChanges();
             }
         }

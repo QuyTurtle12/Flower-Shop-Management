@@ -18,7 +18,7 @@ namespace GUI
 {
     public partial class HomePage : Form
     {
-
+        private List<int> stockList = new List<int>();
         public HomePage()
         {
             InitializeComponent();
@@ -49,10 +49,10 @@ namespace GUI
                 if (currentUser.Role.Equals("Customer"))
                 {
                     CartRepository cartRepository = new CartRepository();
-                    Cart cartForm = new Cart(cartRepository.GetCartItems(), currentUser);
+                    Cart cartForm = new Cart(cartRepository.GetCartItems(), currentUser, stockList);
                     if (cartRepository.checkCart(cartRepository.GetCartItems()))
                     {
-                        cartForm.Show();
+                        cartForm.ShowDialog();
                     }
                     else
                     {
@@ -72,6 +72,11 @@ namespace GUI
 
         private void HomePage_Load(object sender, EventArgs e)
         {
+            reload();
+        }
+
+        private void reload()
+        {
             try
             {
                 ProductRepository productRepository = new ProductRepository();
@@ -88,11 +93,6 @@ namespace GUI
                 dataGridView1.Columns["Id"].Visible = false;
                 dataGridView1.Columns["Stock"].Visible = true;
                 dataGridView1.Columns.Remove("OrderDetails");
-
-                foreach (DataGridViewColumn column in dataGridView1.Columns)
-                {
-                    column.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                }
 
                 if (currentUser.Role.Equals("Admin"))
                 {
@@ -118,7 +118,8 @@ namespace GUI
                 {
                     Id = Convert.ToInt32(selectedRow.Cells["Id"].Value),
                     Name = selectedRow.Cells["Name"].Value.ToString(),
-                    UnitPrice = Convert.ToDecimal(selectedRow.Cells["UnitPrice"].Value)
+                    UnitPrice = Convert.ToDecimal(selectedRow.Cells["UnitPrice"].Value),
+                    Stock = Convert.ToInt32(selectedRow.Cells["Stock"].Value),
                 };
                 return selectedFlower;
             }
@@ -145,6 +146,7 @@ namespace GUI
                             Price = (decimal)selectedFlower.UnitPrice,
                             Amount = 1
                         });
+                        stockList.Add((int)selectedFlower.Stock);
                         MessageBox.Show("Product added to cart successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
@@ -169,7 +171,7 @@ namespace GUI
             if (currentUser.Role.Equals("Customer"))
             {
                 MyOrders orderForm = new MyOrders(currentUser);
-                orderForm.Show();
+                orderForm.ShowDialog();
             }
             else
             {
@@ -180,7 +182,204 @@ namespace GUI
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             Dashboard dashboardForm = new Dashboard(productDTOList);
-            dashboardForm.Show();
+            dashboardForm.ShowDialog();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string season = string.IsNullOrEmpty(cbbSeason.Text) ? null : cbbSeason.SelectedItem.ToString();
+            string sort = string.IsNullOrEmpty(cbbSort.Text) ? null : cbbSort.SelectedItem.ToString();
+
+            //One of them is not null
+            if (season != null || sort != null)
+            {
+                //Season null and Sort not null
+                if (season != null && sort == null)
+                {
+                    ProductRepository productRepository = new ProductRepository();
+                    Dictionary<int, Flower> productList = productRepository.GetProductList();
+                    dataGridView1.DataBindings.Clear();
+
+                    List<Flower> flowers = productList.Values.ToList();
+                    List<Flower> sortedFlowerList = new List<Flower>();
+
+                    dataGridView1.Columns.Clear();
+                    foreach (Flower f in flowers)
+                    {
+                        if (f.Season.Equals(season))
+                        {
+                            sortedFlowerList.Add(f);
+                        }
+                    }
+                    dataGridView1.AutoGenerateColumns = true;
+                    dataGridView1.DataSource = sortedFlowerList;
+                    dataGridView1.Columns["UnitPrice"].HeaderText = "Unit Price";
+                    dataGridView1.Columns["Id"].Visible = false;
+                    dataGridView1.Columns["Stock"].Visible = true;
+                    dataGridView1.Columns.Remove("OrderDetails");
+                }
+                
+                //Season not null and Sort null
+                if (season == null && sort != null)
+                {
+                    if (sort.Equals("Alphabet"))
+                    {
+                        ProductRepository productRepository = new ProductRepository();
+                        Dictionary<int, Flower> productList = productRepository.GetProductList();
+                        dataGridView1.DataBindings.Clear();
+
+                        List<Flower> flowers = productList.Values.ToList();
+                        List<Flower> sortedFlowerList = flowers.OrderBy(flower => flower.Name).ToList();
+
+                        dataGridView1.Columns.Clear();
+
+                        dataGridView1.AutoGenerateColumns = true;
+                        dataGridView1.DataSource = sortedFlowerList;
+                        dataGridView1.Columns["UnitPrice"].HeaderText = "Unit Price";
+                        dataGridView1.Columns["Id"].Visible = false;
+                        dataGridView1.Columns["Stock"].Visible = true;
+                        dataGridView1.Columns.Remove("OrderDetails");
+                    }
+
+                    if (sort.Equals("Ascending price"))
+                    {
+                        ProductRepository productRepository = new ProductRepository();
+                        Dictionary<int, Flower> productList = productRepository.GetProductList();
+                        dataGridView1.DataBindings.Clear();
+
+                        List<Flower> flowers = productList.Values.ToList();
+                        List<Flower> sortedFlowerList = flowers.OrderBy(flower => flower.UnitPrice).ToList();
+
+                        dataGridView1.Columns.Clear();
+
+                        dataGridView1.AutoGenerateColumns = true;
+                        dataGridView1.DataSource = sortedFlowerList;
+                        dataGridView1.Columns["UnitPrice"].HeaderText = "Unit Price";
+                        dataGridView1.Columns["Id"].Visible = false;
+                        dataGridView1.Columns["Stock"].Visible = true;
+                        dataGridView1.Columns.Remove("OrderDetails");
+                    }
+
+                    if (sort.Equals("Descending price"))
+                    {
+                        ProductRepository productRepository = new ProductRepository();
+                        Dictionary<int, Flower> productList = productRepository.GetProductList();
+                        dataGridView1.DataBindings.Clear();
+
+                        List<Flower> flowers = productList.Values.ToList();
+                        List<Flower> sortedFlowerList = flowers.OrderByDescending(flower => flower.UnitPrice).ToList();
+
+                        dataGridView1.Columns.Clear();
+
+                        dataGridView1.AutoGenerateColumns = true;
+                        dataGridView1.DataSource = sortedFlowerList;
+                        dataGridView1.Columns["UnitPrice"].HeaderText = "Unit Price";
+                        dataGridView1.Columns["Id"].Visible = false;
+                        dataGridView1.Columns["Stock"].Visible = true;
+                        dataGridView1.Columns.Remove("OrderDetails");
+                    }
+                }
+                
+                //Both not null
+                if (season != null && sort != null)
+                {
+                    if (sort.Equals("Alphabet"))
+                    {
+                        ProductRepository productRepository = new ProductRepository();
+                        Dictionary<int, Flower> productList = productRepository.GetProductList();
+                        dataGridView1.DataBindings.Clear();
+
+                        List<Flower> flowers = productList.Values.ToList();
+                        List<Flower> sortedFlowerList = new List<Flower>();
+
+                        foreach (Flower f in flowers)
+                        {
+                            if (f.Season.Equals(season))
+                            {
+                                sortedFlowerList.Add(f);
+                            }
+                        }
+                        sortedFlowerList = sortedFlowerList.OrderBy(flower => flower.Name).ToList();
+
+                        dataGridView1.Columns.Clear();
+
+                        dataGridView1.AutoGenerateColumns = true;
+                        dataGridView1.DataSource = sortedFlowerList;
+                        dataGridView1.Columns["UnitPrice"].HeaderText = "Unit Price";
+                        dataGridView1.Columns["Id"].Visible = false;
+                        dataGridView1.Columns["Stock"].Visible = true;
+                        dataGridView1.Columns.Remove("OrderDetails");
+                    }
+
+                    if (sort.Equals("Ascending price"))
+                    {
+                        ProductRepository productRepository = new ProductRepository();
+                        Dictionary<int, Flower> productList = productRepository.GetProductList();
+                        dataGridView1.DataBindings.Clear();
+
+                        List<Flower> flowers = productList.Values.ToList();
+                        List<Flower> sortedFlowerList = new List<Flower>();
+
+                        foreach (Flower f in flowers)
+                        {
+                            if (f.Season.Equals(season))
+                            {
+                                sortedFlowerList.Add(f);
+                            }
+                        }
+                        sortedFlowerList = sortedFlowerList.OrderBy(flower => flower.UnitPrice).ToList();
+
+                        dataGridView1.Columns.Clear();
+
+                        dataGridView1.AutoGenerateColumns = true;
+                        dataGridView1.DataSource = sortedFlowerList;
+                        dataGridView1.Columns["UnitPrice"].HeaderText = "Unit Price";
+                        dataGridView1.Columns["Id"].Visible = false;
+                        dataGridView1.Columns["Stock"].Visible = true;
+                        dataGridView1.Columns.Remove("OrderDetails");
+                    }
+
+                    if (sort.Equals("Descending price"))
+                    {
+                        ProductRepository productRepository = new ProductRepository();
+                        Dictionary<int, Flower> productList = productRepository.GetProductList();
+                        dataGridView1.DataBindings.Clear();
+
+                        List<Flower> flowers = productList.Values.ToList();
+                        List<Flower> sortedFlowerList = new List<Flower>();
+
+                        foreach (Flower f in flowers)
+                        {
+                            if (f.Season.Equals(season))
+                            {
+                                sortedFlowerList.Add(f);
+                            }
+                        }
+                        sortedFlowerList = sortedFlowerList.OrderByDescending(flower => flower.UnitPrice).ToList();
+
+                        dataGridView1.Columns.Clear();
+
+                        dataGridView1.AutoGenerateColumns = true;
+                        dataGridView1.DataSource = sortedFlowerList;
+                        dataGridView1.Columns["UnitPrice"].HeaderText = "Unit Price";
+                        dataGridView1.Columns["Id"].Visible = false;
+                        dataGridView1.Columns["Stock"].Visible = true;
+                        dataGridView1.Columns.Remove("OrderDetails");
+                    }
+                }
+            }
+            //Both are null
+            else
+            {
+                reload();
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            cbbSeason.SelectedItem = null;
+            cbbSort.SelectedItem = null;
+            reload();
         }
     }
 }
