@@ -34,9 +34,6 @@
             button2 = new Button();
             cbbSort = new ComboBox();
             dataGridView1 = new DataGridView();
-            flower_name = new DataGridViewTextBoxColumn();
-            unit_price = new DataGridViewTextBoxColumn();
-            Image = new DataGridViewImageColumn();
             lbFilters = new Label();
             btnCart = new Button();
             btnAdd = new Button();
@@ -48,6 +45,7 @@
             lbSort = new Label();
             btnSearch = new Button();
             btnClear = new Button();
+            btnStaffManager = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -99,7 +97,6 @@
             // 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { flower_name, unit_price, Image });
             dataGridView1.Location = new Point(64, 151);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
@@ -108,30 +105,6 @@
             dataGridView1.Size = new Size(500, 201);
             dataGridView1.TabIndex = 8;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // flower_name
-            // 
-            flower_name.HeaderText = "Flower Name";
-            flower_name.MinimumWidth = 8;
-            flower_name.Name = "flower_name";
-            flower_name.ReadOnly = true;
-            flower_name.Width = 102;
-            // 
-            // unit_price
-            // 
-            unit_price.HeaderText = "Unit Price";
-            unit_price.MinimumWidth = 8;
-            unit_price.Name = "unit_price";
-            unit_price.ReadOnly = true;
-            unit_price.Width = 83;
-            // 
-            // Image
-            // 
-            Image.HeaderText = "Image";
-            Image.MinimumWidth = 8;
-            Image.Name = "Image";
-            Image.ReadOnly = true;
-            Image.Width = 46;
             // 
             // lbFilters
             // 
@@ -156,7 +129,7 @@
             // btnAdd
             // 
             btnAdd.Location = new Point(609, 217);
-            btnAdd.Margin = new Padding(2);
+            btnAdd.Margin = new Padding(2, 2, 2, 2);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(75, 23);
             btnAdd.TabIndex = 10;
@@ -176,21 +149,21 @@
             // 
             // btnViewOrder
             // 
-            btnViewOrder.Location = new Point(609, 94);
-            btnViewOrder.Margin = new Padding(2);
+            btnViewOrder.Location = new Point(599, 90);
+            btnViewOrder.Margin = new Padding(2, 2, 2, 2);
             btnViewOrder.Name = "btnViewOrder";
-            btnViewOrder.Size = new Size(90, 23);
+            btnViewOrder.Size = new Size(100, 23);
             btnViewOrder.TabIndex = 12;
-            btnViewOrder.Text = "ViewOrder";
+            btnViewOrder.Text = "View Your Order";
             btnViewOrder.UseVisualStyleBackColor = true;
             btnViewOrder.Click += btnViewOrder_Click;
             // 
             // btnDashboard
             // 
             btnDashboard.Enabled = false;
-            btnDashboard.Location = new Point(589, 329);
+            btnDashboard.Location = new Point(580, 329);
             btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(110, 23);
+            btnDashboard.Size = new Size(119, 23);
             btnDashboard.TabIndex = 13;
             btnDashboard.Text = "Flower Dashboard";
             btnDashboard.UseVisualStyleBackColor = true;
@@ -243,11 +216,24 @@
             btnClear.UseVisualStyleBackColor = true;
             btnClear.Click += btnClear_Click;
             // 
+            // btnStaffManager
+            // 
+            btnStaffManager.Enabled = false;
+            btnStaffManager.Location = new Point(580, 293);
+            btnStaffManager.Margin = new Padding(2, 2, 2, 2);
+            btnStaffManager.Name = "btnStaffManager";
+            btnStaffManager.Size = new Size(119, 21);
+            btnStaffManager.TabIndex = 19;
+            btnStaffManager.Text = "Staff Manager";
+            btnStaffManager.UseVisualStyleBackColor = true;
+            btnStaffManager.Click += btnStaffManager_Click;
+            // 
             // HomePage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(712, 379);
+            Controls.Add(btnStaffManager);
             Controls.Add(btnClear);
             Controls.Add(btnSearch);
             Controls.Add(lbSort);
@@ -266,7 +252,7 @@
             Controls.Add(textBox1);
             Controls.Add(txtShopName);
             Name = "HomePage";
-            Text = "HomePage";
+            Text = "Home Page";
             Load += HomePage_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
@@ -285,9 +271,6 @@
         private Button btnCart;
         private Button btnAdd;
         private Label lbAnnouncement;
-        private DataGridViewTextBoxColumn flower_name;
-        private DataGridViewTextBoxColumn unit_price;
-        private DataGridViewImageColumn Image;
         private Button btnViewOrder;
         private Button btnDashboard;
         private Label lbSeason;
@@ -295,5 +278,6 @@
         private Label lbSort;
         private Button btnSearch;
         private Button btnClear;
+        private Button btnStaffManager;
     }
 }

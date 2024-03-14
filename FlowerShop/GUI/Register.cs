@@ -36,6 +36,7 @@ namespace GUI
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+            IUserRepository userRepository = new UserRepository();
             // Fill-in Validation checks
             if (string.IsNullOrWhiteSpace(txtFirstName.Text) ||
                 string.IsNullOrWhiteSpace(txtLastName.Text) ||
@@ -55,6 +56,12 @@ namespace GUI
             if (!IsValidEmail(txtEmail.Text))
             {
                 MessageBox.Show("Please enter a valid email address.", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!userRepository.IsNotExistedPhoneNum(txtPhoneNumber.Text))
+            {
+                MessageBox.Show("Existed Phone Number!", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -82,11 +89,10 @@ namespace GUI
 
             try
             {
-                UserRepository userRepository = new UserRepository();
                 userRepository.AddUser(newUser);
 
                 MessageBox.Show("Registration successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                this.Close();
             }
             catch (Exception ex)
             {
@@ -135,6 +141,21 @@ namespace GUI
         }
 
         private void Register_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFirstName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtLastName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPhoneNumber_TextChanged(object sender, EventArgs e)
         {
 
         }

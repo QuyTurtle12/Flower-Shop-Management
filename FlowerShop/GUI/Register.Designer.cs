@@ -53,69 +53,62 @@
             // lbCreate
             // 
             lbCreate.AutoSize = true;
-            lbCreate.Location = new Point(236, 47);
-            lbCreate.Margin = new Padding(4, 0, 4, 0);
+            lbCreate.Location = new Point(165, 28);
             lbCreate.Name = "lbCreate";
-            lbCreate.Size = new Size(153, 25);
+            lbCreate.Size = new Size(103, 15);
             lbCreate.TabIndex = 0;
             lbCreate.Text = "Create an account";
             // 
             // lbFirstName
             // 
             lbFirstName.AutoSize = true;
-            lbFirstName.Location = new Point(69, 148);
-            lbFirstName.Margin = new Padding(4, 0, 4, 0);
+            lbFirstName.Location = new Point(48, 89);
             lbFirstName.Name = "lbFirstName";
-            lbFirstName.Size = new Size(97, 25);
+            lbFirstName.Size = new Size(64, 15);
             lbFirstName.TabIndex = 1;
             lbFirstName.Text = "First Name";
             // 
             // lbLastName
             // 
             lbLastName.AutoSize = true;
-            lbLastName.Location = new Point(316, 148);
-            lbLastName.Margin = new Padding(4, 0, 4, 0);
+            lbLastName.Location = new Point(221, 89);
             lbLastName.Name = "lbLastName";
-            lbLastName.Size = new Size(95, 25);
+            lbLastName.Size = new Size(63, 15);
             lbLastName.TabIndex = 2;
             lbLastName.Text = "Last Name";
             // 
             // lbEmail
             // 
             lbEmail.AutoSize = true;
-            lbEmail.Location = new Point(69, 243);
-            lbEmail.Margin = new Padding(4, 0, 4, 0);
+            lbEmail.Location = new Point(48, 146);
             lbEmail.Name = "lbEmail";
-            lbEmail.Size = new Size(61, 25);
+            lbEmail.Size = new Size(41, 15);
             lbEmail.TabIndex = 3;
             lbEmail.Text = "E-mail";
             // 
             // lbPhoneNumber
             // 
             lbPhoneNumber.AutoSize = true;
-            lbPhoneNumber.Location = new Point(316, 243);
-            lbPhoneNumber.Margin = new Padding(4, 0, 4, 0);
+            lbPhoneNumber.Location = new Point(221, 146);
             lbPhoneNumber.Name = "lbPhoneNumber";
-            lbPhoneNumber.Size = new Size(132, 25);
+            lbPhoneNumber.Size = new Size(88, 15);
             lbPhoneNumber.TabIndex = 4;
             lbPhoneNumber.Text = "Phone Number";
             // 
             // lbUsername
             // 
             lbUsername.AutoSize = true;
-            lbUsername.Location = new Point(69, 352);
-            lbUsername.Margin = new Padding(4, 0, 4, 0);
+            lbUsername.Location = new Point(48, 211);
             lbUsername.Name = "lbUsername";
-            lbUsername.Size = new Size(91, 25);
+            lbUsername.Size = new Size(60, 15);
             lbUsername.TabIndex = 5;
             lbUsername.Text = "Username";
             // 
             // btnAlreadyAcc
             // 
-            btnAlreadyAcc.Location = new Point(199, 645);
-            btnAlreadyAcc.Margin = new Padding(4, 5, 4, 5);
+            btnAlreadyAcc.Location = new Point(139, 387);
             btnAlreadyAcc.Name = "btnAlreadyAcc";
-            btnAlreadyAcc.Size = new Size(181, 38);
+            btnAlreadyAcc.Size = new Size(127, 23);
             btnAlreadyAcc.TabIndex = 6;
             btnAlreadyAcc.Text = "Already an account ?";
             btnAlreadyAcc.UseVisualStyleBackColor = true;
@@ -124,19 +117,17 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(73, 443);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(51, 266);
             label1.Name = "label1";
-            label1.Size = new Size(225, 25);
+            label1.Size = new Size(150, 15);
             label1.TabIndex = 7;
             label1.Text = "Password (>= 8 characters)";
             // 
             // btnRegister
             // 
-            btnRegister.Location = new Point(236, 597);
-            btnRegister.Margin = new Padding(4, 5, 4, 5);
+            btnRegister.Location = new Point(165, 358);
             btnRegister.Name = "btnRegister";
-            btnRegister.Size = new Size(107, 38);
+            btnRegister.Size = new Size(75, 23);
             btnRegister.TabIndex = 8;
             btnRegister.Text = "Create";
             btnRegister.UseVisualStyleBackColor = true;
@@ -145,79 +136,73 @@
             // lbConfirmPassword
             // 
             lbConfirmPassword.AutoSize = true;
-            lbConfirmPassword.Location = new Point(316, 443);
-            lbConfirmPassword.Margin = new Padding(4, 0, 4, 0);
+            lbConfirmPassword.Location = new Point(221, 266);
             lbConfirmPassword.Name = "lbConfirmPassword";
-            lbConfirmPassword.Size = new Size(158, 25);
+            lbConfirmPassword.Size = new Size(104, 15);
             lbConfirmPassword.TabIndex = 9;
             lbConfirmPassword.Text = "Confirm password";
             // 
             // txtFirstName
             // 
-            txtFirstName.Location = new Point(69, 178);
-            txtFirstName.Margin = new Padding(4, 5, 4, 5);
+            txtFirstName.Location = new Point(48, 107);
             txtFirstName.Name = "txtFirstName";
-            txtFirstName.Size = new Size(201, 31);
+            txtFirstName.Size = new Size(142, 23);
             txtFirstName.TabIndex = 10;
+            txtFirstName.TextChanged += txtFirstName_TextChanged;
             // 
             // txtLastName
             // 
-            txtLastName.Location = new Point(316, 178);
-            txtLastName.Margin = new Padding(4, 5, 4, 5);
+            txtLastName.Location = new Point(221, 107);
             txtLastName.Name = "txtLastName";
-            txtLastName.Size = new Size(201, 31);
+            txtLastName.Size = new Size(142, 23);
             txtLastName.TabIndex = 11;
+            txtLastName.TextChanged += txtLastName_TextChanged;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(69, 273);
-            txtEmail.Margin = new Padding(4, 5, 4, 5);
+            txtEmail.Location = new Point(48, 164);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(201, 31);
+            txtEmail.Size = new Size(142, 23);
             txtEmail.TabIndex = 12;
             txtEmail.TextChanged += txtEmail_TextChanged;
             // 
             // txtPhoneNumber
             // 
-            txtPhoneNumber.Location = new Point(316, 273);
-            txtPhoneNumber.Margin = new Padding(4, 5, 4, 5);
+            txtPhoneNumber.Location = new Point(221, 164);
             txtPhoneNumber.Name = "txtPhoneNumber";
-            txtPhoneNumber.Size = new Size(201, 31);
+            txtPhoneNumber.Size = new Size(142, 23);
             txtPhoneNumber.TabIndex = 13;
+            txtPhoneNumber.TextChanged += txtPhoneNumber_TextChanged;
             // 
             // txtConfirmPassword
             // 
-            txtConfirmPassword.Location = new Point(316, 473);
-            txtConfirmPassword.Margin = new Padding(4, 5, 4, 5);
+            txtConfirmPassword.Location = new Point(221, 284);
             txtConfirmPassword.Name = "txtConfirmPassword";
-            txtConfirmPassword.Size = new Size(201, 31);
+            txtConfirmPassword.Size = new Size(142, 23);
             txtConfirmPassword.TabIndex = 14;
             txtConfirmPassword.TextChanged += PasswordFields_TextChanged;
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(69, 382);
-            txtUsername.Margin = new Padding(4, 5, 4, 5);
+            txtUsername.Location = new Point(48, 229);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(201, 31);
+            txtUsername.Size = new Size(142, 23);
             txtUsername.TabIndex = 15;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(69, 473);
-            txtPassword.Margin = new Padding(4, 5, 4, 5);
+            txtPassword.Location = new Point(48, 284);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(201, 31);
+            txtPassword.Size = new Size(142, 23);
             txtPassword.TabIndex = 16;
             txtPassword.TextChanged += PasswordFields_TextChanged;
             // 
             // lbGender
             // 
             lbGender.AutoSize = true;
-            lbGender.Location = new Point(316, 352);
-            lbGender.Margin = new Padding(4, 0, 4, 0);
+            lbGender.Location = new Point(221, 211);
             lbGender.Name = "lbGender";
-            lbGender.Size = new Size(69, 25);
+            lbGender.Size = new Size(45, 15);
             lbGender.TabIndex = 17;
             lbGender.Text = "Gender";
             // 
@@ -225,10 +210,9 @@
             // 
             cbGender.FormattingEnabled = true;
             cbGender.Items.AddRange(new object[] { "Female", "Male", "Other" });
-            cbGender.Location = new Point(316, 382);
-            cbGender.Margin = new Padding(4, 5, 4, 5);
+            cbGender.Location = new Point(221, 229);
             cbGender.Name = "cbGender";
-            cbGender.Size = new Size(201, 33);
+            cbGender.Size = new Size(142, 23);
             cbGender.TabIndex = 18;
             cbGender.Text = "Choose";
             // 
@@ -238,18 +222,17 @@
             lblPasswordMismatch.AutoSize = true;
             lblPasswordMismatch.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             lblPasswordMismatch.ForeColor = Color.OrangeRed;
-            lblPasswordMismatch.Location = new Point(73, 540);
-            lblPasswordMismatch.Margin = new Padding(4, 0, 4, 0);
+            lblPasswordMismatch.Location = new Point(51, 324);
             lblPasswordMismatch.Name = "lblPasswordMismatch";
-            lblPasswordMismatch.Size = new Size(0, 32);
+            lblPasswordMismatch.Size = new Size(0, 21);
             lblPasswordMismatch.TabIndex = 19;
             lblPasswordMismatch.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Register
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(611, 700);
+            ClientSize = new Size(428, 420);
             Controls.Add(lblPasswordMismatch);
             Controls.Add(cbGender);
             Controls.Add(lbGender);
@@ -270,7 +253,6 @@
             Controls.Add(lbLastName);
             Controls.Add(lbFirstName);
             Controls.Add(lbCreate);
-            Margin = new Padding(4, 5, 4, 5);
             Name = "Register";
             Text = "Create an account";
             Load += Register_Load;

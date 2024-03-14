@@ -52,6 +52,7 @@ namespace GUI
                     Cart cartForm = new Cart(cartRepository.GetCartItems(), currentUser, stockList);
                     if (cartRepository.checkCart(cartRepository.GetCartItems()))
                     {
+                        cartForm.FormClosed += (s, args) => this.reload();
                         cartForm.ShowDialog();
                     }
                     else
@@ -97,6 +98,7 @@ namespace GUI
                 if (currentUser.Role.Equals("Admin"))
                 {
                     btnDashboard.Enabled = true;
+                    btnStaffManager.Enabled = true;
                 }
                 ProductDTO productDTO = new ProductDTO();
                 productDTOList = productDTO.MapFlowerToDTO(flowers);
@@ -218,7 +220,7 @@ namespace GUI
                     dataGridView1.Columns["Stock"].Visible = true;
                     dataGridView1.Columns.Remove("OrderDetails");
                 }
-                
+
                 //Season not null and Sort null
                 if (season == null && sort != null)
                 {
@@ -279,7 +281,7 @@ namespace GUI
                         dataGridView1.Columns.Remove("OrderDetails");
                     }
                 }
-                
+
                 //Both not null
                 if (season != null && sort != null)
                 {
@@ -380,6 +382,14 @@ namespace GUI
             cbbSeason.SelectedItem = null;
             cbbSort.SelectedItem = null;
             reload();
+        }
+
+        private void btnStaffManager_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StaffManager staffManager = new StaffManager();
+            staffManager.FormClosed += (s, args) => this.Show();
+            staffManager.Show();
         }
     }
 }

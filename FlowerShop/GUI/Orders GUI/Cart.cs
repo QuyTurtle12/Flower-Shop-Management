@@ -228,7 +228,7 @@ namespace GUI
                 CartRepository cartRepository = new CartRepository();
                 Payment paymentForm = new Payment(cartRepository.GetCartItems(), currentUser, totalPrice);
                 paymentForm.FormClosed += (s, args) => this.Close();
-                paymentForm.Show();
+                paymentForm.ShowDialog();
             }
             catch (Exception ex)
             {

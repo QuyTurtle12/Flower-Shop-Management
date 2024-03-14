@@ -89,6 +89,66 @@ namespace DataAccess
             }
         }
 
+        public bool IsNotExistedMail(string email)
+        {
+            bool flag = true;
+            if (email != null)
+            {
+                Dictionary<int, User> users = GetUserList();
+                List<User> listUser = users.Values.ToList();
+                if (listUser.Count > 0)
+                {
+                    foreach (User user in listUser)
+                    {
+                        if (user.Email == email)
+                        {
+                            flag = false;
+                            break;
+                        }
+                        else
+                        {
+                            flag = true;
+                        }
+                    }
+                }
+                else
+                {
+                    flag = true;
+                }
+            }
+            return flag;
+        }
+
+        public bool IsNotExistedPhoneNum(string phoneNum)
+        {
+            bool flag = true;
+            if (phoneNum != null)
+            {
+                Dictionary<int, User> users = GetUserList();
+                List<User> listUser = users.Values.ToList();
+                if (listUser.Count > 0)
+                {
+                    foreach (User user in listUser)
+                    {
+                        if (user.PhoneNumber == phoneNum)
+                        {
+                            flag = false;
+                            break;
+                        }
+                        else
+                        {
+                            flag = true;
+                        }
+                    }
+                }
+                else
+                {
+                    flag = true;
+                }
+            }
+            return flag;
+        }
+
         public int GenerateNewUserId()
         {
             int newUserId;
@@ -127,8 +187,48 @@ namespace DataAccess
                 context.SaveChanges();
             }
         }
-
         public void DeleteUser(User user) { }
         public void UpdateUser(User user) { }
+
+        public void UpdateStaffInfo (User editedUser)
+        {
+            try
+            {
+                using (var context = new FlowerShopContext())
+                {
+                    var user = context.Users.Find(editedUser.Id);
+                    user.PhoneNumber = editedUser.PhoneNumber;
+                    user.Email = editedUser.Email;
+                    user.Fullname = editedUser.Fullname;
+                    context.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"The ID {editedUser.Id} not found");
+            }
+            
+        }
+        public void EnableStatus(int userId)
+        {
+            using (var context = new FlowerShopContext())
+            {
+                var user = context.Users.Find(userId);
+                user.Status = true;
+                context.SaveChanges();
+            }
+        }
+
+        public void DisableStatus(int userId)
+        {
+            using (var context = new FlowerShopContext())
+            {
+                var user = context.Users.Find(userId);
+                user.Status = false;
+                context.SaveChanges();
+            }
+        }
+
+
     }
 }

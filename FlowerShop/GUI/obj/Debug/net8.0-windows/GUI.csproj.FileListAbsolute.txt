@@ -77,3 +77,6 @@ C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\obj\Debug\
 C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\obj\Debug\net8.0-windows\GUI.Dashboard.resources
 C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\obj\Debug\net8.0-windows\GUI.RecoverAccount.resources
 C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\obj\Debug\net8.0-windows\GUI.Register.resources
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\obj\Debug\net8.0-windows\GUI.StaffManager.resources
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\obj\Debug\net8.0-windows\GUI.CreateStaff.resources
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\obj\Debug\net8.0-windows\GUI.StaffPage.resources

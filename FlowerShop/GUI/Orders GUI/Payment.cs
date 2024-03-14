@@ -74,11 +74,6 @@ namespace GUI.Orders_GUI
                                 detailRepository.AddOrderDetail(item.ProductId, item.Amount, item.Price);
                             }
                             MessageBox.Show("Purchase Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            ProductRepository productRepository = new ProductRepository();
-                            foreach (CartItem item in cartItems)
-                            {
-                                productRepository.UpdateStock(item.ProductId, item.Amount);
-                            }
                             cartItems.Clear();
                             HomePage homePage = new HomePage(cartItems, currentUser);
                             this.Close();
