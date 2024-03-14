@@ -64,7 +64,7 @@ namespace DataAccess
             try
             {
                 using var context = new FlowerShopContext();
-                user = context.Users.SingleOrDefault(u => u.Username == username && u.Password == password && u.Status == true);
+                user = context.Users.SingleOrDefault(u => (u.Username == username || u.Email == username) && u.Password == password && u.Status == true);
             }
             catch (Exception ex)
             {
@@ -86,6 +86,21 @@ namespace DataAccess
                     throw new Exception(ex.Message);
                 }
                 return isExist;
+            }
+        }
+
+        public bool CheckEmailExists(string email)
+        {
+            try
+            {
+                using (var context = new FlowerShopContext())
+                {
+                    return context.Users.Any(u => u.Email == email);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while checking if the email exists.", ex);
             }
         }
 
