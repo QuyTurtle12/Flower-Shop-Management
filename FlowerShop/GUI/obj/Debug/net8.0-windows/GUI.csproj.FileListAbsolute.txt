@@ -158,3 +158,4 @@ E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\GUI\obj\Debu
 E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\GUI\obj\Debug\net8.0-windows\GUI.genruntimeconfig.cache
 E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\GUI\obj\Debug\net8.0-windows\ref\GUI.dll
 E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\GUI\obj\Debug\net8.0-windows\GUI.frmCustomerInfo.resources
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\GUI\obj\Debug\net8.0-windows\GUI.frmOrders.resources

@@ -49,6 +49,7 @@
             btnSearch = new Button();
             btnClear = new Button();
             btnViewInfo = new Button();
+            btnManageOrder = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -189,9 +190,9 @@
             // btnDashboard
             // 
             btnDashboard.Enabled = false;
-            btnDashboard.Location = new Point(589, 329);
+            btnDashboard.Location = new Point(580, 329);
             btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(110, 23);
+            btnDashboard.Size = new Size(129, 23);
             btnDashboard.TabIndex = 13;
             btnDashboard.Text = "Flower Dashboard";
             btnDashboard.UseVisualStyleBackColor = true;
@@ -254,11 +255,23 @@
             btnViewInfo.UseVisualStyleBackColor = true;
             btnViewInfo.Click += btnViewInfo_Click;
             // 
+            // btnManageOrder
+            // 
+            btnManageOrder.Location = new Point(579, 301);
+            btnManageOrder.Margin = new Padding(2);
+            btnManageOrder.Name = "btnManageOrder";
+            btnManageOrder.Size = new Size(130, 23);
+            btnManageOrder.TabIndex = 20;
+            btnManageOrder.Text = "Order Management";
+            btnManageOrder.UseVisualStyleBackColor = true;
+            btnManageOrder.Click += btnManageOrder_Click;
+            // 
             // HomePage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(712, 379);
+            Controls.Add(btnManageOrder);
             Controls.Add(btnViewInfo);
             Controls.Add(btnClear);
             Controls.Add(btnSearch);
@@ -308,5 +321,6 @@
         private Button btnSearch;
         private Button btnClear;
         private Button btnViewInfo;
+        private Button btnManageOrder;
     }
 }

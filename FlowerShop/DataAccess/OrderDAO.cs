@@ -106,7 +106,7 @@ namespace DataAccess
             Dictionary<int, Order> listOrder = new Dictionary<int, Order>();
             try
             {
-                using(var context = new FlowerShopContext())
+                using (var context = new FlowerShopContext())
                 {
                     DateOnly oneMonthAgo = DateOnly.FromDateTime(DateTime.Now.AddMonths(-1));
 
@@ -190,7 +190,7 @@ namespace DataAccess
             using (var context = new FlowerShopContext())
             {
                 int lastOrderId = context.Orders.Max(c => c.Id); // Retrieve the last used OrderId
-                 return lastOrderId + 1; // Increment it by 1 to generate a new OrderId
+                return lastOrderId + 1; // Increment it by 1 to generate a new OrderId
             }
         }
 
@@ -224,10 +224,65 @@ namespace DataAccess
             }
         }
 
-        public void UpdateOrder(Order order)
+        public void UpdateOrderStatus(int orderId, string newStatus)
         {
-            //Update Order Status
+            using var context = new FlowerShopContext();
+            var order = context.Orders.SingleOrDefault(o => o.Id == orderId);
+            if (order == null) throw new Exception("Order not found.");
+
+            if (order.Status == "Canceled")
+            {
+                throw new Exception("Cannot update a canceled order.");
+            }
+
+            var orderDetails = OrderDetailDAO.Instance.GetOrderDetailListByOrderID(orderId).Values.ToList();
+
+            try
+            {
+                // Handle stock adjustment for processing orders
+                if (newStatus == "Processing" && order.Status != "Processing")
+                {
+                    foreach (var detail in orderDetails)
+                    {
+                        ProductDAO.Instance.UpdateStock(detail.FlowerId.Value, -detail.Amount.Value); // Attempt to subtract stock
+                    }
+                }
+                // Handle stock adjustment for orders failing delivery
+                else if (order.Status == "Processing" && newStatus == "Delivering Failed")
+                {
+                    foreach (var detail in orderDetails)
+                    {
+                        ProductDAO.Instance.UpdateStock(detail.FlowerId.Value, detail.Amount.Value); // Restock
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // If any stock adjustment fails, don't update the order status and inform the caller
+                throw new Exception(ex.Message);
+            }
+
+            // Proceed with status update only if stock adjustments succeeded
+            order.Status = newStatus;
+
+            if (newStatus == "Finished")
+            {
+                order.ShippedDate = DateOnly.FromDateTime(DateTime.Now);
+            }
+
+            context.SaveChanges();
         }
+
+
+        public List<Order> GetOrdersByStatus(string status)
+        {
+            using var context = new FlowerShopContext();
+            var filteredOrders = context.Orders.Where(order => order.Status.Equals(status, StringComparison.OrdinalIgnoreCase)).ToList();
+            return filteredOrders;
+        }
+
+        public void UpdateOrder(Order order) => throw new NotImplementedException();
+
     }
 }
 

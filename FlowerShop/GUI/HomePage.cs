@@ -382,10 +382,18 @@ namespace GUI
             reload();
         }
 
+
         private void btnViewInfo_Click(object sender, EventArgs e)
         {
             frmCustomerInfo customerInfoFrm = new frmCustomerInfo(currentUser);
             customerInfoFrm.ShowDialog();
         }
+
+        private void btnManageOrder_Click(object sender, EventArgs e)
+        {
+            frmOrders manageOrdersForm = new frmOrders();
+            manageOrdersForm.ShowDialog(); // Use ShowDialog to open it as a modal dialog
+        }
+
     }
 }
