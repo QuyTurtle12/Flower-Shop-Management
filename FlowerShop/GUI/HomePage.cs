@@ -218,7 +218,7 @@ namespace GUI
                     dataGridView1.Columns["Stock"].Visible = true;
                     dataGridView1.Columns.Remove("OrderDetails");
                 }
-                
+
                 //Season not null and Sort null
                 if (season == null && sort != null)
                 {
@@ -279,7 +279,7 @@ namespace GUI
                         dataGridView1.Columns.Remove("OrderDetails");
                     }
                 }
-                
+
                 //Both not null
                 if (season != null && sort != null)
                 {
@@ -380,6 +380,12 @@ namespace GUI
             cbbSeason.SelectedItem = null;
             cbbSort.SelectedItem = null;
             reload();
+        }
+
+        private void btnViewInfo_Click(object sender, EventArgs e)
+        {
+            frmCustomerInfo customerInfoFrm = new frmCustomerInfo(currentUser);
+            customerInfoFrm.ShowDialog();
         }
     }
 }

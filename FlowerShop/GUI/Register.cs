@@ -13,27 +13,6 @@ namespace GUI
         }
 
         // Strong Password Validation - adjust as needed
-        private bool IsValidPassword(string password)
-        {
-            return password.Any(char.IsUpper) &&
-                   password.Any(char.IsLower) &&
-                   password.Any(char.IsDigit) &&
-                   password.Any(ch => !char.IsLetterOrDigit(ch)) &&
-                   password.Length >= 8;
-        }
-
-        private bool IsValidEmail(string email)
-        {
-            try
-            {
-                var mailAddress = new MailAddress(email);
-                return true;
-            }
-            catch (FormatException)
-            {
-                return false;
-            }
-        }
 
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -52,7 +31,7 @@ namespace GUI
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(txtEmail.Text) || !IsValidEmail(txtEmail.Text))
+            if (string.IsNullOrWhiteSpace(txtEmail.Text) || !UserBusiness.IsValidEmail(txtEmail.Text))
             {
                 MessageBox.Show("Please enter a valid email address.", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -82,7 +61,7 @@ namespace GUI
                 return;
             }
 
-            if (!IsValidPassword(txtPassword.Text))
+            if (!UserBusiness.IsValidPassword(txtPassword.Text))
             {
                 MessageBox.Show("Password must be at least 8 characters long and include uppercase, lowercase letters, a digit, and a special character.", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -164,7 +143,7 @@ namespace GUI
 
         private void txtEmail_TextChanged(object sender, EventArgs e)
         {
-            if (!IsValidEmail(txtEmail.Text))
+            if (!UserBusiness.IsValidEmail(txtEmail.Text))
             {
                 lblPasswordMismatch.Visible = true;
                 lblPasswordMismatch.Text = "Invalid email format.";

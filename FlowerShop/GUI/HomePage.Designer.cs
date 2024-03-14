@@ -48,6 +48,7 @@
             lbSort = new Label();
             btnSearch = new Button();
             btnClear = new Button();
+            btnViewInfo = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -243,11 +244,22 @@
             btnClear.UseVisualStyleBackColor = true;
             btnClear.Click += btnClear_Click;
             // 
+            // btnViewInfo
+            // 
+            btnViewInfo.Location = new Point(507, 94);
+            btnViewInfo.Name = "btnViewInfo";
+            btnViewInfo.Size = new Size(91, 23);
+            btnViewInfo.TabIndex = 19;
+            btnViewInfo.Text = "View My Info";
+            btnViewInfo.UseVisualStyleBackColor = true;
+            btnViewInfo.Click += btnViewInfo_Click;
+            // 
             // HomePage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(712, 379);
+            Controls.Add(btnViewInfo);
             Controls.Add(btnClear);
             Controls.Add(btnSearch);
             Controls.Add(lbSort);
@@ -295,5 +307,6 @@
         private Label lbSort;
         private Button btnSearch;
         private Button btnClear;
+        private Button btnViewInfo;
     }
 }

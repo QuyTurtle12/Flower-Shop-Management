@@ -143,7 +143,22 @@ namespace DataAccess
             }
         }
 
-        public void DeleteUser(User user) { }
-        public void UpdateUser(User user) { }
+        public void DeleteUser(User user) {
+            using (var context = new FlowerShopContext())
+            {
+
+                context.Users.Remove(user);
+                context.SaveChanges();
+            }
+
+        }
+        public void UpdateUser(User user) {
+            using (var context = new FlowerShopContext())
+            {
+
+                context.Users.Update(user);
+                context.SaveChanges();
+            }
+        }
     }
 }

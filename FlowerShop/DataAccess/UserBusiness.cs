@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using BusinessObject.Models;
@@ -32,6 +33,28 @@ namespace DataAccess
                 throw new Exception(ex.Message);
             }
         }
+
+            public static bool IsValidPassword(string password)
+            {
+                return password.Any(char.IsUpper) &&
+                       password.Any(char.IsLower) &&
+                       password.Any(char.IsDigit) &&
+                       password.Any(ch => !char.IsLetterOrDigit(ch)) &&
+                       password.Length >= 8;
+            }
+
+            public static bool IsValidEmail(string email)
+            {
+                try
+                {
+                    var mailAddress = new MailAddress(email);
+                    return true;
+                }
+                catch (FormatException)
+                {
+                    return false;
+                }
+            }
     }
     
 }
