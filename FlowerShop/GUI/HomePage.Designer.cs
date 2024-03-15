@@ -39,15 +39,12 @@
             btnAdd = new Button();
             lbAnnouncement = new Label();
             btnViewOrder = new Button();
-            btnDashboard = new Button();
             lbSeason = new Label();
             cbbSeason = new ComboBox();
             lbSort = new Label();
             btnSearch = new Button();
             btnClear = new Button();
-            btnStaffManager = new Button();
             btnViewInfo = new Button();
-            btnManageOrder = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -120,9 +117,9 @@
             // 
             // btnCart
             // 
-            btnCart.Location = new Point(609, 171);
+            btnCart.Location = new Point(599, 160);
             btnCart.Name = "btnCart";
-            btnCart.Size = new Size(75, 23);
+            btnCart.Size = new Size(87, 29);
             btnCart.TabIndex = 9;
             btnCart.Text = "Cart";
             btnCart.UseVisualStyleBackColor = true;
@@ -130,10 +127,10 @@
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(609, 217);
-            btnAdd.Margin = new Padding(2, 2, 2, 2);
+            btnAdd.Location = new Point(599, 212);
+            btnAdd.Margin = new Padding(2);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(75, 23);
+            btnAdd.Size = new Size(87, 31);
             btnAdd.TabIndex = 10;
             btnAdd.Text = "Add";
             btnAdd.UseVisualStyleBackColor = true;
@@ -152,24 +149,13 @@
             // btnViewOrder
             // 
             btnViewOrder.Location = new Point(599, 90);
-            btnViewOrder.Margin = new Padding(2, 2, 2, 2);
+            btnViewOrder.Margin = new Padding(2);
             btnViewOrder.Name = "btnViewOrder";
             btnViewOrder.Size = new Size(100, 23);
             btnViewOrder.TabIndex = 12;
             btnViewOrder.Text = "View Your Order";
             btnViewOrder.UseVisualStyleBackColor = true;
             btnViewOrder.Click += btnViewOrder_Click;
-            // 
-            // btnDashboard
-            // 
-            btnDashboard.Enabled = false;
-            btnDashboard.Location = new Point(580, 329);
-            btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(119, 23);
-            btnDashboard.TabIndex = 13;
-            btnDashboard.Text = "Flower Dashboard";
-            btnDashboard.UseVisualStyleBackColor = true;
-            btnDashboard.Click += btnDashboard_Click;
             // 
             // lbSeason
             // 
@@ -220,7 +206,7 @@
             // 
             // btnViewInfo
             // 
-            btnViewInfo.Location = new Point(507, 94);
+            btnViewInfo.Location = new Point(503, 90);
             btnViewInfo.Name = "btnViewInfo";
             btnViewInfo.Size = new Size(91, 23);
             btnViewInfo.TabIndex = 19;
@@ -228,43 +214,17 @@
             btnViewInfo.UseVisualStyleBackColor = true;
             btnViewInfo.Click += btnViewInfo_Click;
             // 
-            // btnManageOrder
-            // 
-            btnManageOrder.Location = new Point(579, 301);
-            btnManageOrder.Margin = new Padding(2);
-            btnManageOrder.Name = "btnManageOrder";
-            btnManageOrder.Size = new Size(130, 23);
-            btnManageOrder.TabIndex = 20;
-            btnManageOrder.Text = "Order Management";
-            btnManageOrder.UseVisualStyleBackColor = true;
-            btnManageOrder.Click += btnManageOrder_Click;
-            // 
-            // btnStaffManager
-            // 
-            btnStaffManager.Enabled = false;
-            btnStaffManager.Location = new Point(580, 293);
-            btnStaffManager.Margin = new Padding(2, 2, 2, 2);
-            btnStaffManager.Name = "btnStaffManager";
-            btnStaffManager.Size = new Size(119, 21);
-            btnStaffManager.TabIndex = 19;
-            btnStaffManager.Text = "Staff Manager";
-            btnStaffManager.UseVisualStyleBackColor = true;
-            btnStaffManager.Click += btnStaffManager_Click;
-            // 
             // HomePage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(712, 379);
-            Controls.Add(btnManageOrder);
             Controls.Add(btnViewInfo);
-            Controls.Add(btnStaffManager);
             Controls.Add(btnClear);
             Controls.Add(btnSearch);
             Controls.Add(lbSort);
             Controls.Add(cbbSeason);
             Controls.Add(lbSeason);
-            Controls.Add(btnDashboard);
             Controls.Add(btnViewOrder);
             Controls.Add(lbAnnouncement);
             Controls.Add(btnAdd);
@@ -297,14 +257,11 @@
         private Button btnAdd;
         private Label lbAnnouncement;
         private Button btnViewOrder;
-        private Button btnDashboard;
         private Label lbSeason;
         private ComboBox cbbSeason;
         private Label lbSort;
         private Button btnSearch;
         private Button btnClear;
         private Button btnViewInfo;
-        private Button btnManageOrder;
-        private Button btnStaffManager;
     }
 }

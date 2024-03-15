@@ -48,6 +48,7 @@
             txtUsername = new TextBox();
             lblRole = new Label();
             cbRole = new ComboBox();
+            btnShowHide = new Button();
             SuspendLayout();
             // 
             // lblFullName
@@ -222,11 +223,22 @@
             cbRole.Size = new Size(200, 23);
             cbRole.TabIndex = 21;
             // 
+            // btnShowHide
+            // 
+            btnShowHide.Location = new Point(175, 417);
+            btnShowHide.Name = "btnShowHide";
+            btnShowHide.Size = new Size(83, 23);
+            btnShowHide.TabIndex = 23;
+            btnShowHide.Text = "Show/Hide";
+            btnShowHide.UseVisualStyleBackColor = true;
+            btnShowHide.Click += btnShowHide_Click;
+            // 
             // frmCustomerInfo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(458, 622);
+            Controls.Add(btnShowHide);
             Controls.Add(lblRole);
             Controls.Add(cbRole);
             Controls.Add(lblUsername);
@@ -248,7 +260,7 @@
             Controls.Add(txtEmail);
             Controls.Add(txtFullName);
             Name = "frmCustomerInfo";
-            Text = "frmCustomerInfo";
+            Text = "s";
             Load += frmCustomerInfo_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -276,5 +288,6 @@
         private TextBox txtUsername;
         private Label lblRole;
         private ComboBox cbRole;
+        private Button btnShowHide;
     }
 }

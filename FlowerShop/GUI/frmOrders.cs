@@ -81,8 +81,10 @@ namespace GUI
             }
             else
             {
-                var filteredOrders = OrderDAO.Instance.GetOrdersByStatus(statusFilterComboBox.SelectedItem.ToString());
+                IOrderRepository orderRepository = new OrderRepository();
+                List<Order> filteredOrders = orderRepository.GetOrdersByStatus(statusFilterComboBox.SelectedItem.ToString());
                 ordersDataGridView.DataSource = filteredOrders;
+                PopulateBuyerColumn(); // Populate the Buyer column with User's Fullname
             }
         }
         private void PopulateUpdateStatusComboBox(string currentStatus)
@@ -152,11 +154,14 @@ namespace GUI
             {
                 int orderId = Convert.ToInt32(ordersDataGridView.Rows[e.RowIndex].Cells["id"].Value);
                 OrderDetails orderDetailsForm = new OrderDetails(orderId);
-                orderDetailsForm.ShowDialog(); 
+                orderDetailsForm.ShowDialog();
             }
 
         }
 
+        private void updateStatusComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

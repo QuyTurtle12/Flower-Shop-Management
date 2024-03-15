@@ -137,11 +137,28 @@ namespace GUI
         private void btnUpdatePassword_Click(object sender, EventArgs e)
         {
             UpdatePassword(txtOldPassword.Text, txtNewPassword.Text, txtConfirmNewPassword.Text);
+            this.Close();
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnShowHide_Click(object sender, EventArgs e)
+        {
+            if (txtOldPassword.PasswordChar.Equals('*'))
+            {
+                txtOldPassword.PasswordChar = '\0';
+                txtNewPassword.PasswordChar = '\0';
+                txtConfirmNewPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                txtOldPassword.PasswordChar = '*';
+                txtNewPassword.PasswordChar = '*';
+                txtConfirmNewPassword.PasswordChar = '*';
+            }
         }
     }
 }

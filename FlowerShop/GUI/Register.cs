@@ -17,7 +17,7 @@ namespace GUI
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-
+            IUserRepository userRepository = new UserRepository();
             // Individual checks for each field for detailed error messages
             if (string.IsNullOrWhiteSpace(txtFirstName.Text))
             {

@@ -20,5 +20,6 @@ namespace Repositories
         Dictionary<int, Order> GetOrdersOneYearBefore(Dictionary<int, Order> orders);
         void UpdateOrder(Order order);
         void AddOrder(int userId, DateOnly orderedDate, decimal totalPrice, string paymentMethod, string phoneNum, string address);
+        List<Order> GetOrdersByStatus(string status);
     }
 }

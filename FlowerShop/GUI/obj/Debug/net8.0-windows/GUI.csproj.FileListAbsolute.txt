@@ -80,3 +80,16 @@ C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\obj\Debug\
 C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\obj\Debug\net8.0-windows\GUI.StaffManager.resources
 C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\obj\Debug\net8.0-windows\GUI.CreateStaff.resources
 C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\obj\Debug\net8.0-windows\GUI.StaffPage.resources
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\obj\Debug\net8.0-windows\GUI.frmCustomerInfo.resources
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\obj\Debug\net8.0-windows\GUI.frmOrders.resources
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\bin\Debug\net8.0-windows\Microsoft.Identity.Client.NativeInterop.dll
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Core.dll
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.WinForms.dll
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Wpf.dll
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\bin\Debug\net8.0-windows\runtimes\win-arm64\native\msalruntime_arm64.dll
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\bin\Debug\net8.0-windows\runtimes\win-x64\native\msalruntime.dll
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\bin\Debug\net8.0-windows\runtimes\win-x86\native\msalruntime_x86.dll
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\bin\Debug\net8.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\bin\Debug\net8.0-windows\runtimes\win-x64\native\WebView2Loader.dll
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\bin\Debug\net8.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\obj\Debug\net8.0-windows\GUI.ManagementPage.resources

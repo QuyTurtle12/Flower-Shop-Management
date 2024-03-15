@@ -29,7 +29,6 @@ namespace Repositories
         public Dictionary<int, Order> GetOrdersOneYearBefore(Dictionary<int, Order> orders) => OrderDAO.Instance.GetOrdersOneYearBefore(orders);
 
         public void UpdateOrder(Order order) => OrderDAO.Instance.UpdateOrder(order);
-
-
+        public List<Order> GetOrdersByStatus(string status) => OrderDAO.Instance.GetOrdersByStatus(status);
     }
 }

@@ -50,7 +50,7 @@
             // statusFilterComboBox
             // 
             statusFilterComboBox.FormattingEnabled = true;
-            statusFilterComboBox.Items.AddRange(new object[] { "Unprocessed", "Canceled", "Processing", "Delivering", "Delivering Failed", "Finished", "All" });
+            statusFilterComboBox.Items.AddRange(new object[] { "Unprocessed", "Canceled", "Processing", "Delivering", "Delivering Failed", "Shipped", "All" });
             statusFilterComboBox.Location = new Point(159, 67);
             statusFilterComboBox.Name = "statusFilterComboBox";
             statusFilterComboBox.Size = new Size(240, 23);
@@ -92,6 +92,7 @@
             updateStatusComboBox.Name = "updateStatusComboBox";
             updateStatusComboBox.Size = new Size(240, 23);
             updateStatusComboBox.TabIndex = 5;
+            updateStatusComboBox.SelectedIndexChanged += updateStatusComboBox_SelectedIndexChanged;
             // 
             // frmOrders
             // 

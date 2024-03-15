@@ -95,13 +95,6 @@ namespace GUI
                 dataGridView1.Columns["Stock"].Visible = true;
                 dataGridView1.Columns.Remove("OrderDetails");
 
-                if (currentUser.Role.Equals("Admin"))
-                {
-                    btnDashboard.Enabled = true;
-                    btnStaffManager.Enabled = true;
-                }
-                ProductDTO productDTO = new ProductDTO();
-                productDTOList = productDTO.MapFlowerToDTO(flowers);
             }
             catch (Exception ex)
             {
@@ -181,11 +174,6 @@ namespace GUI
             }
         }
 
-        private void btnDashboard_Click(object sender, EventArgs e)
-        {
-            Dashboard dashboardForm = new Dashboard(productDTOList);
-            dashboardForm.ShowDialog();
-        }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -384,26 +372,10 @@ namespace GUI
             reload();
         }
 
-        private void btnStaffManager_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            StaffManager staffManager = new StaffManager();
-            staffManager.FormClosed += (s, args) => this.Show();
-            staffManager.Show();
-        }
-
-
         private void btnViewInfo_Click(object sender, EventArgs e)
         {
             frmCustomerInfo customerInfoFrm = new frmCustomerInfo(currentUser);
             customerInfoFrm.ShowDialog();
         }
-
-        private void btnManageOrder_Click(object sender, EventArgs e)
-        {
-            frmOrders manageOrdersForm = new frmOrders();
-            manageOrdersForm.ShowDialog(); // Use ShowDialog to open it as a modal dialog
-        }
-
     }
 }

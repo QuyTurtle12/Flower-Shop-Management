@@ -25,10 +25,16 @@ namespace GUI
             try
             {
                 var user = userBusiness.Login(username, password);
-                if (user != null)
+                if (user != null && user.Role.Equals("Customer"))
                 {
                     this.Hide(); 
                     HomePage nextPage = new HomePage(user);
+                    nextPage.FormClosed += (s, args) => this.Close();
+                    nextPage.Show();
+                } else if (user != null && (user.Role.Equals("Staff") || user.Role.Equals("Admin")))
+                {
+                    this.Hide();
+                    ManagementPage nextPage = new ManagementPage(user);
                     nextPage.FormClosed += (s, args) => this.Close();
                     nextPage.Show();
                 }

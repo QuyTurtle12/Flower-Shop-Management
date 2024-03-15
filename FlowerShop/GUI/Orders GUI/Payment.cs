@@ -54,43 +54,57 @@ namespace GUI.Orders_GUI
                     {
                         if (!string.IsNullOrEmpty(txtCountry.Text))
                         {
-                            OrderRepository orderRepository = new OrderRepository();
-
-                            DateOnly orderedDate = DateOnly.FromDateTime(DateTime.Now);
-
-                            string paymentMethod = PaymentMethod();
-
-                            string phoneNum = txtPhoneNumber.Text;
-                            string address = txtStreet.Text + ", " + txtDistrict.Text + ", " + txtCountry.Text; 
-
-                            //Insert Order into Order Table
-                            orderRepository.AddOrder(currentUser.Id, orderedDate, totalPrice, paymentMethod, phoneNum, address);
-
-
-                            //Insert Order Detail into Order_Detail table
-                            OrderDetailRepository detailRepository = new OrderDetailRepository();
-                            foreach (CartItem item in cartItems)
+                            if (!string.IsNullOrEmpty(txtFullName.Text))
                             {
-                                detailRepository.AddOrderDetail(item.ProductId, item.Amount, item.Price);
+                                if (!string.IsNullOrEmpty(txtPhoneNumber.Text))
+                                {
+                                    OrderRepository orderRepository = new OrderRepository();
+
+                                    DateOnly orderedDate = DateOnly.FromDateTime(DateTime.Now);
+
+                                    string paymentMethod = PaymentMethod();
+
+                                    string phoneNum = txtPhoneNumber.Text;
+                                    string address = txtStreet.Text + ", " + txtDistrict.Text + ", " + txtCountry.Text;
+
+                                    //Insert Order into Order Table
+                                    orderRepository.AddOrder(currentUser.Id, orderedDate, totalPrice, paymentMethod, phoneNum, address);
+
+
+                                    //Insert Order Detail into Order_Detail table
+                                    OrderDetailRepository detailRepository = new OrderDetailRepository();
+                                    foreach (CartItem item in cartItems)
+                                    {
+                                        detailRepository.AddOrderDetail(item.ProductId, item.Amount, item.Price);
+                                    }
+                                    MessageBox.Show("Purchase Successfully!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    cartItems.Clear();
+                                    HomePage homePage = new HomePage(cartItems, currentUser);
+                                    this.Close();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Empty Phone Number!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
                             }
-                            MessageBox.Show("Purchase Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            cartItems.Clear();
-                            HomePage homePage = new HomePage(cartItems, currentUser);
-                            this.Close();
+                            else
+                            {
+                                MessageBox.Show("Empty Name!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("Empty Country!", "Infomation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Empty Country!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Empty District!", "Infomation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Empty District!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Empty Street!", "Infomation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Empty Street!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
@@ -118,6 +132,36 @@ namespace GUI.Orders_GUI
                 return "Apple Pay";
             }
             return null;
+        }
+
+        private void txtPhoneNumber_TextChanged(object sender, EventArgs e)
+        {
+            string input = txtPhoneNumber.Text;
+            string result = "";
+            foreach (char c in input)
+            {
+                if (char.IsDigit(c))
+                {
+                    result += c;
+                }
+            }
+            txtPhoneNumber.Text = result;
+            txtPhoneNumber.Select(txtPhoneNumber.Text.Length, 0);
+        }
+
+        private void txtFullName_TextChanged(object sender, EventArgs e)
+        {
+            string input = txtFullName.Text;
+            string result = "";
+            foreach (char c in input)
+            {
+                if (char.IsLetter(c) || c.Equals(' '))
+                {
+                    result += c;
+                }
+            }
+            txtFullName.Text = result;
+            txtFullName.Select(txtFullName.Text.Length, 0);
         }
     }
 }

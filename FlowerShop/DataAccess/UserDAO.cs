@@ -35,6 +35,7 @@ namespace DataAccess
                 {
                     listUser = context.Users.ToDictionary(User => User.Id);
                 }
+
             }
             catch (Exception ex)
             {
@@ -212,8 +213,6 @@ namespace DataAccess
             }
 
         }
-
-        public void DeleteUser(User user) { }
 
         public void UpdateStaffInfo (User editedUser)
         {

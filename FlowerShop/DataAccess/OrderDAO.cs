@@ -1,5 +1,4 @@
 ﻿using BusinessObject.Models;
-using Microsoft.Identity.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -276,9 +275,13 @@ namespace DataAccess
 
         public List<Order> GetOrdersByStatus(string status)
         {
-            using var context = new FlowerShopContext();
-            var filteredOrders = context.Orders.Where(order => order.Status.Equals(status, StringComparison.OrdinalIgnoreCase)).ToList();
-            return filteredOrders;
+            List<Order> filteredOrders = new List<Order>();
+            using (var context = new FlowerShopContext())
+            {
+                filteredOrders = context.Orders.Where(order => order.Status.Equals(status)).ToList();
+                return filteredOrders;
+            }
+                //filteredOrders = context.Orders.Where(order => order.Status.Equals(status, StringComparison.OrdinalIgnoreCase)).ToList();
         }
 
         public void UpdateOrder(Order order) => throw new NotImplementedException();

@@ -197,7 +197,7 @@
             Controls.Add(lbRole);
             Controls.Add(lbUserID);
             Name = "StaffPage";
-            Text = "Staff Page";
+            Text = "Staff Info";
             Load += StaffPage_Load;
             ResumeLayout(false);
             PerformLayout();
