@@ -98,6 +98,7 @@ namespace GUI
                 {
                     btnDashboard.Enabled = true;
                     AddFlower.Enabled = true;
+                    btnUpdate.Enabled = true;
                 }
                 ProductDTO productDTO = new ProductDTO();
                 productDTOList = productDTO.MapFlowerToDTO(flowers);
@@ -197,5 +198,26 @@ namespace GUI
             }
         }
 
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (currentUser.Role.Equals("Admin"))
+            {
+                //Update Flower with the flower selected in the datagridview
+                Flower selectedFlower = GetSelectedFlower();
+                if (selectedFlower != null)
+                {
+                    UpdateFlower updateFlowerForm = new UpdateFlower(selectedFlower);
+                    updateFlowerForm.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Please select a flower to update.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Only admin can use this function.", "Infomation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

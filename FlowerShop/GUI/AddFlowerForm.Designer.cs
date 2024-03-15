@@ -78,9 +78,10 @@
             label4.Font = new Font("Segoe UI", 11F);
             label4.Location = new Point(50, 160);
             label4.Name = "label4";
-            label4.Size = new Size(45, 20);
+            label4.Size = new Size(85, 20);
             label4.TabIndex = 3;
-            label4.Text = "Color";
+            label4.Text = "Descripiton";
+            label4.Click += label4_Click;
             // 
             // label5
             // 
