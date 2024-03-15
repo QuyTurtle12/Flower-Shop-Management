@@ -58,29 +58,20 @@ namespace DataAccess
             return product;
         }
 
-        public void UpdateStock(int id ,int amount)
+        public void UpdateStock(int id, int amount)
         {
-            try
-            {
-                using (var context = new FlowerShopContext())
-                {
-                    var flower = context.Flowers.Find(id);
+            using var context = new FlowerShopContext();
+            var flower = context.Flowers.Find(id);
+            if (flower == null) throw new Exception($"Flower with ID {id} not found.");
 
-                    if (flower != null)
-                    {
-                        flower.Stock -= amount;
-                        context.SaveChanges();
-                    }
-                    else
-                    {
-                        throw new Exception($"Flower with ID {id} not found.");
-                    }
-                }
-            }
-            catch (Exception ex)
+            // Check if the stock adjustment will result in negative stock
+            if (flower.Stock + amount < 0)
             {
-                throw new Exception($"Error updating stock: {ex.Message}");
+                throw new Exception("Out of stock.");
             }
+
+            flower.Stock += amount;
+            context.SaveChanges();
         }
 
         public void AddProduct(Flower product) {

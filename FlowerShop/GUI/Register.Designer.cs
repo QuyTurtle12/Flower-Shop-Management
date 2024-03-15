@@ -178,6 +178,7 @@
             // 
             txtConfirmPassword.Location = new Point(221, 284);
             txtConfirmPassword.Name = "txtConfirmPassword";
+            txtConfirmPassword.PasswordChar = '*';
             txtConfirmPassword.Size = new Size(142, 23);
             txtConfirmPassword.TabIndex = 14;
             txtConfirmPassword.TextChanged += PasswordFields_TextChanged;
@@ -193,6 +194,7 @@
             // 
             txtPassword.Location = new Point(48, 284);
             txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(142, 23);
             txtPassword.TabIndex = 16;
             txtPassword.TextChanged += PasswordFields_TextChanged;

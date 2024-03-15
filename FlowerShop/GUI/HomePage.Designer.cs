@@ -46,6 +46,8 @@
             btnSearch = new Button();
             btnClear = new Button();
             btnStaffManager = new Button();
+            btnViewInfo = new Button();
+            btnManageOrder = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -216,6 +218,27 @@
             btnClear.UseVisualStyleBackColor = true;
             btnClear.Click += btnClear_Click;
             // 
+            // btnViewInfo
+            // 
+            btnViewInfo.Location = new Point(507, 94);
+            btnViewInfo.Name = "btnViewInfo";
+            btnViewInfo.Size = new Size(91, 23);
+            btnViewInfo.TabIndex = 19;
+            btnViewInfo.Text = "View My Info";
+            btnViewInfo.UseVisualStyleBackColor = true;
+            btnViewInfo.Click += btnViewInfo_Click;
+            // 
+            // btnManageOrder
+            // 
+            btnManageOrder.Location = new Point(579, 301);
+            btnManageOrder.Margin = new Padding(2);
+            btnManageOrder.Name = "btnManageOrder";
+            btnManageOrder.Size = new Size(130, 23);
+            btnManageOrder.TabIndex = 20;
+            btnManageOrder.Text = "Order Management";
+            btnManageOrder.UseVisualStyleBackColor = true;
+            btnManageOrder.Click += btnManageOrder_Click;
+            // 
             // btnStaffManager
             // 
             btnStaffManager.Enabled = false;
@@ -233,6 +256,8 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(712, 379);
+            Controls.Add(btnManageOrder);
+            Controls.Add(btnViewInfo);
             Controls.Add(btnStaffManager);
             Controls.Add(btnClear);
             Controls.Add(btnSearch);
@@ -278,6 +303,8 @@
         private Label lbSort;
         private Button btnSearch;
         private Button btnClear;
+        private Button btnViewInfo;
+        private Button btnManageOrder;
         private Button btnStaffManager;
     }
 }
