@@ -247,7 +247,7 @@ namespace DataAccess
                     }
                 }
                 // Handle stock adjustment for orders failing delivery
-                else if (order.Status == "Processing" && newStatus == "Delivering Failed")
+                else if (order.Status == "Delivering" && newStatus == "Delivering Failed")
                 {
                     foreach (var detail in orderDetails)
                     {

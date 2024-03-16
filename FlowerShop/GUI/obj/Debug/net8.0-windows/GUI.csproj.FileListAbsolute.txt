@@ -93,3 +93,4 @@ C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\bin\Debug\
 C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\bin\Debug\net8.0-windows\runtimes\win-x64\native\WebView2Loader.dll
 C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\bin\Debug\net8.0-windows\runtimes\win-x86\native\WebView2Loader.dll
 C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\obj\Debug\net8.0-windows\GUI.ManagementPage.resources
+C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\GUI\obj\Debug\net8.0-windows\GUI.CustomerManager.resources

@@ -42,6 +42,7 @@
             ordersDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             ordersDataGridView.Location = new Point(12, 103);
             ordersDataGridView.Name = "ordersDataGridView";
+            ordersDataGridView.ReadOnly = true;
             ordersDataGridView.Size = new Size(1205, 470);
             ordersDataGridView.TabIndex = 0;
             ordersDataGridView.CellDoubleClick += ordersDataGridView_CellDoubleClick;
@@ -50,7 +51,7 @@
             // statusFilterComboBox
             // 
             statusFilterComboBox.FormattingEnabled = true;
-            statusFilterComboBox.Items.AddRange(new object[] { "Unprocessed", "Canceled", "Processing", "Delivering", "Delivering Failed", "Shipped", "All" });
+            statusFilterComboBox.Items.AddRange(new object[] { "Unprocessed", "Canceled", "Processing", "Delivering", "Delivering Failed", "Shipped", "Finished", "All" });
             statusFilterComboBox.Location = new Point(159, 67);
             statusFilterComboBox.Name = "statusFilterComboBox";
             statusFilterComboBox.Size = new Size(240, 23);

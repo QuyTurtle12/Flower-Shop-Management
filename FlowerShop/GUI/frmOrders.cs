@@ -21,6 +21,13 @@ namespace GUI
             InitializeComponent();
         }
 
+        private int selectedCustomerId = -1;
+        public frmOrders(int userId)
+        {
+            selectedCustomerId = userId;
+            InitializeComponent();
+        }
+
         private void frmOrders_Load(object sender, EventArgs e)
         {
             LoadAllOrders();
@@ -29,9 +36,18 @@ namespace GUI
 
         private void LoadAllOrders()
         {
-            var orders = OrderDAO.Instance.GetOrderList().Values.ToList();
-            ordersDataGridView.DataSource = orders;
-            AdjustDataGridViewColumns();
+            if (selectedCustomerId == -1)
+            {
+                var orders = OrderDAO.Instance.GetOrderList().Values.ToList();
+                ordersDataGridView.DataSource = orders;
+                AdjustDataGridViewColumns();
+            }
+            else
+            {
+                var orders = OrderDAO.Instance.GetOrderListByUserID(selectedCustomerId).Values.ToList();
+                ordersDataGridView.DataSource = orders;
+                AdjustDataGridViewColumns();
+            }
         }
 
         private void AdjustDataGridViewColumns()

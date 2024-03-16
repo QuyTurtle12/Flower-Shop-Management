@@ -30,12 +30,6 @@
         {
             components = new System.ComponentModel.Container();
             dgvStaff = new DataGridView();
-            txtID = new DataGridViewTextBoxColumn();
-            txtFullName = new DataGridViewTextBoxColumn();
-            txtEmail = new DataGridViewTextBoxColumn();
-            txtPhoneNumber = new DataGridViewTextBoxColumn();
-            txtGender = new DataGridViewTextBoxColumn();
-            txtStatus = new DataGridViewTextBoxColumn();
             userBindingSource = new BindingSource(components);
             btnCreate = new Button();
             btnActive = new Button();
@@ -49,6 +43,12 @@
             rdbtnOther = new RadioButton();
             rdbtnFemale = new RadioButton();
             rdbtnMale = new RadioButton();
+            txtID = new DataGridViewTextBoxColumn();
+            txtFullName = new DataGridViewTextBoxColumn();
+            txtEmail = new DataGridViewTextBoxColumn();
+            txtPhoneNumber = new DataGridViewTextBoxColumn();
+            txtGender = new DataGridViewTextBoxColumn();
+            txtStatus = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvStaff).BeginInit();
             ((System.ComponentModel.ISupportInitialize)userBindingSource).BeginInit();
             gbFilter.SuspendLayout();
@@ -75,60 +75,6 @@
             dgvStaff.CellFormatting += dgvStaff_CellFormatting;
             dgvStaff.DataBindingComplete += dgvStaff_DataBindingComplete;
             dgvStaff.RowHeaderMouseDoubleClick += dgvStaff_RowHeaderMouseDoubleClick;
-            // 
-            // txtID
-            // 
-            txtID.DataPropertyName = "Id";
-            txtID.HeaderText = "Id";
-            txtID.MinimumWidth = 8;
-            txtID.Name = "txtID";
-            txtID.ReadOnly = true;
-            txtID.Width = 42;
-            // 
-            // txtFullName
-            // 
-            txtFullName.DataPropertyName = "Fullname";
-            txtFullName.HeaderText = "Fullname";
-            txtFullName.MinimumWidth = 8;
-            txtFullName.Name = "txtFullName";
-            txtFullName.ReadOnly = true;
-            txtFullName.Width = 81;
-            // 
-            // txtEmail
-            // 
-            txtEmail.DataPropertyName = "Email";
-            txtEmail.HeaderText = "Email";
-            txtEmail.MinimumWidth = 8;
-            txtEmail.Name = "txtEmail";
-            txtEmail.ReadOnly = true;
-            txtEmail.Width = 61;
-            // 
-            // txtPhoneNumber
-            // 
-            txtPhoneNumber.DataPropertyName = "PhoneNumber";
-            txtPhoneNumber.HeaderText = "PhoneNumber";
-            txtPhoneNumber.MinimumWidth = 8;
-            txtPhoneNumber.Name = "txtPhoneNumber";
-            txtPhoneNumber.ReadOnly = true;
-            txtPhoneNumber.Width = 110;
-            // 
-            // txtGender
-            // 
-            txtGender.DataPropertyName = "Gender";
-            txtGender.HeaderText = "Gender";
-            txtGender.MinimumWidth = 8;
-            txtGender.Name = "txtGender";
-            txtGender.ReadOnly = true;
-            txtGender.Width = 70;
-            // 
-            // txtStatus
-            // 
-            txtStatus.DataPropertyName = "Status";
-            txtStatus.HeaderText = "Status";
-            txtStatus.MinimumWidth = 8;
-            txtStatus.Name = "txtStatus";
-            txtStatus.ReadOnly = true;
-            txtStatus.Width = 64;
             // 
             // userBindingSource
             // 
@@ -276,6 +222,60 @@
             rdbtnMale.Text = "Male";
             rdbtnMale.UseVisualStyleBackColor = true;
             // 
+            // txtID
+            // 
+            txtID.DataPropertyName = "Id";
+            txtID.HeaderText = "Id";
+            txtID.MinimumWidth = 8;
+            txtID.Name = "txtID";
+            txtID.ReadOnly = true;
+            txtID.Width = 42;
+            // 
+            // txtFullName
+            // 
+            txtFullName.DataPropertyName = "Fullname";
+            txtFullName.HeaderText = "Full Name";
+            txtFullName.MinimumWidth = 8;
+            txtFullName.Name = "txtFullName";
+            txtFullName.ReadOnly = true;
+            txtFullName.Width = 86;
+            // 
+            // txtEmail
+            // 
+            txtEmail.DataPropertyName = "Email";
+            txtEmail.HeaderText = "Email";
+            txtEmail.MinimumWidth = 8;
+            txtEmail.Name = "txtEmail";
+            txtEmail.ReadOnly = true;
+            txtEmail.Width = 61;
+            // 
+            // txtPhoneNumber
+            // 
+            txtPhoneNumber.DataPropertyName = "PhoneNumber";
+            txtPhoneNumber.HeaderText = "Phone Number";
+            txtPhoneNumber.MinimumWidth = 8;
+            txtPhoneNumber.Name = "txtPhoneNumber";
+            txtPhoneNumber.ReadOnly = true;
+            txtPhoneNumber.Width = 113;
+            // 
+            // txtGender
+            // 
+            txtGender.DataPropertyName = "Gender";
+            txtGender.HeaderText = "Gender";
+            txtGender.MinimumWidth = 8;
+            txtGender.Name = "txtGender";
+            txtGender.ReadOnly = true;
+            txtGender.Width = 70;
+            // 
+            // txtStatus
+            // 
+            txtStatus.DataPropertyName = "Status";
+            txtStatus.HeaderText = "Status";
+            txtStatus.MinimumWidth = 8;
+            txtStatus.Name = "txtStatus";
+            txtStatus.ReadOnly = true;
+            txtStatus.Width = 64;
+            // 
             // StaffManager
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -315,15 +315,15 @@
         private Button btnClear;
         private GroupBox gbFilter;
         private BindingSource userBindingSource;
+        private GroupBox groupBox1;
+        private RadioButton rdbtnFemale;
+        private RadioButton rdbtnMale;
+        private RadioButton rdbtnOther;
         private DataGridViewTextBoxColumn txtID;
         private DataGridViewTextBoxColumn txtFullName;
         private DataGridViewTextBoxColumn txtEmail;
         private DataGridViewTextBoxColumn txtPhoneNumber;
         private DataGridViewTextBoxColumn txtGender;
         private DataGridViewTextBoxColumn txtStatus;
-        private GroupBox groupBox1;
-        private RadioButton rdbtnFemale;
-        private RadioButton rdbtnMale;
-        private RadioButton rdbtnOther;
     }
 }

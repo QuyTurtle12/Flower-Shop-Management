@@ -83,5 +83,13 @@ namespace GUI
             homePage.FormClosed += (s, args) => this.Show();
             homePage.Show();
         }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CustomerManager customerManager = new CustomerManager();
+            customerManager.FormClosed += (s, args) => this.Show();
+            customerManager.Show();
+        }
     }
 }

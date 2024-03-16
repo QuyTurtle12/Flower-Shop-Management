@@ -15,7 +15,7 @@ namespace GUI.Orders_GUI
     public partial class OrderDetails : Form
     {
         private int currentOrderId;
-        
+
         public OrderDetails()
         {
             InitializeComponent();
@@ -34,7 +34,7 @@ namespace GUI.Orders_GUI
         private void OrderDetails_Load(object sender, EventArgs e)
         {
             txtOrderNumber.Text = currentOrderId.ToString();
-            
+
             OrderDetailRepository orderDetailRepository = new OrderDetailRepository();
             Dictionary<int, OrderDetail> orderDetailList = orderDetailRepository.GetOrderDetailListByOrderID(currentOrderId);
             dgvOrderDetail.DataBindings.Clear();
@@ -45,7 +45,7 @@ namespace GUI.Orders_GUI
 
             foreach (OrderDetail order in orderDetails)
             {
-                int rowIndex= dgvOrderDetail.Rows.Add();
+                int rowIndex = dgvOrderDetail.Rows.Add();
                 dgvOrderDetail.Rows[rowIndex].Cells["txtID"].Value = order.FlowerId;
                 dgvOrderDetail.Rows[rowIndex].Cells["txtFlowerName"].Value = productRepository.GetProductById((int)order.FlowerId).Name;
                 dgvOrderDetail.Rows[rowIndex].Cells["txtSeason"].Value = productRepository.GetProductById((int)order.FlowerId).Season;
@@ -53,6 +53,11 @@ namespace GUI.Orders_GUI
                 dgvOrderDetail.Rows[rowIndex].Cells["txtTotalPrice"].Value = order.Price;
             }
             txtNumberOfItems.Text = orderDetailList.Count.ToString();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
