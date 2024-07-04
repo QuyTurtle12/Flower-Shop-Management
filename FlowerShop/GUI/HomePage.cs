@@ -95,6 +95,12 @@ namespace GUI
                 dataGridView1.Columns["Stock"].Visible = true;
                 dataGridView1.Columns.Remove("OrderDetails");
 
+                if (currentUser.Role.Equals("Admin"))
+                {
+                    AddFlower.Enabled = true;
+                    btnUpdate.Enabled = true;
+                    btnDelete.Enabled = true;
+                }
             }
             catch (Exception ex)
             {
@@ -115,6 +121,8 @@ namespace GUI
                     Name = selectedRow.Cells["Name"].Value.ToString(),
                     UnitPrice = Convert.ToDecimal(selectedRow.Cells["UnitPrice"].Value),
                     Stock = Convert.ToInt32(selectedRow.Cells["Stock"].Value),
+                    Description = selectedRow.Cells["Description"].Value.ToString(),
+                    Season = selectedRow.Cells["Season"].Value.ToString()
                 };
                 return selectedFlower;
             }
@@ -376,6 +384,59 @@ namespace GUI
         {
             frmCustomerInfo customerInfoFrm = new frmCustomerInfo(currentUser);
             customerInfoFrm.ShowDialog();
+        }
+
+        private void AddFlower_Click(object sender, EventArgs e)
+        {
+            if (currentUser.Role.Equals("Admin"))
+            {
+                AddFlowerForm addFlowerForm = new AddFlowerForm();
+                addFlowerForm.FormClosed += (s, args) => this.reload();
+                addFlowerForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Only admin can use this function.", "Infomation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (currentUser.Role.Equals("Admin"))
+            {
+                //Update Flower with the flower selected in the datagridview
+                Flower selectedFlower = GetSelectedFlower();
+                if (selectedFlower != null)
+                {
+                    UpdateFlower updateFlowerForm = new UpdateFlower(selectedFlower);
+                    updateFlowerForm.FormClosed += (s, args) => this.reload();
+                    updateFlowerForm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Please select a flower to update.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Only admin can use this function.", "Infomation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            IFlowerRepository flowerRepository = new FlowerRepository();
+            Flower flower = GetSelectedFlower();
+            if (flower != null)
+            {
+                flowerRepository.DeleteFlower(flower);
+                MessageBox.Show("Delete Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                reload();
+            }
+            else
+            {
+                MessageBox.Show("Null Selection", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
