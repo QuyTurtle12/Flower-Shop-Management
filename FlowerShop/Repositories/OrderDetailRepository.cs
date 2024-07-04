@@ -10,14 +10,18 @@ namespace Repositories
 {
     public class OrderDetailRepository : IOrderDetailRepository
     {
-        public OrderDetail GetOrderDetailByOrderId(int OrderId) => OrderDetailDAO.GetOrderDetailByOrderId(OrderId);
+        public OrderDetail GetOrderDetailByOrderId(int OrderId) => OrderDetailDAO.Instance.GetOrderDetailByOrderId(OrderId);
 
-        public OrderDetail GetOrderDetailByFlowerId(int FlowerId) => OrderDetailDAO.GetOrderDetailByFlowerId(FlowerId);
+        public OrderDetail GetOrderDetailByFlowerId(int FlowerId) => OrderDetailDAO.Instance.GetOrderDetailByFlowerId(FlowerId);
 
-        public void AddOrderDetail(OrderDetail orderDetail) => OrderDetailDAO.AddOrderDetail(orderDetail);
+        public void DeleteOrderDetail(OrderDetail orderDetail) => OrderDetailDAO.Instance.DeleteOrderDetail(orderDetail);
 
-        public void DeleteOrderDetail(OrderDetail orderDetail) => OrderDetailDAO.DeleteOrderDetail(orderDetail);
+        public void UpdateOrderDetail(OrderDetail orderDetail) => OrderDetailDAO.Instance.UpdateOrderDetail(orderDetail);
 
-        public void UpdateOrderDetail(OrderDetail orderDetail) => OrderDetailDAO.UpdateOrderDetail(orderDetail);
+        public Dictionary<int, OrderDetail> GetOrderDetailListByOrderID(int orderId) => OrderDetailDAO.Instance.GetOrderDetailListByOrderID(orderId);
+
+        public void AddOrderDetail(int flowerId, int amount, decimal price) => OrderDetailDAO.Instance.AddOrderDetail(flowerId, amount, price);
+
+        public Dictionary<int, OrderDetail> GetOrderDetailListByFlowerID(int flowerId) => OrderDetailDAO.Instance.GetOrderDetailListByFlowerID(flowerId);
     }
 }

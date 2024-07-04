@@ -27,8 +27,27 @@ namespace DataAccess
             }
         }
 
+        public Dictionary<int, OrderDetail> GetOrderDetailListByOrderID(int id)
+        {
+            Dictionary<int, OrderDetail> listOrder = new Dictionary<int, OrderDetail>();
+            try
+            {
+                using (var context = new FlowerShopContext())
+                {
+                    var orders = context.OrderDetails.Where(order => order.OrderId == id).ToList();
+
+                    listOrder = orders.ToDictionary(order => order.OrderDetailId);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return listOrder;
+        }
+
         //View Order detail by Order ID
-        public static OrderDetail GetOrderDetailByOrderId(int OrderId)
+        public OrderDetail GetOrderDetailByOrderId(int OrderId)
         {
             OrderDetail orderDetail = null;
             try
@@ -45,7 +64,25 @@ namespace DataAccess
 
         //View Order detail by Flower ID
         //Useful for Flower Dashboard
-        public static OrderDetail GetOrderDetailByFlowerId(int FlowerId)
+        public Dictionary<int, OrderDetail> GetOrderDetailListByFlowerID(int id)
+        {
+            Dictionary<int, OrderDetail> listOrder = new Dictionary<int, OrderDetail>();
+            try
+            {
+                using (var context = new FlowerShopContext())
+                {
+                    var flowers = context.OrderDetails.Where(flower => flower.FlowerId == id).ToList();
+                    listOrder = flowers.ToDictionary(flower => flower.OrderDetailId);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return listOrder;
+        }
+
+        public OrderDetail GetOrderDetailByFlowerId(int FlowerId)
         {
             OrderDetail orderDetail = null;
             try
@@ -60,8 +97,34 @@ namespace DataAccess
             return orderDetail;
         }
 
-        public static void AddOrderDetail(OrderDetail orderDetail) { }
-        public static void DeleteOrderDetail(OrderDetail orderDetail) { }
-        public static void UpdateOrderDetail(OrderDetail orderDetail) { }
+        private int orderId;
+        public void GetOrderIdFromOrderDAO(int orderId)
+        {
+            this.orderId = orderId;
+        }
+
+        public void AddOrderDetail(int flowerId, int amount, decimal price) {
+            try
+            {
+                using (var context = new FlowerShopContext())
+                {
+                    OrderDetail detail = new OrderDetail
+                    {
+                        OrderId = orderId,
+                        FlowerId = flowerId,
+                        Amount = amount,
+                        Price = price
+                    };
+                    context.OrderDetails.Add(detail);
+                    context.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error at adding order detail: " + ex.Message);
+            }
+        }
+        public void DeleteOrderDetail(OrderDetail orderDetail) { }
+        public void UpdateOrderDetail(OrderDetail orderDetail) { }
     }
 }

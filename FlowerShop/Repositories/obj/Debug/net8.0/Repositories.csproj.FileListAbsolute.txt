@@ -16,3 +16,21 @@ C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Repositories\o
 C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Repositories\obj\Debug\net8.0\refint\Repositories.dll
 C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.pdb
 C:\Users\ADMIN\Documents\GitHub\Flower-Shop-Management\FlowerShop\Repositories\obj\Debug\net8.0\ref\Repositories.dll
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.csproj.AssemblyReference.cache
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfoInputs.cache
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfo.cs
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.csproj.CoreCompileInputs.cache
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.sourcelink.json
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.dll
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\obj\Debug\net8.0\refint\Repositories.dll
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.pdb
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\bin\Debug\net8.0\Repositories.deps.json
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\bin\Debug\net8.0\Repositories.dll
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\bin\Debug\net8.0\Repositories.pdb
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\bin\Debug\net8.0\BusinessObject.dll
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\bin\Debug\net8.0\DataAccess.dll
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\bin\Debug\net8.0\DataAccess.pdb
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\bin\Debug\net8.0\BusinessObject.pdb
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\obj\Debug\net8.0\Repositories.csproj.CopyComplete
+E:\1. Project\School SP24\PRNx\Project\ProjectAssignment\FlowerShop\Repositories\obj\Debug\net8.0\ref\Repositories.dll

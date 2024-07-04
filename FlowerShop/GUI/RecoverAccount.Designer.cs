@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class Reset
+    partial class RecoverAccount
     {
         /// <summary>
         /// Required designer variable.

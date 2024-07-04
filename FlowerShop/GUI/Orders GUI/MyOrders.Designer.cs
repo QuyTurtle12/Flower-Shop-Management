@@ -32,19 +32,21 @@
             lbPhoneNumber = new Label();
             lbEmail = new Label();
             lbClientID = new Label();
-            dataGridView1 = new DataGridView();
+            dgvOrder = new DataGridView();
+            txtOrderId = new DataGridViewLinkColumn();
+            txtTotalPrice = new DataGridViewTextBoxColumn();
+            txtPaymentMethod = new DataGridViewTextBoxColumn();
+            PhoneNumber = new DataGridViewTextBoxColumn();
+            txtAddress = new DataGridViewTextBoxColumn();
+            txtStatus = new DataGridViewTextBoxColumn();
+            txtOrderDate = new DataGridViewTextBoxColumn();
+            txtShippedDate = new DataGridViewTextBoxColumn();
             lbOrdersHistory = new Label();
             txtClient = new TextBox();
             txtPhoneNumber = new TextBox();
             txtEmail = new TextBox();
             txtClientID = new TextBox();
-            ID = new DataGridViewTextBoxColumn();
-            orders = new DataGridViewLinkColumn();
-            total_price = new DataGridViewTextBoxColumn();
-            payment_method = new DataGridViewComboBoxColumn();
-            status = new DataGridViewComboBoxColumn();
-            date = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvOrder).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -83,15 +85,89 @@
             lbClientID.TabIndex = 3;
             lbClientID.Text = "Client ID";
             // 
-            // dataGridView1
+            // dgvOrder
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, orders, total_price, payment_method, status, date });
-            dataGridView1.Location = new Point(29, 243);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(643, 150);
-            dataGridView1.TabIndex = 4;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dgvOrder.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvOrder.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvOrder.Columns.AddRange(new DataGridViewColumn[] { txtOrderId, txtTotalPrice, txtPaymentMethod, PhoneNumber, txtAddress, txtStatus, txtOrderDate, txtShippedDate });
+            dgvOrder.Location = new Point(29, 243);
+            dgvOrder.Name = "dgvOrder";
+            dgvOrder.ReadOnly = true;
+            dgvOrder.RowHeadersWidth = 62;
+            dgvOrder.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvOrder.Size = new Size(643, 150);
+            dgvOrder.TabIndex = 4;
+            dgvOrder.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // txtOrderId
+            // 
+            txtOrderId.HeaderText = "Order";
+            txtOrderId.MinimumWidth = 8;
+            txtOrderId.Name = "txtOrderId";
+            txtOrderId.ReadOnly = true;
+            txtOrderId.Width = 43;
+            // 
+            // txtTotalPrice
+            // 
+            txtTotalPrice.HeaderText = "Total Price";
+            txtTotalPrice.MinimumWidth = 8;
+            txtTotalPrice.Name = "txtTotalPrice";
+            txtTotalPrice.ReadOnly = true;
+            txtTotalPrice.Resizable = DataGridViewTriState.True;
+            txtTotalPrice.SortMode = DataGridViewColumnSortMode.NotSortable;
+            txtTotalPrice.Width = 67;
+            // 
+            // txtPaymentMethod
+            // 
+            txtPaymentMethod.HeaderText = "Payment Method";
+            txtPaymentMethod.MinimumWidth = 8;
+            txtPaymentMethod.Name = "txtPaymentMethod";
+            txtPaymentMethod.ReadOnly = true;
+            txtPaymentMethod.Resizable = DataGridViewTriState.True;
+            txtPaymentMethod.SortMode = DataGridViewColumnSortMode.NotSortable;
+            txtPaymentMethod.Width = 105;
+            // 
+            // PhoneNumber
+            // 
+            PhoneNumber.HeaderText = "Phone Number";
+            PhoneNumber.MinimumWidth = 8;
+            PhoneNumber.Name = "PhoneNumber";
+            PhoneNumber.ReadOnly = true;
+            PhoneNumber.Width = 113;
+            // 
+            // txtAddress
+            // 
+            txtAddress.HeaderText = "Address";
+            txtAddress.MinimumWidth = 8;
+            txtAddress.Name = "txtAddress";
+            txtAddress.ReadOnly = true;
+            txtAddress.Width = 74;
+            // 
+            // txtStatus
+            // 
+            txtStatus.HeaderText = "Status";
+            txtStatus.MinimumWidth = 8;
+            txtStatus.Name = "txtStatus";
+            txtStatus.ReadOnly = true;
+            txtStatus.Resizable = DataGridViewTriState.True;
+            txtStatus.SortMode = DataGridViewColumnSortMode.NotSortable;
+            txtStatus.Width = 45;
+            // 
+            // txtOrderDate
+            // 
+            txtOrderDate.HeaderText = "Ordered Date";
+            txtOrderDate.MinimumWidth = 8;
+            txtOrderDate.Name = "txtOrderDate";
+            txtOrderDate.ReadOnly = true;
+            txtOrderDate.Width = 102;
+            // 
+            // txtShippedDate
+            // 
+            txtShippedDate.HeaderText = "Shipped Date";
+            txtShippedDate.MinimumWidth = 8;
+            txtShippedDate.Name = "txtShippedDate";
+            txtShippedDate.ReadOnly = true;
+            txtShippedDate.Width = 102;
             // 
             // lbOrdersHistory
             // 
@@ -106,6 +182,7 @@
             // 
             txtClient.Location = new Point(137, 50);
             txtClient.Name = "txtClient";
+            txtClient.ReadOnly = true;
             txtClient.Size = new Size(125, 23);
             txtClient.TabIndex = 6;
             // 
@@ -113,6 +190,7 @@
             // 
             txtPhoneNumber.Location = new Point(137, 88);
             txtPhoneNumber.Name = "txtPhoneNumber";
+            txtPhoneNumber.ReadOnly = true;
             txtPhoneNumber.Size = new Size(125, 23);
             txtPhoneNumber.TabIndex = 7;
             // 
@@ -120,6 +198,7 @@
             // 
             txtEmail.Location = new Point(137, 128);
             txtEmail.Name = "txtEmail";
+            txtEmail.ReadOnly = true;
             txtEmail.Size = new Size(125, 23);
             txtEmail.TabIndex = 8;
             // 
@@ -127,43 +206,9 @@
             // 
             txtClientID.Location = new Point(137, 170);
             txtClientID.Name = "txtClientID";
+            txtClientID.ReadOnly = true;
             txtClientID.Size = new Size(125, 23);
             txtClientID.TabIndex = 9;
-            // 
-            // ID
-            // 
-            ID.HeaderText = "ID";
-            ID.Name = "ID";
-            // 
-            // orders
-            // 
-            orders.HeaderText = "Orders";
-            orders.Name = "orders";
-            // 
-            // total_price
-            // 
-            total_price.HeaderText = "Total Price";
-            total_price.Name = "total_price";
-            total_price.Resizable = DataGridViewTriState.True;
-            total_price.SortMode = DataGridViewColumnSortMode.NotSortable;
-            // 
-            // payment_method
-            // 
-            payment_method.HeaderText = "Payment method";
-            payment_method.Items.AddRange(new object[] { "Bank card", "Cash", "Zalo Pay" });
-            payment_method.Name = "payment_method";
-            payment_method.Resizable = DataGridViewTriState.True;
-            // 
-            // status
-            // 
-            status.HeaderText = "Status";
-            status.Items.AddRange(new object[] { "Unprocessed", "Canceled", "Processing", "Delivering", "Finished" });
-            status.Name = "status";
-            // 
-            // date
-            // 
-            date.HeaderText = "Date";
-            date.Name = "date";
             // 
             // MyOrders
             // 
@@ -175,14 +220,15 @@
             Controls.Add(txtPhoneNumber);
             Controls.Add(txtClient);
             Controls.Add(lbOrdersHistory);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvOrder);
             Controls.Add(lbClientID);
             Controls.Add(lbEmail);
             Controls.Add(lbPhoneNumber);
             Controls.Add(label1);
             Name = "MyOrders";
             Text = "MyOrders";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += MyOrders_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvOrder).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -193,17 +239,19 @@
         private Label lbPhoneNumber;
         private Label lbEmail;
         private Label lbClientID;
-        private DataGridView dataGridView1;
+        private DataGridView dgvOrder;
         private Label lbOrdersHistory;
         private TextBox txtClient;
         private TextBox txtPhoneNumber;
         private TextBox txtEmail;
         private TextBox txtClientID;
-        private DataGridViewTextBoxColumn ID;
-        private DataGridViewLinkColumn orders;
-        private DataGridViewTextBoxColumn total_price;
-        private DataGridViewComboBoxColumn payment_method;
-        private DataGridViewComboBoxColumn status;
-        private DataGridViewTextBoxColumn date;
+        private DataGridViewLinkColumn txtOrderId;
+        private DataGridViewTextBoxColumn txtTotalPrice;
+        private DataGridViewTextBoxColumn txtPaymentMethod;
+        private DataGridViewTextBoxColumn PhoneNumber;
+        private DataGridViewTextBoxColumn txtAddress;
+        private DataGridViewTextBoxColumn txtStatus;
+        private DataGridViewTextBoxColumn txtOrderDate;
+        private DataGridViewTextBoxColumn txtShippedDate;
     }
 }

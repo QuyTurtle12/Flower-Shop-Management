@@ -33,14 +33,13 @@
             txtOrderNumber = new TextBox();
             label2 = new Label();
             btnClose = new Button();
-            dataGridView1 = new DataGridView();
-            ID = new DataGridViewTextBoxColumn();
-            flower_name = new DataGridViewTextBoxColumn();
-            season = new DataGridViewTextBoxColumn();
-            amount = new DataGridViewTextBoxColumn();
-            unit_price = new DataGridViewTextBoxColumn();
-            total_price = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            dgvOrderDetail = new DataGridView();
+            txtID = new DataGridViewTextBoxColumn();
+            txtFlowerName = new DataGridViewTextBoxColumn();
+            txtSeason = new DataGridViewTextBoxColumn();
+            txtAmount = new DataGridViewTextBoxColumn();
+            txtTotalPrice = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dgvOrderDetail).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -56,14 +55,15 @@
             // 
             txtNumberOfItems.Location = new Point(150, 94);
             txtNumberOfItems.Name = "txtNumberOfItems";
+            txtNumberOfItems.ReadOnly = true;
             txtNumberOfItems.Size = new Size(38, 23);
             txtNumberOfItems.TabIndex = 1;
-            //txtNumberOfItems.TextChanged += this.textBox1_TextChanged;
             // 
             // txtOrderNumber
             // 
             txtOrderNumber.Location = new Point(150, 52);
             txtOrderNumber.Name = "txtOrderNumber";
+            txtOrderNumber.ReadOnly = true;
             txtOrderNumber.Size = new Size(100, 23);
             txtOrderNumber.TabIndex = 2;
             txtOrderNumber.TextChanged += textBox2_TextChanged;
@@ -85,52 +85,66 @@
             btnClose.TabIndex = 4;
             btnClose.Text = "Close";
             btnClose.UseVisualStyleBackColor = true;
+            btnClose.Click += btnClose_Click;
             // 
-            // dataGridView1
+            // dgvOrderDetail
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, flower_name, season, amount, unit_price, total_price });
-            dataGridView1.Location = new Point(44, 144);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(642, 150);
-            dataGridView1.TabIndex = 5;
+            dgvOrderDetail.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvOrderDetail.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvOrderDetail.Columns.AddRange(new DataGridViewColumn[] { txtID, txtFlowerName, txtSeason, txtAmount, txtTotalPrice });
+            dgvOrderDetail.Location = new Point(44, 144);
+            dgvOrderDetail.Name = "dgvOrderDetail";
+            dgvOrderDetail.ReadOnly = true;
+            dgvOrderDetail.RowHeadersWidth = 62;
+            dgvOrderDetail.Size = new Size(467, 150);
+            dgvOrderDetail.TabIndex = 5;
             // 
-            // ID
+            // txtID
             // 
-            ID.HeaderText = "ID";
-            ID.Name = "ID";
+            txtID.HeaderText = "ID";
+            txtID.MinimumWidth = 8;
+            txtID.Name = "txtID";
+            txtID.ReadOnly = true;
+            txtID.Width = 43;
             // 
-            // flower_name
+            // txtFlowerName
             // 
-            flower_name.HeaderText = "Flower Name";
-            flower_name.Name = "flower_name";
+            txtFlowerName.HeaderText = "Flower Name";
+            txtFlowerName.MinimumWidth = 8;
+            txtFlowerName.Name = "txtFlowerName";
+            txtFlowerName.ReadOnly = true;
+            txtFlowerName.Width = 102;
             // 
-            // season
+            // txtSeason
             // 
-            season.HeaderText = "Season";
-            season.Name = "season";
+            txtSeason.HeaderText = "Season";
+            txtSeason.MinimumWidth = 8;
+            txtSeason.Name = "txtSeason";
+            txtSeason.ReadOnly = true;
+            txtSeason.Width = 69;
             // 
-            // amount
+            // txtAmount
             // 
-            amount.HeaderText = "Amount";
-            amount.Name = "amount";
+            txtAmount.HeaderText = "Amount";
+            txtAmount.MinimumWidth = 8;
+            txtAmount.Name = "txtAmount";
+            txtAmount.ReadOnly = true;
+            txtAmount.Width = 76;
             // 
-            // unit_price
+            // txtTotalPrice
             // 
-            unit_price.HeaderText = "Unit price";
-            unit_price.Name = "unit_price";
-            // 
-            // total_price
-            // 
-            total_price.HeaderText = "Total Price";
-            total_price.Name = "total_price";
+            txtTotalPrice.HeaderText = "Total Price";
+            txtTotalPrice.MinimumWidth = 8;
+            txtTotalPrice.Name = "txtTotalPrice";
+            txtTotalPrice.ReadOnly = true;
+            txtTotalPrice.Width = 86;
             // 
             // OrderDetails
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(716, 378);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvOrderDetail);
             Controls.Add(btnClose);
             Controls.Add(label2);
             Controls.Add(txtOrderNumber);
@@ -138,7 +152,8 @@
             Controls.Add(label1);
             Name = "OrderDetails";
             Text = "OrderDetails";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += OrderDetails_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvOrderDetail).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -150,12 +165,11 @@
         private TextBox txtOrderNumber;
         private Label label2;
         private Button btnClose;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn ID;
-        private DataGridViewTextBoxColumn flower_name;
-        private DataGridViewTextBoxColumn season;
-        private DataGridViewTextBoxColumn amount;
-        private DataGridViewTextBoxColumn unit_price;
-        private DataGridViewTextBoxColumn total_price;
+        private DataGridView dgvOrderDetail;
+        private DataGridViewTextBoxColumn txtID;
+        private DataGridViewTextBoxColumn txtFlowerName;
+        private DataGridViewTextBoxColumn txtSeason;
+        private DataGridViewTextBoxColumn txtAmount;
+        private DataGridViewTextBoxColumn txtTotalPrice;
     }
 }

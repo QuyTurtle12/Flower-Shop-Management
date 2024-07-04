@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class Create : Form
+    public partial class RecoverAccount : Form
     {
-        public Create()
+        public RecoverAccount()
         {
             InitializeComponent();
         }
